@@ -2,8 +2,6 @@ package com.sirma.itt.javacourse.intro.arrayreverse;
 
 import org.junit.Test;
 
-import com.sirma.itt.javacourse.intro.array.Array;
-
 /**
  * Class that testing method reverseElementInArray form class ReverseArray
  * 
@@ -15,12 +13,21 @@ public class ReverseArrayTest {
 	 */
 
 	ReverseArray r = new ReverseArray();
-	Array p = new Array();
 
 	@Test
 	public void testReverseElemntsInArray() {
+
 		float arr[] = { 1, 2, 3, 4 };
 		float resultArray[] = { 4, 3, 2, 1 };
+		r.reverseElemntsInArray(arr);
+
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] == resultArray[i]) {
+				System.out.println("good");
+			} else {
+				System.out.println("fail");
+			}
+		}
 
 	}
 }

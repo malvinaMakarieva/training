@@ -6,9 +6,13 @@ package com.sirma.itt.javacourse.intro.arraysmedian;
 public class Median {
 
 	/**
-	 * @param args
-	 * @return
+	 * Method which finds the median not sorted array and returns the index of the item
+	 * 
+	 * @param array
+	 *            an array of user-entered numbers
+	 * @return index of the array element, which is the median
 	 */
+
 	public int findMedian(int[] array) {
 		int i;
 		int sum1 = 0;
@@ -30,11 +34,23 @@ public class Median {
 		return medIndex++;
 	}
 
+	/**
+	 * Method which calculates the amount of one side of the selected area to medium
+	 * 
+	 * @param array
+	 *            an array of user-entered numbers
+	 * @param start
+	 *            Index of the starting element
+	 * @param finish
+	 *            Index of the final element
+	 * @return
+	 */
+
 	public int sum(int array[], int start, int finish) {
 		int sum = 0;
-		int start2 = 0;
-		for (start2 = start; start2 < finish - 1; start2++) {
-			sum += array[start2];
+		int i = 0;
+		for (i = start; i < finish - 1; i++) {
+			sum += array[i];
 		}
 		return sum;
 	}

@@ -1,7 +1,7 @@
 package com.sirma.itt.javacourse.intro.gcd;
 
 /**
- * This class
+ * This class contains the function for least common multiple
  * 
  * @author Malvina Makarieva
  */
