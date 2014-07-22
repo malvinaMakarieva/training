@@ -3,7 +3,7 @@ package com.sirma.itt.javacourse.intro.quicsortarray;
 import java.util.Scanner;
 
 /**
- * This class read from console and running method ..............................
+ * This class read from console and running method
  * 
  * @author Malvina Makarieva
  */
