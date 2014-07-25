@@ -3,8 +3,6 @@ package com.sirma.itt.javacourse.intro.sumlargenumbers;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.sirma.itt.javacourse.intro.sumlargenumbers.LargeNumber;
-
 /**
  * Class that contains method summingLargeNumbers(String firstNum, String secondNum) from class
  * LargeNumber
@@ -17,14 +15,19 @@ public class LargeNumberTest {
 	 */
 	@Test
 	public void testSumLargeNumbers() {
-		LargeNumber lg = new LargeNumber();
-		Assert.assertEquals("1254892040790802",
-				lg.summingLargeNumbers("1254885458545254", "6582245548"));
-		Assert.assertEquals("356625821500", lg.summingLargeNumbers("265945", "356625555555"));
-		Assert.assertEquals("0", lg.summingLargeNumbers("0", "0"));
-		Assert.assertEquals("025", lg.summingLargeNumbers("013", "12"));
-		Assert.assertEquals("15", lg.summingLargeNumbers("13", "02"));
+		LargeNumber testLargeNumber = new LargeNumber();
+		String sumOfLargeNumberOne = testLargeNumber.summingLargeNumbers("1254885458545254",
+				"6582245548");
+		String sumOfLargeNumberTwo = testLargeNumber.summingLargeNumbers("265945", "356625555555");
+		String sumOfLargeNumberThree = testLargeNumber.summingLargeNumbers("0", "0");
+		String sumOfLargeNumberFour = testLargeNumber.summingLargeNumbers("013", "12");
+		String sumOfLargeNumberFive = testLargeNumber.summingLargeNumbers("13", "02");
+
+		Assert.assertEquals("1254892040790802", sumOfLargeNumberFour);
+		Assert.assertEquals("356625821500", sumOfLargeNumberTwo);
+		Assert.assertEquals("0", sumOfLargeNumberThree);
+		Assert.assertEquals("025", sumOfLargeNumberFour);
+		Assert.assertEquals("15", sumOfLargeNumberFive);
 
 	}
-
 }
