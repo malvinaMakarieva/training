@@ -35,9 +35,15 @@ public class RunReverse {
 		ReverseArray arrayFunction = new ReverseArray();
 		Array p = new Array();
 
-		System.out.println("Array elemets are " + p.print(array));
+		String inputElements = p.print(array);
+		System.out.println("Array elemets are " + inputElements);
 		arrayFunction.reverseElemntsInArray(array);
-		System.out.println("Exchanged elements of the array looks like " + p.print(array));
+		String reversElements = p.print(array);
+		System.out.println("Exchanged elements of the array looks like " + reversElements);
+
+		if (input != null) {
+			input.close();
+		}
 
 	}
 }
