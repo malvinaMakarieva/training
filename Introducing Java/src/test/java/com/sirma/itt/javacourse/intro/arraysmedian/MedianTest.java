@@ -9,7 +9,7 @@ import org.junit.Test;
  * @author Malvina Makarieva
  */
 public class MedianTest {
-	Median m = new Median();
+	Median median = new Median();
 
 	/**
 	 * Testing summing the elements of an array of initial to final element.
@@ -17,10 +17,15 @@ public class MedianTest {
 	@Test
 	public void testSum() {
 		int array[] = { 1, 3, 6, 5 };
-		Assert.assertEquals(9, m.sum(array, 1, 4));
-		Assert.assertEquals(0, m.sum(array, 1, 1));
-		Assert.assertEquals(10, m.sum(array, 0, 4));
-		Assert.assertEquals(3, m.sum(array, 1, 3));
+		int testSumOne = median.sum(array, 1, 4);
+		int testSumTwo = median.sum(array, 1, 1);
+		int testSumTree = median.sum(array, 0, 4);
+		int testSumFour = median.sum(array, 1, 3);
+
+		Assert.assertEquals(9, testSumOne);
+		Assert.assertEquals(0, testSumTwo);
+		Assert.assertEquals(10, testSumTree);
+		Assert.assertEquals(3, testSumFour);
 	}
 
 	/**
@@ -31,8 +36,11 @@ public class MedianTest {
 		int array2[] = { 1, 2, 3, 4, 5 };
 		int array3[] = { 4, 5, 99, -1, 5, 6 };
 
-		Assert.assertEquals(3, m.findMedian(array2));
-		Assert.assertEquals(3, m.findMedian(array3));
+		int testFindingMedianSecondArray = median.findMedian(array2);
+		int testFindingMedianThirdArray = median.findMedian(array3);
+
+		Assert.assertEquals(3, testFindingMedianSecondArray);
+		Assert.assertEquals(3, testFindingMedianThirdArray);
 
 	}
 

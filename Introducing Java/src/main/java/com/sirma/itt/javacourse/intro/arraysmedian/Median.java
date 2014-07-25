@@ -1,6 +1,8 @@
 package com.sirma.itt.javacourse.intro.arraysmedian;
 
 /**
+ * Class contains functions for finding the median of an array
+ * 
  * @author Malvina Makarieva
  */
 public class Median {
@@ -15,17 +17,17 @@ public class Median {
 
 	public int findMedian(int[] array) {
 		int i;
-		int sum1 = 0;
-		int sum2 = 0;
-		float k = 999999;
+		int sumRight = 0;
+		int sumLeft = 0;
+		float differenceBetweenTheTwoSums = 999999;
 		int index = 0;
 		int medIndex = 0;
 
 		for (i = 0; i < array.length - 1; i++) {
-			sum1 = sum(array, 0, index);
-			sum2 = sum(array, index, array.length);
-			if (Math.abs(sum1 - sum2) < k) {
-				k = Math.abs(sum1 - sum2);
+			sumRight = sum(array, 0, index);
+			sumLeft = sum(array, index, array.length);
+			if (Math.abs(sumRight - sumLeft) < differenceBetweenTheTwoSums) {
+				differenceBetweenTheTwoSums = Math.abs(sumRight - sumLeft);
 				medIndex = index;
 
 			}
