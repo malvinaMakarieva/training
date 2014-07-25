@@ -5,7 +5,7 @@ package com.sirma.itt.javacourse.intro.gcd;
  * 
  * @author Malvina Makarieva
  */
-public class GCD {
+public class GreatestCommonDivisor {
 
 	/**
 	 * A public method that calculates greatest common divisor of two numbers entered by the user
@@ -16,7 +16,7 @@ public class GCD {
 	 *            Second enter number from user calculated greatest common divisor
 	 * @return greatest common divisor for two numbers
 	 */
-	public int gcd(int firstNumber, int secondNumber) {
+	public int greatestCommonDivisorCalculation(int firstNumber, int secondNumber) {
 		int bufferNumber;
 
 		while (firstNumber != secondNumber) {

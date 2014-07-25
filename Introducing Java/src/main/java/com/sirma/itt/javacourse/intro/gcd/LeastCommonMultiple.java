@@ -5,7 +5,7 @@ package com.sirma.itt.javacourse.intro.gcd;
  * 
  * @author Malvina Makarieva
  */
-public class LCM {
+public class LeastCommonMultiple {
 
 	/**
 	 * A public method that calculates least common multiple of two numbers entered by the user
@@ -16,9 +16,10 @@ public class LCM {
 	 *            Second enter number from user to calculated least common multiple
 	 * @return least common multiple
 	 */
-	public int lcm(int firstNumber, int secondNumber) {
-		GCD gcd = new GCD();
-
-		return ((firstNumber * secondNumber) / gcd.gcd(firstNumber, secondNumber));
+	public int leastCommonMultipleCalculation(int firstNumber, int secondNumber) {
+		GreatestCommonDivisor gcd = new GreatestCommonDivisor();
+		int calculateGcd = gcd.greatestCommonDivisorCalculation(firstNumber, secondNumber);
+		int leastCommonMultiple = (firstNumber * secondNumber) / calculateGcd;
+		return leastCommonMultiple;
 	}
 }
