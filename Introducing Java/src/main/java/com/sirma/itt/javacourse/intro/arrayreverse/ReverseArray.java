@@ -14,10 +14,9 @@ public class ReverseArray {
 	 *            read the console mass
 	 */
 	public final void reverseElemntsInArray(float array[]) {
-		int i;
 		float leftElememt;
 
-		for (i = 0; i < array.length / 2; i++) {
+		for (int i = 0; i < array.length / 2; i++) {
 			leftElememt = array[i];
 			array[i] = array[(array.length - 1) - i];
 			array[(array.length - 1) - i] = leftElememt;
