@@ -1,14 +1,12 @@
 package com.sirma.itt.javacourse.intro.array;
 
 /**
- * Class that contains three methods for minimum elements of an array, sum of the elements of the
- * array and output array
+ * Class that contains methods for minimum elements of an array, sum of the elements of the array
+ * and output array
  * 
  * @author Malvina Makarieva
  */
 public class Array {
-	int i;
-
 	/**
 	 * A public float method that returns the index of the element with minimum value
 	 * 
@@ -17,9 +15,9 @@ public class Array {
 	 * @return minElement - element with minimum value
 	 */
 	public float getMinElement(float[] array) {
-		float minElement = 100000;
+		float minElement = array[0];
 
-		for (i = 0; i < array.length; i++) {
+		for (int i = 1; i < array.length; i++) {
 			if (array[i] < minElement) {
 				minElement = array[i];
 			}
@@ -36,7 +34,7 @@ public class Array {
 	 */
 	public float sum(float[] array) {
 		float sum = 0;
-		for (i = 0; i < array.length; i++) {
+		for (int i = 0; i < array.length; i++) {
 			sum += array[i];
 		}
 		return sum;
@@ -47,13 +45,13 @@ public class Array {
 	 * 
 	 * @param array
 	 *            array entered by the user, which will search for items
-	 * @return array element in format "[1, 2, 4, 5]"
+	 * @return array element in format "[1, 2, 4, 5,]"
 	 */
 	public String print(float array[]) {
 		String result = "[";
-		for (int i = 0; i < array.length - 1; i++) {
+		for (int i = 0; i < array.length; i++) {
 			result += array[i] + ", ";
 		}
-		return (result += array[array.length - 1] + "]");
+		return result += "]";
 	}
 }

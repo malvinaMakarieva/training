@@ -16,10 +16,20 @@ public class ArrayTest {
 	 */
 	@Test
 	public void testGetMinElement() {
-		Assert.assertEquals(20, testArray.getMinElement(new float[] { 60, 20 }), 0.1);
-		Assert.assertEquals(-10, testArray.getMinElement(new float[] { 20, 30, (-10) }), 0.1);
-		Assert.assertEquals(0, testArray.getMinElement(new float[] { 0, 0, 0, 0 }), 0.1);
-		Assert.assertNotEquals(1, testArray.getMinElement(new float[] { 0, 0, 0, 0, 0, 1 }), 0.1);
+		float[] testArrayOne = new float[] { 60, 20 };
+		float[] testArrayTwo = new float[] { 20, 30, -10f };
+		float[] testArrayTree = new float[] { 0, 0, 0, 0 };
+		float[] testArrayFour = new float[] { 0, 0, 0, 0, 0, 1 };
+
+		float testMinElementOne = testArray.getMinElement(testArrayOne);
+		float testMinElementTwo = testArray.getMinElement(testArrayTwo);
+		float testMinElementTree = testArray.getMinElement(testArrayTree);
+		float testMinElementFour = testArray.getMinElement(testArrayFour);
+
+		Assert.assertEquals(20, testMinElementOne, 0.1);
+		Assert.assertEquals(-10, testMinElementTwo, 0.1);
+		Assert.assertEquals(0, testMinElementTree, 0.1);
+		Assert.assertNotEquals(1, testMinElementFour, 0.1);
 
 	}
 
@@ -28,10 +38,20 @@ public class ArrayTest {
 	 */
 	@Test
 	public void testSum() {
-		Assert.assertEquals(20, testArray.sum(new float[] { 10, 10 }), 0.1);
-		Assert.assertEquals(107, testArray.sum(new float[] { 10, -20, 100, 8, 9 }), 0.1);
-		Assert.assertEquals(32.5, testArray.sum(new float[] { 1, (float) 2.5, 3, 4, 22 }), 0.1);
-		Assert.assertNotEquals(101, testArray.sum(new float[] { 10, 10, 10, 20, 50 }), 0.1);
+		float[] testArrayForSumOne = new float[] { 10, 10 };
+		float[] testArrayForSumTwo = new float[] { 10, -20, 100, 8, 9 };
+		float[] testArrayForSumTree = new float[] { 1, 2.5f, 3, 4, 22 };
+		float[] testArrayForSumFour = new float[] { 10, 10, 10, 20, 50 };
+
+		float testSumOne = testArray.sum(testArrayForSumOne);
+		float testSumTwo = testArray.sum(testArrayForSumTwo);
+		float testSumTree = testArray.sum(testArrayForSumTree);
+		float testSumFour = testArray.sum(testArrayForSumFour);
+
+		Assert.assertEquals(20, testSumOne, 0.1);
+		Assert.assertEquals(107, testSumTwo, 0.1);
+		Assert.assertEquals(32.5, testSumTree, 0.1);
+		Assert.assertNotEquals(101, testSumFour, 0.1);
 	}
 
 	/**
@@ -39,12 +59,17 @@ public class ArrayTest {
 	 */
 	@Test
 	public void testPrint() {
-		Assert.assertEquals("[1.0, 2.5, 3.0, 4.0, 5.0]",
-				testArray.print(new float[] { 1, (float) 2.5, 3, 4, 5 }));
-		Assert.assertEquals("[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]",
-				testArray.print(new float[] { 0, 0, 0, 0, 0, 0 }));
-		Assert.assertEquals("[-7.0, 0.0, 33.0, -105.0]",
-				testArray.print(new float[] { (-7), 0, 33, -105 }));
+		float[] testArrayForPrintOne = new float[] { 1, 2.5f, 3, 4, 5 };
+		float[] testArrayForPrintTwo = new float[] { 0, 0, 0, 0, 0, 0 };
+		float[] testArrayForPrintTree = new float[] { -7, 0, 33, -105 };
+
+		String testPrintOne = testArray.print(testArrayForPrintOne);
+		String testPrintTwo = testArray.print(testArrayForPrintTwo);
+		String testPrintTree = testArray.print(testArrayForPrintTree);
+
+		Assert.assertEquals("[1.0, 2.5, 3.0, 4.0, 5.0, ]", testPrintOne);
+		Assert.assertEquals("[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, ]", testPrintTwo);
+		Assert.assertEquals("[-7.0, 0.0, 33.0, -105.0, ]", testPrintTree);
 
 	}
 }
