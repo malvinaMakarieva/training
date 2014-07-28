@@ -23,7 +23,7 @@ public class LargeNumberTest {
 		String sumOfLargeNumberFour = testLargeNumber.summingLargeNumbers("013", "12");
 		String sumOfLargeNumberFive = testLargeNumber.summingLargeNumbers("13", "02");
 
-		Assert.assertEquals("1254892040790802", sumOfLargeNumberFour);
+		Assert.assertEquals("1254892040790802", sumOfLargeNumberOne);
 		Assert.assertEquals("356625821500", sumOfLargeNumberTwo);
 		Assert.assertEquals("0", sumOfLargeNumberThree);
 		Assert.assertEquals("025", sumOfLargeNumberFour);
