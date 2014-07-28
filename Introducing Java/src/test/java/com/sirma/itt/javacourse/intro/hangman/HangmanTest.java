@@ -16,10 +16,15 @@ public class HangmanTest {
 	 */
 	@Test
 	public void testHideWord() {
-		Assert.assertEquals("****", h.hideWord("java"));
-		Assert.assertEquals("************", h.hideWord("bambambambam"));
-		Assert.assertEquals("****", h.hideWord("JAVA"));
-		Assert.assertEquals("***", h.hideWord("123"));
+		String testJavaWord = h.hideWord("java");
+		String testBamWord = h.hideWord("bambambambam");
+		String testUpercaseJavaWord = h.hideWord("JAVA");
+		String testNumbers = h.hideWord("123");
+
+		Assert.assertEquals("****", testJavaWord);
+		Assert.assertEquals("************", testBamWord);
+		Assert.assertEquals("****", testUpercaseJavaWord);
+		Assert.assertEquals("***", testNumbers);
 	}
 
 	/**
@@ -28,11 +33,17 @@ public class HangmanTest {
 	 */
 	@Test
 	public void testSearchLetterInWord() {
-		Assert.assertEquals("*a*a", h.searchLetterInWord("java", "a", "****"));
-		Assert.assertEquals("**v*", h.searchLetterInWord("java", "v", "****"));
-		Assert.assertEquals("*ava", h.searchLetterInWord("java", "v", "*a*a"));
-		Assert.assertEquals("*aVa", h.searchLetterInWord("java", "V", "*a*a"));
-		Assert.assertEquals("****", h.searchLetterInWord("java", "1", "****"));
+		String testSearchAInJavaWord = h.searchLetterInWord("java", "a", "****");
+		String testSearchVInJavaWord = h.searchLetterInWord("java", "v", "****");
+		String testSearchVInJavaWordWhitA = h.searchLetterInWord("java", "v", "*a*a");
+		String testSearchUpperVInJavaWordWhitA = h.searchLetterInWord("java", "V", "*a*a");
+		String testSearchNumberInWordJava = h.searchLetterInWord("java", "1", "****");
+
+		Assert.assertEquals("*a*a", testSearchAInJavaWord);
+		Assert.assertEquals("**v*", testSearchVInJavaWord);
+		Assert.assertEquals("*ava", testSearchVInJavaWordWhitA);
+		Assert.assertEquals("*aVa", testSearchUpperVInJavaWordWhitA);
+		Assert.assertEquals("****", testSearchNumberInWordJava);
 
 	}
 }

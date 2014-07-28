@@ -59,6 +59,9 @@ public class Game {
 			if (wrongLeters == 6) {
 				System.out.println("Game over! You're dead");
 			}
+			if (userInput != null) {
+				userInput.close();
+			}
 		}
 
 	}
