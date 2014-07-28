@@ -16,9 +16,9 @@ public class GenerateRandomString {
 	 *            size of the string
 	 * @return string of random numbers, uppercase and lowercase characters specified length - n
 	 */
-	public static String generateString(int n) {
+	public String generateString(int n) {
 
-		String characters = "1234567890abcdefghijklmnopqrstuvwxyzABCDIFGHIJKLMPQRSTUVWXYZ";
+		String characters = "1234567890abcdefghijklmnopqrstuvwxyzABCDEIFGHIJKLMOPQRSTUVWXYZ";
 		String result = "";
 
 		for (int i = 0; i < n; i++) {

@@ -14,13 +14,17 @@ public class GenerateRandomStringTest {
 	 */
 	@Test
 	public void testGenerateString() {
-		GenerateRandomString g = new GenerateRandomString();
+		GenerateRandomString grateRandom = new GenerateRandomString();
+		String testStringRandomLenghtEight = grateRandom.generateString(8);
+		String testStringRandomLenghtTwenty = grateRandom.generateString(20);
+		String testStringRandomLenghtZero = grateRandom.generateString(0);
+		String testStringRandomLenghtFifty = grateRandom.generateString(50);
+		String testStringRandomLenghtThirty = grateRandom.generateString(10);
 
-		Assert.assertEquals(8, g.generateString(8).length());
-		Assert.assertEquals(20, g.generateString(20).length());
-		Assert.assertEquals(0, g.generateString(0).length());
-		Assert.assertEquals(50, g.generateString(50).length());
-		Assert.assertNotEquals(30, g.generateString(10).length());
+		Assert.assertEquals(8, testStringRandomLenghtEight.length());
+		Assert.assertEquals(20, testStringRandomLenghtTwenty.length());
+		Assert.assertEquals(0, testStringRandomLenghtZero.length());
+		Assert.assertEquals(50, testStringRandomLenghtFifty.length());
+		Assert.assertNotEquals(30, testStringRandomLenghtThirty.length());
 	}
-
 }

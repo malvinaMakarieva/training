@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class Run {
 	/**
-	 * Main netoda read from the console and execute the method generateString(int n).
+	 * Main metoda read from the console and execute the method generateString(int n).
 	 * 
 	 * @param args
 	 */
@@ -20,7 +20,11 @@ public class Run {
 		int length = input.nextInt();
 
 		GenerateRandomString gs = new GenerateRandomString();
-		System.out.println("Random string is " + GenerateRandomString.generateString(length));
+		String randomString = gs.generateString(length);
+		System.out.println("Random string is " + randomString);
+		if (input != null) {
+			input.close();
+		}
 	}
 
 }
