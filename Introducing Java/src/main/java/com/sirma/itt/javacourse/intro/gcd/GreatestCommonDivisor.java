@@ -1,5 +1,6 @@
 package com.sirma.itt.javacourse.intro.gcd;
 
+
 /**
  * This class contains the function for greatest common divisor
  * 
