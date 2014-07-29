@@ -19,21 +19,22 @@ public class Median {
 		int i;
 		int sumRight = 0;
 		int sumLeft = 0;
-		float differenceBetweenTheTwoSums = 999999;
+		float differenceBetweenTheTwoSums = sum(array, 0, array.length);
 		int index = 0;
-		int medIndex = 0;
+		int medianIndex = 0;
+		float absSubtraction = 0;
 
 		for (i = 0; i < array.length - 1; i++) {
 			sumRight = sum(array, 0, index);
-			sumLeft = sum(array, index, array.length);
-			if (Math.abs(sumRight - sumLeft) < differenceBetweenTheTwoSums) {
-				differenceBetweenTheTwoSums = Math.abs(sumRight - sumLeft);
-				medIndex = index;
-
+			sumLeft = sum(array, index + 1, array.length);
+			absSubtraction = Math.abs(sumRight - sumLeft);
+			if (absSubtraction < differenceBetweenTheTwoSums) {
+				differenceBetweenTheTwoSums = absSubtraction;
+				medianIndex = index;
 			}
 			index++;
 		}
-		return medIndex++;
+		return medianIndex++;
 	}
 
 	/**
@@ -51,7 +52,7 @@ public class Median {
 	public int sum(int array[], int start, int finish) {
 		int sum = 0;
 		int i = 0;
-		for (i = start; i < finish - 1; i++) {
+		for (i = start; i < finish; i++) {
 			sum += array[i];
 		}
 		return sum;

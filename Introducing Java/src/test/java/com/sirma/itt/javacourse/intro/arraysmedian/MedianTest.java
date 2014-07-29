@@ -16,16 +16,18 @@ public class MedianTest {
 	 */
 	@Test
 	public void testSum() {
-		int array[] = { 1, 3, 6, 5 };
-		int testSumOne = median.sum(array, 1, 4);
-		int testSumTwo = median.sum(array, 1, 1);
-		int testSumTree = median.sum(array, 0, 4);
-		int testSumFour = median.sum(array, 1, 3);
+		int testaArray[] = { 1, 3, 6, 5 };
 
-		Assert.assertEquals(9, testSumOne);
-		Assert.assertEquals(0, testSumTwo);
-		Assert.assertEquals(10, testSumTree);
-		Assert.assertEquals(3, testSumFour);
+		int testSumOne = median.sum(testaArray, 0, 0);
+		int testSumTwo = median.sum(testaArray, 1, 4);
+		int testSumTree = median.sum(testaArray, 0, 2);
+		int testSumFour = median.sum(testaArray, 1, 3);
+
+		Assert.assertEquals(0, testSumOne);
+		Assert.assertEquals(14, testSumTwo);
+		Assert.assertEquals(4, testSumTree);
+		Assert.assertEquals(9, testSumFour);
+
 	}
 
 	/**
@@ -33,14 +35,14 @@ public class MedianTest {
 	 */
 	@Test
 	public void testFindMedian() {
-		int array2[] = { 1, 2, 3, 4, 5 };
-		int array3[] = { 4, 5, 99, -1, 5, 6 };
+		int testArray2[] = { 1, 2, 3, 4, 5 };
+		int testArray3[] = { 7, 6, -8, 2, 6, 4, 3 };
 
-		int testFindingMedianSecondArray = median.findMedian(array2);
-		int testFindingMedianThirdArray = median.findMedian(array3);
+		int testFindingMedianSecondArray = median.findMedian(testArray2);
+		int testFindingMedianThirdArray = median.findMedian(testArray3);
 
 		Assert.assertEquals(3, testFindingMedianSecondArray);
-		Assert.assertEquals(3, testFindingMedianThirdArray);
+		Assert.assertEquals(1, testFindingMedianThirdArray);
 
 	}
 
