@@ -1,7 +1,5 @@
 package com.sirma.itt.javacourse.intro.array;
 
-import java.util.Scanner;
-
 /**
  * Class that run methods from Array class
  * 
@@ -15,21 +13,11 @@ public class RunArrayFunction {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int element = 0;
-
-		Scanner input = new Scanner(System.in);
-		System.out.print("Length of array = ");
-		int length = input.nextInt();
-
-		float[] array = new float[length];
-
-		for (int i = 0; i < length; i++) {
-			System.out.print("array[" + i + "] = ");
-			element = input.nextInt();
-			array[i] = element;
-		}
+		float array[];
 
 		Array arrayFunction = new Array();
+
+		array = arrayFunction.readArrayFromConsolFloat();
 
 		System.out.println("Array elemets are " + arrayFunction.print(array));
 
@@ -37,9 +25,6 @@ public class RunArrayFunction {
 
 		System.out.println("Sum is " + arrayFunction.sum(array));
 
-		if (input != null) {
-			input.close();
-		}
 	}
 
 }
