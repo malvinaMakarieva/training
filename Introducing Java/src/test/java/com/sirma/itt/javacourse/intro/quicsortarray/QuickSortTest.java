@@ -8,18 +8,28 @@ import org.junit.Test;
  */
 public class QuickSortTest {
 	QuickSort qs = new QuickSort();
-	int[] arr = { 2, 8, 6, 4 };
+	int[] testArrayNoSort = { 2, 8, 6, 4 };
+	int[] arr = { 5, 20, -45, 0, 35 };
 
 	@Test
 	public void testPartition() {
-		Assert.assertEquals(3, qs.partition(arr, 0, 3));
-		Assert.assertEquals(3, qs.partition(arr, 1, 3));
-		Assert.assertEquals(2, qs.partition(arr, 0, 2));
-		Assert.assertEquals(3, qs.partition(arr, 2, 3));
+		int tetsPartOne = qs.partition(testArrayNoSort, 0, 3);
+		int testPartTwo = qs.partition(testArrayNoSort, 1, 3);
+		int testPartThree = qs.partition(testArrayNoSort, 0, 2);
+		int testPartFoure = qs.partition(testArrayNoSort, 2, 3);
+
+		Assert.assertEquals(3, tetsPartOne);
+		Assert.assertEquals(3, testPartTwo);
+		Assert.assertEquals(2, testPartThree);
+		Assert.assertEquals(3, testPartFoure);
 	}
 
 	@Test
 	public void testPrint() {
-		Assert.assertEquals("[2, 8, 6, 4]", qs.print(arr));
+		String testPrintSortArray = qs.print(testArrayNoSort);
+		Assert.assertEquals("[2 8 6 4 ]", testPrintSortArray);
+
+		String testPrintSortArrayTwo = qs.print(arr);
+		Assert.assertEquals("[5 20 -45 0 35 ]", testPrintSortArrayTwo);
 	}
 }

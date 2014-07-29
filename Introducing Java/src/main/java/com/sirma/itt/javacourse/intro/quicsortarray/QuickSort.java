@@ -1,35 +1,35 @@
 package com.sirma.itt.javacourse.intro.quicsortarray;
 
 /**
- * Class that contains three methods. some sort of parts of the array, a recursive call of the
- * method for sorting and ordering one array.
+ * Class that contains methods - some sort of parts of the array, a recursive call of the method for
+ * sorting and ordering one array.
  * 
  * @author Malvina Makarieva
  */
 public class QuickSort {
 	/**
-	 * @param arr
+	 * @param imputArray
 	 *            input array form user
-	 * @param left
+	 * @param leftIndex
 	 *            index of left element
-	 * @param right
+	 * @param rightIndex
 	 *            index of right element
 	 * @return index of left margin
 	 */
-	int partition(int arr[], int left, int right) {
-		int i = left, j = right;
+	int partition(int imputArray[], int leftIndex, int rightIndex) {
+		int i = leftIndex, j = rightIndex;
 		int tmp;
-		int pivot = arr[(left + right) / 2];
+		int pivot = imputArray[(leftIndex + rightIndex) / 2];
 
 		while (i <= j) {
-			while (arr[i] < pivot)
+			while (imputArray[i] < pivot)
 				i++;
-			while (arr[j] > pivot)
+			while (imputArray[j] > pivot)
 				j--;
 			if (i <= j) {
-				tmp = arr[i];
-				arr[i] = arr[j];
-				arr[j] = tmp;
+				tmp = imputArray[i];
+				imputArray[i] = imputArray[j];
+				imputArray[j] = tmp;
 				i++;
 				j--;
 			}
@@ -40,19 +40,19 @@ public class QuickSort {
 	/**
 	 * Recursively invokes sorting
 	 * 
-	 * @param arr
+	 * @param array
 	 *            input array from user
 	 * @param left
 	 *            index of first element form array.
 	 * @param right
 	 *            index of last element from array.
 	 */
-	public void quickSort(int arr[], int left, int right) {
-		int index = partition(arr, left, right);
+	public void quickSort(int array[], int left, int right) {
+		int index = partition(array, left, right);
 		if (left < index - 1)
-			quickSort(arr, left, index - 1);
+			quickSort(array, left, index - 1);
 		if (index < right)
-			quickSort(arr, index, right);
+			quickSort(array, index, right);
 	}
 
 	/**
@@ -60,13 +60,13 @@ public class QuickSort {
 	 *
 	 * @param array
 	 *            array entered by the user, which will search for items
-	 * @return array element in format "[1, 2, 4, 5]"
+	 * @return array element in format "[1 2 4 5]"
 	 */
 	public String print(int array[]) {
 		String result = "[";
-		for (int i = 0; i < array.length - 1; i++) {
-			result += array[i] + ", ";
+		for (int i = 0; i < array.length; i++) {
+			result += array[i] + " ";
 		}
-		return (result += array[array.length - 1] + "]");
+		return result += "]";
 	}
 }
