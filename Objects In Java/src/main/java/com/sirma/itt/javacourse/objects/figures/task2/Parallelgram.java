@@ -13,7 +13,7 @@ public class Parallelgram extends Rectangle {
 	/**
 	 * Default constructor
 	 */
-	Parallelgram() {
+	public Parallelgram() {
 
 	}
 
@@ -27,7 +27,7 @@ public class Parallelgram extends Rectangle {
 	 * @param currentSecondAngle
 	 *            top right corner.
 	 */
-	Parallelgram(Rectangle basisRect, float currentFirstAngle, float currentSecondAngle) {
+	public Parallelgram(Rectangle basisRect, float currentFirstAngle, float currentSecondAngle) {
 		this.a = basisRect;
 		this.firstAngle = currentFirstAngle;
 		this.secondAngle = currentSecondAngle;
