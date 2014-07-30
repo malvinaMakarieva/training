@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class Game {
 	/**
-	 * Method describes the whole game using methods of class Nangmen. It describes the conditions
+	 * Method describes the whole game using methods of class Hangmen. It describes the conditions
 	 * for the lodge and the loss of the player.
 	 */
 	public void play() {
@@ -46,11 +46,8 @@ public class Game {
 			}
 			lives = 6 - wrongLeters;
 			starWord = h.searchLetterInWord(secretWord, letter, starWord);
-			System.out.println("Word: " + starWord);
-			System.out.println("Guess: " + guessingLetters);
-			System.out.println("Misses: " + misses);
-			System.out.println("Lives: " + lives);
-
+			generateGameInfo(secretWord, temporaryStarWord, wrongLeters, guessingLetters, misses,
+					lives);
 			if (secretWord.compareToIgnoreCase(starWord) == 0) {
 				System.out.println("Game over! You're a winner!!!");
 				break;
@@ -59,10 +56,34 @@ public class Game {
 			if (wrongLeters == 6) {
 				System.out.println("Game over! You're dead");
 			}
-			if (userInput != null) {
-				userInput.close();
-			}
-		}
 
+		}
+		if (userInput != null) {
+			userInput.close();
+		}
+	}
+
+	/**
+	 * Method that generate information about status in a game.
+	 * 
+	 * @param secretWord
+	 *            word randomly generate by function chooseRandomWord() form class Hangman.
+	 * @param starWord
+	 *            word with ****
+	 * @param wrongLeters
+	 *            string from wrong letters entered by user.
+	 * @param guessingLetters
+	 *            string from guessing letter.
+	 * @param misses
+	 *            string from wrong letter.
+	 * @param lives
+	 *            user gets 6 life with the launch of the game. any error loses one life
+	 */
+	public void generateGameInfo(String secretWord, String starWord, int wrongLeters,
+			String guessingLetters, String misses, int lives) {
+		System.out.println("Word: " + starWord);
+		System.out.println("Guess: " + guessingLetters);
+		System.out.println("Misses: " + misses);
+		System.out.println("Lives: " + lives);
 	}
 }

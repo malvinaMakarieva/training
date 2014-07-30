@@ -3,11 +3,13 @@ package com.sirma.itt.javacourse.intro.hangman;
 import java.util.Random;
 
 /**
- * class that has three methods are then called in class Game
+ * Class that contains methods for game performance
  * 
  * @author Malvina Makarieva
  */
 public class Hangman {
+	private final String[] allWords = { "java", "moon", "eclipse", "luna", "kepler" };
+
 	/**
 	 * A method method returns a random word from an array of predefined words.
 	 * 
@@ -15,10 +17,8 @@ public class Hangman {
 	 */
 	public String chooseRandomWord() {
 		int index = -1;
-		String[] allWords = { "java", "moon", "eclipse", "luna", "kepler" };
 		Random randmWord = new Random();
 		index = randmWord.nextInt(allWords.length);
-		// System.out.println("++++Hint++++  " + allWords[index] + " +++Hint+++");
 		return allWords[index];
 	}
 
