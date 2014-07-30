@@ -1,7 +1,5 @@
 package com.sirma.itt.javacourse.intro.arrayreverse;
 
-import java.util.Scanner;
-
 import com.sirma.itt.javacourse.intro.array.Array;
 
 /**
@@ -17,33 +15,16 @@ public class RunReverse {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int i;
-		int element = 0;
 
-		Scanner input = new Scanner(System.in);
-		System.out.print("Length of array = ");
-		int length = input.nextInt();
+		ReverseArray arrayReverseFunction = new ReverseArray();
+		Array arrayPrintFunction = new Array();
+		float inputArray[];
+		inputArray = arrayPrintFunction.readArrayFromConsolFloat();
 
-		float[] array = new float[length];
-
-		for (i = 0; i < length; i++) {
-			System.out.print("array[" + i + "] = ");
-			element = input.nextInt();
-			array[i] = element;
-		}
-
-		ReverseArray arrayFunction = new ReverseArray();
-		Array p = new Array();
-
-		String inputElements = p.print(array);
+		String inputElements = arrayPrintFunction.print(inputArray);
 		System.out.println("Array elemets are " + inputElements);
-		arrayFunction.reverseElemntsInArray(array);
-		String reversElements = p.print(array);
+		arrayReverseFunction.reverseElemntsInArray(inputArray);
+		String reversElements = arrayPrintFunction.print(inputArray);
 		System.out.println("Exchanged elements of the array looks like " + reversElements);
-
-		if (input != null) {
-			input.close();
-		}
-
 	}
 }
