@@ -57,10 +57,10 @@ public class PolyLine extends Point {
 	 */
 	public String print(Point array[]) {
 		String result = "[";
-		for (int i = 0; i < array.length - 1; i++) {
-			result += array[i] + ", ";
+		for (int i = 0; i < array.length; i++) {
+			result += array[i] + " ";
 		}
-		return (result += array[array.length - 1] + "]");
+		return (result += "]");
 	}
 
 	/**
