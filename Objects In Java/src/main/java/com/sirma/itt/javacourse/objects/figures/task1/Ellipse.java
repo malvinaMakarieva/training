@@ -7,8 +7,8 @@ package com.sirma.itt.javacourse.objects.figures.task1;
  */
 public class Ellipse extends Circle {
 	Point a;
-	float radius1;
-	float radius2;
+	float firstRadius;
+	float secondRadius;
 
 	/**
 	 * Default constructor.
@@ -28,8 +28,8 @@ public class Ellipse extends Circle {
 	 */
 	Ellipse(Point point, float firstRadius, float secondRadius) {
 		this.a = point;
-		this.radius1 = firstRadius;
-		this.radius2 = secondRadius;
+		this.firstRadius = firstRadius;
+		this.secondRadius = secondRadius;
 	}
 
 	public Point getA() {
@@ -41,19 +41,19 @@ public class Ellipse extends Circle {
 	}
 
 	public float getRadius1() {
-		return radius1;
+		return firstRadius;
 	}
 
 	public void setRadius1(float radius1) {
-		this.radius1 = radius1;
+		this.firstRadius = radius1;
 	}
 
 	public float getRadius2() {
-		return radius2;
+		return secondRadius;
 	}
 
 	public void setRadius2(float radius2) {
-		this.radius2 = radius2;
+		this.secondRadius = radius2;
 	}
 
 	/**
@@ -61,8 +61,8 @@ public class Ellipse extends Circle {
 	 */
 	private void drow() {
 		System.out.println("Ellipse point is " + a);
-		System.out.println("Ellipse first radius is " + radius1);
-		System.out.println("Ellipse second radius is " + radius2);
+		System.out.println("Ellipse first radius is " + firstRadius);
+		System.out.println("Ellipse second radius is " + secondRadius);
 
 	}
 }

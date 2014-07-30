@@ -1,7 +1,7 @@
 package com.sirma.itt.javacourse.objects.figures.task1;
 
 /**
- * Class represents the data needed to draw the circle and constructors .
+ * Class represents the data needed to draw the circle and constructors.
  * 
  * @author Malvina Makarieva
  */
