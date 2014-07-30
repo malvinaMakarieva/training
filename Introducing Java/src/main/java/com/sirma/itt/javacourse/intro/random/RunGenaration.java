@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 
  * @author Malvina Makarieva
  */
-public class Run {
+public class RunGenaration {
 	/**
 	 * Main metoda read from the console and execute the method generateString(int n).
 	 * 
@@ -15,15 +15,15 @@ public class Run {
 	 */
 	public static void main(String[] args) {
 
-		Scanner input = new Scanner(System.in);
+		Scanner userInput = new Scanner(System.in);
 		System.out.print("Length of string = ");
-		int length = input.nextInt();
+		int length = userInput.nextInt();
 
 		GenerateRandomString gs = new GenerateRandomString();
 		String randomString = gs.generateString(length);
 		System.out.println("Random string is " + randomString);
-		if (input != null) {
-			input.close();
+		if (userInput != null) {
+			userInput.close();
 		}
 	}
 

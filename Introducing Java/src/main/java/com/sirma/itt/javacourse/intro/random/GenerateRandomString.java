@@ -1,16 +1,11 @@
 package com.sirma.itt.javacourse.intro.random;
 
-import java.util.Random;
-
 /**
  * Class which contains a method of randomly generating a string of a given length
  * 
  * @author Malvina Makarieva
  */
 public class GenerateRandomString {
-
-	private static Random random = new Random();
-
 	/**
 	 * @param n
 	 *            size of the string
@@ -20,12 +15,13 @@ public class GenerateRandomString {
 
 		String characters = "1234567890abcdefghijklmnopqrstuvwxyzABCDEIFGHIJKLMOPQRSTUVWXYZ";
 		String result = "";
+		int lenftOfCharecters = characters.length();
 
 		for (int i = 0; i < n; i++) {
-			result += characters.charAt(random.nextInt(characters.length()));
+			int randomSymbol = (int) (Math.random() * lenftOfCharecters);
+			result += characters.charAt(randomSymbol);
 		}
 
 		return result;
 	}
-
 }
