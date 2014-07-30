@@ -4,10 +4,15 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 /**
+ * class that has various functions for summing
+ * 
  * @author Malvina Makarieva
  */
 public class Sumator {
+
 	/**
+	 * Method collects two numbers of type int.
+	 * 
 	 * @param a
 	 *            integer entered by the user
 	 * @param b
@@ -18,10 +23,11 @@ public class Sumator {
 		int sum = 0;
 		sum = a + b;
 		return sum;
-
 	}
 
 	/**
+	 * Method collects two numbers of type float.
+	 * 
 	 * @param a
 	 *            float entered by the user
 	 * @param b
@@ -35,11 +41,13 @@ public class Sumator {
 	}
 
 	/**
+	 * Method collects two numbers of type double.
+	 * 
 	 * @param a
 	 *            double entered by the user
 	 * @param b
 	 *            double entered by the user
-	 * @return the sum of a and b in doubele format
+	 * @return the sum of a and b in double format
 	 */
 	public double sum(double a, double b) {
 		double sum = 0.0;
@@ -48,6 +56,8 @@ public class Sumator {
 	}
 
 	/**
+	 * Method collects two numbers of type String.
+	 * 
 	 * @param a
 	 *            String entered by the user
 	 * @param b
@@ -88,6 +98,15 @@ public class Sumator {
 		return result;
 	}
 
+	/**
+	 * Method collects two numbers of type BigInteger.
+	 * 
+	 * @param a
+	 *            BigInteger entered by the user
+	 * @param b
+	 *            BigInteger entered by the user
+	 * @return the sum of a and b in BigInteger format
+	 */
 	public BigInteger sum(BigInteger a, BigInteger b) {
 		BigInteger sum = BigInteger.ZERO;
 		sum = sum.add(a);
@@ -95,6 +114,15 @@ public class Sumator {
 		return sum;
 	}
 
+	/**
+	 * Method collects two numbers of type BigDecimal.
+	 * 
+	 * @param a
+	 *            BigDecemal entered by the user
+	 * @param b
+	 *            BigDecemal entered by the user
+	 * @return the sum of a and b in BigDecimal format
+	 */
 	public BigDecimal sum(BigDecimal a, BigDecimal b) {
 		BigDecimal sum = BigDecimal.ZERO;
 		sum = sum.add(a);

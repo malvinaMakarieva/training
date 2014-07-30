@@ -3,8 +3,17 @@ package com.sirma.itt.javacourse.objects.sumator;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-public class Run {
-
+/**
+ * Class to carry out the methods of the class Sumator
+ * 
+ * @author Malvina Makarieva
+ */
+public class RunSumming {
+	/**
+	 * Method that runs all methods form class Sumator
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		Sumator s = new Sumator();
@@ -24,13 +33,11 @@ public class Run {
 
 		BigInteger a = new BigInteger("9900");
 		BigInteger b = new BigInteger("20165421");
-
 		BigInteger sumBigInt = s.sum(a, b);
 		System.out.println("Sum in BigInteger is " + sumBigInt);
 
 		BigDecimal a1 = new BigDecimal("9900.089");
 		BigDecimal b2 = new BigDecimal("20165421.786");
-
 		BigDecimal sumBigDecimal = s.sum(a1, b2);
 		System.out.printf("Sum in BigDecimal is " + "%.5f", sumBigDecimal);
 	}
