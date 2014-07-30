@@ -1,5 +1,6 @@
 package com.sirma.itt.javacourse.intro.sumlargenumbers;
 
+
 /**
  * A class that contains a method for summing large numbers. They are read from the console and
  * recorded in strings
@@ -50,6 +51,5 @@ public class LargeNumber {
 			result = String.valueOf(transfer) + result;
 		}
 		return result;
-
 	}
 }

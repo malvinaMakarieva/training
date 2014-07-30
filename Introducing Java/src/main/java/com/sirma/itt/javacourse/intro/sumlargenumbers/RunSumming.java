@@ -16,19 +16,19 @@ public class RunSumming {
 	 */
 	public static void main(String[] args) {
 
-		Scanner input = new Scanner(System.in);
+		Scanner userInput = new Scanner(System.in);
 		System.out.print("Firs large number  = ");
-		String firstNumber = input.next();
+		String firstNumber = userInput.next();
 
 		System.out.print("Second large number  = ");
-		String secondNumber = input.next();
+		String secondNumber = userInput.next();
 
 		LargeNumber largeNumber = new LargeNumber();
 		String sum = largeNumber.summingLargeNumbers(firstNumber, secondNumber);
 		System.out.println("Sum is " + sum);
 
-		if (input != null) {
-			input.close();
+		if (userInput != null) {
+			userInput.close();
 		}
 
 	}
