@@ -13,6 +13,25 @@ public class HomogeneusTree<T> {
 	private Node<T> root;
 
 	/**
+	 * Getter method for root.
+	 *
+	 * @return the root
+	 */
+	public Node<T> getRoot() {
+		return root;
+	}
+
+	/**
+	 * Setter method for root.
+	 *
+	 * @param root
+	 *            the root to set
+	 */
+	public void setRoot(Node<T> root) {
+		this.root = root;
+	}
+
+	/**
 	 * Constructor
 	 * 
 	 * @param rootData

@@ -14,16 +14,14 @@ import java.util.List;
 public class Node<T> {
 	private T data;
 	private Node<T> parent;
-	private List<Node<T>> children;
+	private ArrayList<Node<T>> children;
 
 	/**
-	 * Constructor of class Node.
-	 * 
-	 * @param dataType
-	 *            type of data in tree.
+	 * @param data
+	 *            data of element in Tree
 	 */
-	public Node(T dataType) {
-		this.data = dataType;
+	public Node(T data) {
+		this.data = data;
 	}
 
 	/**
@@ -84,12 +82,12 @@ public class Node<T> {
 	}
 
 	/**
-	 * Add child in tree
+	 * Add node in tree
 	 * 
 	 * @param child
-	 *            new child in tree
+	 *            every node in tree without root
 	 */
-	public void add(Node<T> child) {
+	public void addNode(Node<T> child) {
 		children.add(child);
 		child.setParent(this);
 	}
