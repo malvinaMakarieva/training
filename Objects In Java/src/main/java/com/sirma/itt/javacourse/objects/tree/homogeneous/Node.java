@@ -1,7 +1,6 @@
 package com.sirma.itt.javacourse.objects.tree.homogeneous;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Class describes a node of the tree
@@ -67,7 +66,7 @@ public class Node<T> {
 	 *
 	 * @return the children
 	 */
-	public List<Node<T>> getChildren() {
+	public ArrayList<Node<T>> getChildren() {
 		return children;
 	}
 
