@@ -67,9 +67,9 @@ public class ArrayTest {
 		String testPrintTwo = testArray.print(testArrayForPrintTwo);
 		String testPrintTree = testArray.print(testArrayForPrintTree);
 
-		Assert.assertEquals("[1.0, 2.5, 3.0, 4.0, 5.0, ]", testPrintOne);
-		Assert.assertEquals("[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, ]", testPrintTwo);
-		Assert.assertEquals("[-7.0, 0.0, 33.0, -105.0, ]", testPrintTree);
+		Assert.assertEquals("[1.0 2.5 3.0 4.0 5.0 ]", testPrintOne);
+		Assert.assertEquals("[0.0 0.0 0.0 0.0 0.0 0.0 ]", testPrintTwo);
+		Assert.assertEquals("[-7.0 0.0 33.0 -105.0 ]", testPrintTree);
 
 	}
 }
