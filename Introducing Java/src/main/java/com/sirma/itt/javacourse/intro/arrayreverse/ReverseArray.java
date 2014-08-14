@@ -12,8 +12,9 @@ public class ReverseArray {
 	 * 
 	 * @param inputArray
 	 *            read the console mass
+	 * @return
 	 */
-	public void reverseElemntsInArray(float inputArray[]) {
+	public float[] reverseElemntsInArray(float inputArray[]) {
 		float leftElememt;
 
 		for (int i = 0; i < inputArray.length / 2; i++) {
@@ -21,7 +22,7 @@ public class ReverseArray {
 			inputArray[i] = inputArray[(inputArray.length - 1) - i];
 			inputArray[(inputArray.length - 1) - i] = leftElememt;
 		}
-
+		return inputArray;
 	}
 
 }

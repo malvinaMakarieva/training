@@ -1,5 +1,8 @@
 package com.sirma.itt.javacourse.intro.arrayreverse;
 
+import java.util.Arrays;
+
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -12,22 +15,18 @@ public class ReverseArrayTest {
 	 * Method, testing the functionality of the method reverseElementInArray.
 	 */
 
-	ReverseArray r = new ReverseArray();
+	ReverseArray transformationArray = new ReverseArray();
 
 	@Test
 	public void testReverseElemntsInArray() {
 
-		float arr[] = { 1, 2, 3, 4 };
-		float resultArray[] = { 4, 3, 2, 1 };
-		r.reverseElemntsInArray(arr);
+		float testInputArray[] = { 1, 2, 3, 4 };
+		float testResultArray[] = { 4.0f, 3.0f, 2.0f, 1.0f };
 
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[i] == resultArray[i]) {
-				System.out.println("good");
-			} else {
-				System.out.println("fail");
-			}
-		}
+		boolean arrayEquals;
+		arrayEquals = Arrays.equals(transformationArray.reverseElemntsInArray(testInputArray),
+				testResultArray);
+		Assert.assertTrue(arrayEquals);
 
 	}
 }
