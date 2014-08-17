@@ -18,12 +18,12 @@ public class RunSearchMedian {
 
 		Array ar = new Array();
 		int array[];
-		array = ar.readArrayFromConsol();
+		array = ar.readArrayFromConsolå();
 
 		Median center = new Median();
-		int idexOfArrayMedian = center.findMedian(array);
-		System.out.println("Median is element " + array[idexOfArrayMedian] + " (with index "
-				+ idexOfArrayMedian + ")");
+		int indexOfArrayMedian = center.findMedian(array);
+		System.out.println("Median is element " + array[indexOfArrayMedian] + " (with index "
+				+ indexOfArrayMedian + ")");
 	}
 
 }

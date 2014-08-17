@@ -27,8 +27,8 @@ public class Median {
 		for (i = 0; i < array.length - 1; i++) {
 			sumRight = sum(array, 0, index);
 			sumLeft = sum(array, index + 1, array.length);
-			absSubtraction = Math.abs(sumRight - sumLeft);
-			if (absSubtraction < differenceBetweenTheTwoSums) {
+			absSubtraction = Math.abs(sumLeft - sumRight);
+			if (absSubtraction <= differenceBetweenTheTwoSums) {
 				differenceBetweenTheTwoSums = absSubtraction;
 				medianIndex = index;
 			}
