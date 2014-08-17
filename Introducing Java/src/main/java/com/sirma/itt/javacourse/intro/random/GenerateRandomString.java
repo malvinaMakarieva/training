@@ -7,6 +7,8 @@ package com.sirma.itt.javacourse.intro.random;
  */
 public class GenerateRandomString {
 	/**
+	 * Method generates a random string of characters specified length
+	 * 
 	 * @param n
 	 *            size of the string
 	 * @return string of random numbers, uppercase and lowercase characters specified length - n
