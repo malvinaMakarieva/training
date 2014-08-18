@@ -13,9 +13,9 @@ public class Game {
 	 * for the lodge and the loss of the player.
 	 */
 	public void play() {
-		Hangman h = new Hangman();
-		String secretWord = h.chooseRandomWord();
-		String starWord = h.hideWord(secretWord);
+		Hangman hamgmanFunction = new Hangman();
+		String secretWord = hamgmanFunction.chooseRandomWord();
+		String starWord = hamgmanFunction.hideWord(secretWord);
 		Scanner userInput = new Scanner(System.in);
 		String letter = "";
 		String guessingLetters = "";
@@ -30,9 +30,9 @@ public class Game {
 			System.out.print("Input a char ");
 			letter = userInput.next();
 
-			h.searchLetterInWord(secretWord, letter, starWord);
+			hamgmanFunction.searchLetterInWord(secretWord, letter, starWord);
 
-			temporaryStarWord = h.searchLetterInWord(secretWord, letter, starWord);
+			temporaryStarWord = hamgmanFunction.searchLetterInWord(secretWord, letter, starWord);
 			if (temporaryStarWord.equals(starWord)) {
 				wrongLeters++;
 				misses += letter + " ";
@@ -45,7 +45,7 @@ public class Game {
 
 			}
 			lives = 6 - wrongLeters;
-			starWord = h.searchLetterInWord(secretWord, letter, starWord);
+			starWord = hamgmanFunction.searchLetterInWord(secretWord, letter, starWord);
 			generateGameInfo(secretWord, temporaryStarWord, wrongLeters, guessingLetters, misses,
 					lives);
 			if (secretWord.compareToIgnoreCase(starWord) == 0) {
