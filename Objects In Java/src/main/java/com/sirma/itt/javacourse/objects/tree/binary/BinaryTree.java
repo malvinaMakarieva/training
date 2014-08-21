@@ -77,6 +77,7 @@ public class BinaryTree {
 	 * Print elements of the tree in this order - left successor, root, right successor.
 	 * 
 	 * @param node
+	 *            data on one node on tree
 	 */
 	public void print(BinaryNode node) {
 		if (node == null) {
