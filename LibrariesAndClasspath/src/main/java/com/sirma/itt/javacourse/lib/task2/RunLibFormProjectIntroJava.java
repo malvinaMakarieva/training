@@ -6,7 +6,5 @@ public class RunLibFormProjectIntroJava {
 
 	public static void main(String[] args) {
 		RunArrayFunction.main(args);
-
 	}
-
 }
