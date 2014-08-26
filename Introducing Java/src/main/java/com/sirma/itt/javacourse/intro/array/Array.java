@@ -62,7 +62,7 @@ public class Array {
 	 * 
 	 * @return array of int value.
 	 */
-	public int[] readArrayFromConsolå() {
+	public int[] readArrayFromConsole() {
 		int i;
 		int element = 0;
 

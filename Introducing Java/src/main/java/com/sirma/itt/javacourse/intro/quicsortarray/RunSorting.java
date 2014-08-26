@@ -19,7 +19,7 @@ public class RunSorting {
 
 		Array arrayFunction = new Array();
 		int[] inputArray;
-		inputArray = arrayFunction.readArrayFromConsolå();
+		inputArray = arrayFunction.readArrayFromConsole();
 
 		QuickSort sort = new QuickSort();
 

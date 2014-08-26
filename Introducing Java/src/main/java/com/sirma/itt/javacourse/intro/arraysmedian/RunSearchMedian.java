@@ -18,7 +18,7 @@ public class RunSearchMedian {
 
 		Array ar = new Array();
 		int array[];
-		array = ar.readArrayFromConsolå();
+		array = ar.readArrayFromConsole();
 
 		Median center = new Median();
 		int indexOfArrayMedian = center.findMedian(array);
