@@ -36,14 +36,13 @@ public class MedianTest {
 	@Test
 	public void testFindMedian() {
 		int testArray2[] = { 1, 2, 3, 4, 5 };
-		int testArray3[] = { 7, 6, -8, 2, 6, 4, 3 };
+		int testArray3[] = { 7, 6, -8, 2, 6, 4 };
 
 		int testFindingMedianSecondArray = median.findMedian(testArray2);
 		int testFindingMedianThirdArray = median.findMedian(testArray3);
 
 		Assert.assertEquals(3, testFindingMedianSecondArray);
-		Assert.assertEquals(1, testFindingMedianThirdArray);
-
+		Assert.assertEquals(2, testFindingMedianThirdArray);
 	}
 
 }
