@@ -24,29 +24,29 @@
   <class id="3" language="java" name="com.sirma.itt.javacourse.objects.figures.task3.PolyLine" project="Objects In Java" 
     file="/Objects In Java/src/main/java/com/sirma/itt/javacourse/objects/figures/task3/PolyLine.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="319" y="577"/>    
+    <position height="-1" width="-1" x="321" y="574"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="4">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <generalization id="5">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <association id="6">    
+  <association id="4">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="7" name="allPoints"/>      
-      <multiplicity id="8" minimum="0" maximum="2147483647"/>    
+      <attribute id="5" name="allPoints"/>      
+      <multiplicity id="6" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <generalization id="7">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="8">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

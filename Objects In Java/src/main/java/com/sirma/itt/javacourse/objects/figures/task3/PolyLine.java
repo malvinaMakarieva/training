@@ -32,18 +32,38 @@ public class PolyLine extends Point {
 		this.allPoints = currentpoints;
 	}
 
+	/**
+	 * Getter method for pointsNumber.
+	 *
+	 * @return the pointsNumber
+	 */
 	public int getPointsNumber() {
 		return pointsNumber;
 	}
 
+	/**
+	 * Setter method for pointsNumber.
+	 *
+	 * @param pointsNumber the pointsNumber to set
+	 */
 	public void setPointsNumber(int pointsNumber) {
 		this.pointsNumber = pointsNumber;
 	}
 
+	/**
+	 * Getter method for allPoints.
+	 *
+	 * @return the allPoints
+	 */
 	public Point[] getAllPoints() {
 		return allPoints;
 	}
 
+	/**
+	 * Setter method for allPoints.
+	 *
+	 * @param allPoints the allPoints to set
+	 */
 	public void setAllPoints(Point[] allPoints) {
 		this.allPoints = allPoints;
 	}
@@ -64,9 +84,9 @@ public class PolyLine extends Point {
 	}
 
 	/**
-	 * Method that drow polyLine.
+	 * Method that draw polyLine.
 	 */
-	private void drow() {
+	public void drow() {
 		System.out.println("Number of all point in fugure is " + pointsNumber);
 		System.out.println("Array ot points is" + print(allPoints));
 
