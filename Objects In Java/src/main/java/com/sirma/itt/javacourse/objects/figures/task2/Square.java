@@ -32,18 +32,40 @@ public class Square extends Point {
 		this.width = width;
 	}
 
+	/**
+	 * Getter method for a.
+	 *
+	 * @return the a
+	 */
 	public Point getA() {
 		return a;
 	}
 
+	/**
+	 * Setter method for a.
+	 *
+	 * @param a
+	 *            the a to set
+	 */
 	public void setA(Point a) {
 		this.a = a;
 	}
 
+	/**
+	 * Getter method for width.
+	 *
+	 * @return the width
+	 */
 	public float getWidth() {
 		return width;
 	}
 
+	/**
+	 * Setter method for width.
+	 *
+	 * @param width
+	 *            the width to set
+	 */
 	public void setWidth(float width) {
 		this.width = width;
 	}
@@ -51,7 +73,7 @@ public class Square extends Point {
 	/**
 	 * Method that drow square.
 	 */
-	private void drow() {
+	public void drow() {
 		System.out.println("Point of square is " + a);
 		System.out.println("Width of square is " + width);
 	}

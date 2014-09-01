@@ -33,34 +33,67 @@ public class Parallelgram extends Rectangle {
 		this.secondAngle = currentSecondAngle;
 	}
 
+	/**
+	 * Getter method for a.
+	 *
+	 * @return the a
+	 */
 	public Rectangle getA() {
 		return a;
 	}
 
+	/**
+	 * Setter method for a.
+	 *
+	 * @param a
+	 *            the a to set
+	 */
 	public void setA(Rectangle a) {
 		this.a = a;
 	}
 
-	public float getAngle1() {
+	/**
+	 * Getter method for firstAngle.
+	 *
+	 * @return the firstAngle
+	 */
+	public float getFirstAngle() {
 		return firstAngle;
 	}
 
-	public void setAngle1(float angle1) {
-		this.firstAngle = angle1;
-	}
-
-	public float getAngle2() {
-		return secondAngle;
-	}
-
-	public void setAngle2(float angle2) {
-		this.secondAngle = angle2;
+	/**
+	 * Setter method for firstAngle.
+	 *
+	 * @param firstAngle
+	 *            the firstAngle to set
+	 */
+	public void setFirstAngle(float firstAngle) {
+		this.firstAngle = firstAngle;
 	}
 
 	/**
-	 * Method that drow square.
+	 * Getter method for secondAngle.
+	 *
+	 * @return the secondAngle
 	 */
-	private void drow() {
+	public float getSecondAngle() {
+		return secondAngle;
+	}
+
+	/**
+	 * Setter method for secondAngle.
+	 *
+	 * @param secondAngle
+	 *            the secondAngle to set
+	 */
+	public void setSecondAngle(float secondAngle) {
+		this.secondAngle = secondAngle;
+	}
+
+	/**
+	 * Method that draw square.
+	 */
+	public void drow() {
 		System.out.println("Info about basis rectangle" + a);
 		System.out.println("Fisrt angle" + firstAngle);
 		System.out.println("Secont angle" + secondAngle);

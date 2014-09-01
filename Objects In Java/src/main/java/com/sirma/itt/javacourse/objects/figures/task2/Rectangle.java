@@ -36,9 +36,66 @@ public class Rectangle extends Square {
 	}
 
 	/**
-	 * Method that drow rectangle.
+	 * Getter method for a.
+	 *
+	 * @return the a
 	 */
-	private void drow() {
+	public Point getA() {
+		return a;
+	}
+
+	/**
+	 * Setter method for a.
+	 *
+	 * @param a
+	 *            the a to set
+	 */
+	public void setA(Point a) {
+		this.a = a;
+	}
+
+	/**
+	 * Getter method for width.
+	 *
+	 * @return the width
+	 */
+	public float getWidth() {
+		return width;
+	}
+
+	/**
+	 * Setter method for width.
+	 *
+	 * @param width
+	 *            the width to set
+	 */
+	public void setWidth(float width) {
+		this.width = width;
+	}
+
+	/**
+	 * Getter method for height.
+	 *
+	 * @return the height
+	 */
+	public float getHeight() {
+		return height;
+	}
+
+	/**
+	 * Setter method for height.
+	 *
+	 * @param height
+	 *            the height to set
+	 */
+	public void setHeight(float height) {
+		this.height = height;
+	}
+
+	/**
+	 * Method that draw rectangle.
+	 */
+	public void drow() {
 		System.out.println("Point of rectangle is " + a);
 		System.out.println("Wight of rectangle is " + width);
 		System.out.println("Height of rectangle is " + height);

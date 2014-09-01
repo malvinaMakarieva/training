@@ -40,42 +40,86 @@ public class Quadrangle extends Point {
 
 	}
 
+	/**
+	 * Getter method for a.
+	 *
+	 * @return the a
+	 */
 	public Point getA() {
 		return a;
 	}
 
+	/**
+	 * Setter method for a.
+	 *
+	 * @param a
+	 *            the a to set
+	 */
 	public void setA(Point a) {
 		this.a = a;
 	}
 
+	/**
+	 * Getter method for b.
+	 *
+	 * @return the b
+	 */
 	public Point getB() {
 		return b;
 	}
 
+	/**
+	 * Setter method for b.
+	 *
+	 * @param b
+	 *            the b to set
+	 */
 	public void setB(Point b) {
 		this.b = b;
 	}
 
+	/**
+	 * Getter method for c.
+	 *
+	 * @return the c
+	 */
 	public Point getC() {
 		return c;
 	}
 
+	/**
+	 * Setter method for c.
+	 *
+	 * @param c
+	 *            the c to set
+	 */
 	public void setC(Point c) {
 		this.c = c;
 	}
 
+	/**
+	 * Getter method for d.
+	 *
+	 * @return the d
+	 */
 	public Point getD() {
 		return d;
 	}
 
+	/**
+	 * Setter method for d.
+	 *
+	 * @param d
+	 *            the d to set
+	 */
 	public void setD(Point d) {
 		this.d = d;
 	}
 
 	/**
-	 * Method that drow quadrangle.
+	 * Method that draw quadrangle.
 	 */
-	private void drow() {
+	public void drow() {
 		System.out.println("Point A is " + a);
 		System.out.println("Point B is " + b);
 		System.out.println("Point C is " + c);

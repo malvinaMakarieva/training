@@ -37,34 +37,86 @@ public class Rhombus extends Square {
 		this.secondAngle = currentSecondAngle;
 	}
 
+	/**
+	 * Getter method for a.
+	 *
+	 * @return the a
+	 */
 	public Square getA() {
 		return a;
 	}
 
+	/**
+	 * Setter method for a.
+	 *
+	 * @param a
+	 *            the a to set
+	 */
 	public void setA(Square a) {
 		this.a = a;
 	}
 
+	/**
+	 * Getter method for lenght.
+	 *
+	 * @return the lenght
+	 */
+	public float getLenght() {
+		return lenght;
+	}
+
+	/**
+	 * Setter method for lenght.
+	 *
+	 * @param lenght
+	 *            the lenght to set
+	 */
+	public void setLenght(float lenght) {
+		this.lenght = lenght;
+	}
+
+	/**
+	 * Getter method for firstAngle.
+	 *
+	 * @return the firstAngle
+	 */
 	public float getFirstAngle() {
 		return firstAngle;
 	}
 
+	/**
+	 * Setter method for firstAngle.
+	 *
+	 * @param firstAngle
+	 *            the firstAngle to set
+	 */
 	public void setFirstAngle(float firstAngle) {
 		this.firstAngle = firstAngle;
 	}
 
+	/**
+	 * Getter method for secondAngle.
+	 *
+	 * @return the secondAngle
+	 */
 	public float getSecondAngle() {
 		return secondAngle;
 	}
 
+	/**
+	 * Setter method for secondAngle.
+	 *
+	 * @param secondAngle
+	 *            the secondAngle to set
+	 */
 	public void setSecondAngle(float secondAngle) {
 		this.secondAngle = secondAngle;
 	}
 
 	/**
-	 * Method that drow rhombus.
+	 * Method that draw rhombus.
 	 */
-	private void drow() {
+	public void drow() {
 		System.out.println("Point and saids are" + a);
 		System.out.println("Length of the thigh " + lenght);
 		System.out.println("First angle is " + firstAngle);
