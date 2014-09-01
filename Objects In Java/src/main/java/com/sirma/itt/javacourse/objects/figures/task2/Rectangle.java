@@ -8,9 +8,9 @@ import com.sirma.itt.javacourse.objects.figures.task1.Point;
  * @author Malvina Makarieva.
  */
 public class Rectangle extends Square {
-	Point a;
-	float width;
-	float height;
+	private Point a;
+	private float width;
+	private float height;
 
 	/**
 	 * Default constructor.

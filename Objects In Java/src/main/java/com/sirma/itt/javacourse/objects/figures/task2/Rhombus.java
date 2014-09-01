@@ -6,10 +6,10 @@ package com.sirma.itt.javacourse.objects.figures.task2;
  * @author Malvina Makarieva
  */
 public class Rhombus extends Square {
-	Square a;
-	float lenght;
-	float firstAngle;
-	float secondAngle;
+	private Square a;
+	private float lenght;
+	private float firstAngle;
+	private float secondAngle;
 
 	/**
 	 * Default constructor.

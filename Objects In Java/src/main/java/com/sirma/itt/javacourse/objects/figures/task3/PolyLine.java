@@ -9,8 +9,8 @@ import com.sirma.itt.javacourse.objects.figures.task1.Point;
  */
 
 public class PolyLine extends Point {
-	int pointsNumber;
-	Point[] allPoints = new Point[pointsNumber];
+	private int pointsNumber;
+	private Point[] allPoints = new Point[pointsNumber];
 
 	/**
 	 * Default constructor.
@@ -44,7 +44,8 @@ public class PolyLine extends Point {
 	/**
 	 * Setter method for pointsNumber.
 	 *
-	 * @param pointsNumber the pointsNumber to set
+	 * @param pointsNumber
+	 *            the pointsNumber to set
 	 */
 	public void setPointsNumber(int pointsNumber) {
 		this.pointsNumber = pointsNumber;
@@ -62,7 +63,8 @@ public class PolyLine extends Point {
 	/**
 	 * Setter method for allPoints.
 	 *
-	 * @param allPoints the allPoints to set
+	 * @param allPoints
+	 *            the allPoints to set
 	 */
 	public void setAllPoints(Point[] allPoints) {
 		this.allPoints = allPoints;

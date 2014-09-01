@@ -8,8 +8,8 @@ import com.sirma.itt.javacourse.objects.figures.Figure;
  * @author Malvina Makarieva.
  */
 public class Point extends Figure {
-	float x;
-	float y;
+	private float x;
+	private float y;
 
 	/**
 	 * Default constructor.

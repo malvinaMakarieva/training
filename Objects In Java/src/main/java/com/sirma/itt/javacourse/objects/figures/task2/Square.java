@@ -9,8 +9,8 @@ import com.sirma.itt.javacourse.objects.figures.task1.Point;
  */
 public class Square extends Point {
 
-	Point a;
-	float width;
+	private Point a;
+	private float width;
 
 	/**
 	 * Default constructor

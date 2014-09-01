@@ -6,9 +6,9 @@ package com.sirma.itt.javacourse.objects.figures.task2;
  * @author Malvina Makarieva
  */
 public class Parallelgram extends Rectangle {
-	Rectangle a;
-	float firstAngle;
-	float secondAngle;
+	private Rectangle a;
+	private float firstAngle;
+	private float secondAngle;
 
 	/**
 	 * Default constructor

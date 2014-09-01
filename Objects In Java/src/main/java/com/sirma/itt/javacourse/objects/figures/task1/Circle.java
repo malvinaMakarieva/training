@@ -6,8 +6,8 @@ package com.sirma.itt.javacourse.objects.figures.task1;
  * @author Malvina Makarieva
  */
 public class Circle extends Curve {
-	Point a;
-	float radius;
+	private Point a;
+	private float radius;
 
 	/**
 	 * Default constructor of Circle class.

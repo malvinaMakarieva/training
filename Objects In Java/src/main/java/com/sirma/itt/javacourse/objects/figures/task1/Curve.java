@@ -6,9 +6,9 @@ package com.sirma.itt.javacourse.objects.figures.task1;
  * @author Malvina Makarieva
  */
 public class Curve extends Point {
-	Point a;
-	int angle;
-	float lenght;
+	private Point a;
+	private int angle;
+	private float lenght;
 
 	/**
 	 * Default constructor.

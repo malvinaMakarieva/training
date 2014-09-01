@@ -6,9 +6,9 @@ package com.sirma.itt.javacourse.objects.figures.task1;
  * @author Mlvina Makarieva.
  */
 public class Ellipse extends Circle {
-	Point a;
-	float firstRadius;
-	float secondRadius;
+	private Point a;
+	private float firstRadius;
+	private float secondRadius;
 
 	/**
 	 * Default constructor.

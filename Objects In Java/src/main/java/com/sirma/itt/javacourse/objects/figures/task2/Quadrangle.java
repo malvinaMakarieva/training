@@ -8,10 +8,10 @@ import com.sirma.itt.javacourse.objects.figures.task1.Point;
  * @author Malvina Makarieva
  */
 public class Quadrangle extends Point {
-	Point a;
-	Point b;
-	Point c;
-	Point d;
+	private Point a;
+	private Point b;
+	private Point c;
+	private Point d;
 
 	/**
 	 * Default constructor.
