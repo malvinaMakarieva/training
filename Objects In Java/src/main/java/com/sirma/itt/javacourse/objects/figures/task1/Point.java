@@ -31,24 +31,46 @@ public class Point extends Figure {
 		this.y = y;
 	}
 
+	/**
+	 * Getter method for x.
+	 *
+	 * @return the x
+	 */
 	public float getX() {
 		return x;
 	}
 
+	/**
+	 * Setter method for x.
+	 *
+	 * @param x
+	 *            the x to set
+	 */
 	public void setX(float x) {
 		this.x = x;
 	}
 
+	/**
+	 * Getter method for y.
+	 *
+	 * @return the y
+	 */
 	public float getY() {
 		return y;
 	}
 
+	/**
+	 * Setter method for y.
+	 *
+	 * @param y
+	 *            the y to set
+	 */
 	public void setY(float y) {
 		this.y = y;
 	}
 
 	/**
-	 * Method that drow point.
+	 * Method that draw point.
 	 */
 	@Override
 	public void draw() {

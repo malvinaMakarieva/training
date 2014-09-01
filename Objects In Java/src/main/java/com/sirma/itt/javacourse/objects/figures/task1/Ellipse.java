@@ -32,34 +32,67 @@ public class Ellipse extends Circle {
 		this.secondRadius = secondRadius;
 	}
 
+	/**
+	 * Getter method for a.
+	 *
+	 * @return the a
+	 */
 	public Point getA() {
 		return a;
 	}
 
+	/**
+	 * Setter method for a.
+	 *
+	 * @param a
+	 *            the a to set
+	 */
 	public void setA(Point a) {
 		this.a = a;
 	}
 
-	public float getRadius1() {
+	/**
+	 * Getter method for firstRadius.
+	 *
+	 * @return the firstRadius
+	 */
+	public float getFirstRadius() {
 		return firstRadius;
 	}
 
-	public void setRadius1(float radius1) {
-		this.firstRadius = radius1;
-	}
-
-	public float getRadius2() {
-		return secondRadius;
-	}
-
-	public void setRadius2(float radius2) {
-		this.secondRadius = radius2;
+	/**
+	 * Setter method for firstRadius.
+	 *
+	 * @param firstRadius
+	 *            the firstRadius to set
+	 */
+	public void setFirstRadius(float firstRadius) {
+		this.firstRadius = firstRadius;
 	}
 
 	/**
-	 * Method that drow ellipse.
+	 * Getter method for secondRadius.
+	 *
+	 * @return the secondRadius
 	 */
-	private void drow() {
+	public float getSecondRadius() {
+		return secondRadius;
+	}
+
+	/**
+	 * Setter method for secondRadius.
+	 *
+	 * @param secondRadius
+	 *            the secondRadius to set
+	 */
+	public void setSecondRadius(float secondRadius) {
+		this.secondRadius = secondRadius;
+	}
+
+	/**
+	 * Method that draw ellipse.
+	 */
+	public void drow() {
 		System.out.println("Ellipse point is " + a);
 		System.out.println("Ellipse first radius is " + firstRadius);
 		System.out.println("Ellipse second radius is " + secondRadius);

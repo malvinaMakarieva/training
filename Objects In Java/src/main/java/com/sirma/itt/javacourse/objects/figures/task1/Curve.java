@@ -33,34 +33,67 @@ public class Curve extends Point {
 		this.lenght = currentLenght;
 	}
 
+	/**
+	 * Getter method for a.
+	 *
+	 * @return the a
+	 */
 	public Point getA() {
 		return a;
 	}
 
+	/**
+	 * Setter method for a.
+	 *
+	 * @param a
+	 *            the a to set
+	 */
 	public void setA(Point a) {
 		this.a = a;
 	}
 
+	/**
+	 * Getter method for angle.
+	 *
+	 * @return the angle
+	 */
 	public int getAngle() {
 		return angle;
 	}
 
+	/**
+	 * Setter method for angle.
+	 *
+	 * @param angle
+	 *            the angle to set
+	 */
 	public void setAngle(int angle) {
 		this.angle = angle;
 	}
 
+	/**
+	 * Getter method for lenght.
+	 *
+	 * @return the lenght
+	 */
 	public float getLenght() {
 		return lenght;
 	}
 
+	/**
+	 * Setter method for lenght.
+	 *
+	 * @param lenght
+	 *            the lenght to set
+	 */
 	public void setLenght(float lenght) {
 		this.lenght = lenght;
 	}
 
 	/**
-	 * Method that drow curve.
+	 * Method that draw curve.
 	 */
-	private void drow() {
+	public void drow() {
 		System.out.println("Point of curve is " + a);
 		System.out.println("Angle of curve is " + angle);
 		System.out.println("Lenght of curve is " + lenght);
