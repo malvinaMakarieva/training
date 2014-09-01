@@ -1,17 +1,17 @@
 package com.sirma.itt.javacourse.intro.hangman;
 
 /**
- * This class running method play() from class Game
+ * This class running method play() from class Game.
  * 
  * @author Malvina Makarieva
  */
 public class RunHangmanGame {
+
 	/**
 	 * Main method that run play()
 	 * 
 	 * @param args
 	 */
-
 	public static void main(String[] args) {
 		Game startGame = new Game();
 
