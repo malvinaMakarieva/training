@@ -1,13 +1,12 @@
 package com.sirma.itt.javacourse.objects.supermarket.humans;
 
-import java.math.BigDecimal;
 
 /**
  * Class describing the behavior of a normal client
  * 
  * @author Malvina Makarieva
  */
-public class NormalClients extends Humans implements ClientsInterface {
+public class NormalClients extends Humans implements ClientsManagment {
 
 	@Override
 	public void buy() {
@@ -27,7 +26,7 @@ public class NormalClients extends Humans implements ClientsInterface {
 	}
 
 	@Override
-	public BigDecimal sumByAllTime() {
+	public Double sumByAllTime() {
 		return null;
 	}
 

@@ -5,7 +5,7 @@ package com.sirma.itt.javacourse.objects.supermarket.humans;
  * 
  * @author Malvina Makarieva
  */
-public interface PersonnelInterface {
+public interface PersonnelManagment {
 	/**
 	 * Days and working time
 	 */

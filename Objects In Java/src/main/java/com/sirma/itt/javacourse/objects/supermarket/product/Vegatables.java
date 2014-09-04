@@ -1,34 +1,28 @@
 package com.sirma.itt.javacourse.objects.supermarket.product;
 
-import java.math.BigDecimal;
-
 /**
- * class associated with the operation of vegatables
+ * class associated with the operation of vegatables.
  * 
  * @author Malvina Makarieva
  */
-public class Vegatables extends Foodstuffs implements ProductInterface {
+public class Vegatables extends Foodstuffs implements ProductManagment {
 	@Override
-	public BigDecimal delivered() {
-		// TODO Auto-generated method stub
+	public Double delivered() {
 		return null;
 	}
 
 	@Override
-	public BigDecimal sold() {
-		// TODO Auto-generated method stub
+	public Double sold() {
 		return null;
 	}
 
 	@Override
-	public BigDecimal scrappedProducts() {
-		// TODO Auto-generated method stub
+	public Double scrappedProducts() {
 		return null;
 	}
 
 	@Override
-	public BigDecimal incomeOrwaste() {
-		// TODO Auto-generated method stub
+	public Double incomeOrwaste() {
 		return null;
 	}
 }

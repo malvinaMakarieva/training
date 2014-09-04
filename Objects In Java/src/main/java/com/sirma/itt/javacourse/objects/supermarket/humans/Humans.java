@@ -37,34 +37,78 @@ public class Humans {
 		this.compliment = humanCompliment;
 	}
 
+	/**
+	 * Getter method for name.
+	 *
+	 * @return the name
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * Setter method for name.
+	 *
+	 * @param name
+	 *            the name to set
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
+	/**
+	 * Getter method for lastName.
+	 *
+	 * @return the lastName
+	 */
 	public String getLastName() {
 		return lastName;
 	}
 
+	/**
+	 * Setter method for lastName.
+	 *
+	 * @param lastName
+	 *            the lastName to set
+	 */
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 
+	/**
+	 * Getter method for complaint.
+	 *
+	 * @return the complaint
+	 */
 	public String getComplaint() {
 		return complaint;
 	}
 
+	/**
+	 * Setter method for complaint.
+	 *
+	 * @param complaint
+	 *            the complaint to set
+	 */
 	public void setComplaint(String complaint) {
 		this.complaint = complaint;
 	}
 
+	/**
+	 * Getter method for compliment.
+	 *
+	 * @return the compliment
+	 */
 	public String getCompliment() {
 		return compliment;
 	}
 
+	/**
+	 * Setter method for compliment.
+	 *
+	 * @param compliment
+	 *            the compliment to set
+	 */
 	public void setCompliment(String compliment) {
 		this.compliment = compliment;
 	}

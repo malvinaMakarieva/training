@@ -1,6 +1,6 @@
 package com.sirma.itt.javacourse.objects.supermarket.humans;
 
-public class Manager extends Humans implements PersonnelInterface {
+public class Manager extends Humans implements PersonnelManagment {
 
 	@Override
 	public void work() {

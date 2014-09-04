@@ -1,35 +1,29 @@
 package com.sirma.itt.javacourse.objects.supermarket.product;
 
-import java.math.BigDecimal;
-
 /**
  * Class associated with the operation of meat.
  * 
  * @author Malvina Makarieva
  */
-public class Meat extends Foodstuffs implements ProductInterface {
+public class Meat extends Foodstuffs implements ProductManagment {
 
 	@Override
-	public BigDecimal delivered() {
-		// TODO Auto-generated method stub
+	public Double delivered() {
 		return null;
 	}
 
 	@Override
-	public BigDecimal sold() {
-		// TODO Auto-generated method stub
+	public Double sold() {
 		return null;
 	}
 
 	@Override
-	public BigDecimal scrappedProducts() {
-		// TODO Auto-generated method stub
+	public Double scrappedProducts() {
 		return null;
 	}
 
 	@Override
-	public BigDecimal incomeOrwaste() {
-		// TODO Auto-generated method stub
+	public Double incomeOrwaste() {
 		return null;
 	}
 

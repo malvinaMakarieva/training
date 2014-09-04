@@ -5,7 +5,7 @@ package com.sirma.itt.javacourse.objects.supermarket.humans;
  * 
  * @author Malvina Makarieva
  */
-public class Cleaners extends Humans implements PersonnelInterface {
+public class Cleaners extends Humans implements PersonnelManagment {
 
 	@Override
 	public void work() {

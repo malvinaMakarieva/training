@@ -83,7 +83,7 @@ public class Sumator {
 		transfer = 0;
 		length = a.length();
 		for (int i = length - 1; i > -1; i--) {
-			digit = (a.charAt(i) - '0') + ((b.charAt(i) - '0')) + transfer;
+			digit = (a.charAt(i) - '0') + (b.charAt(i) - '0') + transfer;
 			if (digit > 9) {
 				transfer = digit / 10;
 				digit = digit % 10;

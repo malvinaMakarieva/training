@@ -1,34 +1,28 @@
 package com.sirma.itt.javacourse.objects.supermarket.product;
 
-import java.math.BigDecimal;
-
 /**
- * Class associated with the operation of fruts.
+ * Class associated with the operation of fruits.
  * 
  * @author Malvina Makarieva
  */
-public class Fruts extends Foodstuffs implements ProductInterface {
+public class Fruts extends Foodstuffs implements ProductManagment {
 	@Override
-	public BigDecimal delivered() {
-		// TODO Auto-generated method stub
+	public Double delivered() {
 		return null;
 	}
 
 	@Override
-	public BigDecimal sold() {
-		// TODO Auto-generated method stub
+	public Double sold() {
 		return null;
 	}
 
 	@Override
-	public BigDecimal scrappedProducts() {
-		// TODO Auto-generated method stub
+	public Double scrappedProducts() {
 		return null;
 	}
 
 	@Override
-	public BigDecimal incomeOrwaste() {
-		// TODO Auto-generated method stub
+	public Double incomeOrwaste() {
 		return null;
 	}
 }

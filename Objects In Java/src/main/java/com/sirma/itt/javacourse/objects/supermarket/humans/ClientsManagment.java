@@ -1,8 +1,7 @@
 package com.sirma.itt.javacourse.objects.supermarket.humans;
 
-import java.math.BigDecimal;
 
-public interface ClientsInterface {
+public interface ClientsManagment {
 
 	void buy();
 
@@ -35,7 +34,7 @@ public interface ClientsInterface {
 	 * 
 	 * @return amount of supplied goods
 	 */
-	BigDecimal sumByAllTime();
+	Double sumByAllTime();
 
 	/**
 	 * Method which calculates the discount
