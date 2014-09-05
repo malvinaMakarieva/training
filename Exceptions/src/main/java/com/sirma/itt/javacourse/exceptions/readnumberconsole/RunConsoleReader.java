@@ -14,7 +14,7 @@ public class RunConsoleReader {
 	 *             Class describing custom exception. An exception will be thrown when entering a
 	 *             number is out of range.
 	 */
-	public void main(String[] args) throws IncorectInputAreaException {
+	public static void main(String[] args) throws IncorectInputAreaException {
 		ConsolReader consoleReader = new ConsolReader();
 		consoleReader.readFromConsoleNumbers();
 	}
