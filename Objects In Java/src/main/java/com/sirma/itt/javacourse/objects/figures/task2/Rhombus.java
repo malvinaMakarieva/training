@@ -7,7 +7,7 @@ package com.sirma.itt.javacourse.objects.figures.task2;
  */
 public class Rhombus extends Square {
 	private Square a;
-	private float lenght;
+	private float length;
 	private float firstAngle;
 	private float secondAngle;
 
@@ -32,7 +32,7 @@ public class Rhombus extends Square {
 	 */
 	Rhombus(Square basisSquare, float width, float currentFirstAngle, float currentSecondAngle) {
 		this.a = basisSquare;
-		this.lenght = width;
+		this.length = width;
 		this.firstAngle = currentFirstAngle;
 		this.secondAngle = currentSecondAngle;
 	}
@@ -57,22 +57,22 @@ public class Rhombus extends Square {
 	}
 
 	/**
-	 * Getter method for lenght.
+	 * Getter method for length.
 	 *
-	 * @return the lenght
+	 * @return the length
 	 */
 	public float getLenght() {
-		return lenght;
+		return length;
 	}
 
 	/**
-	 * Setter method for lenght.
+	 * Setter method for length.
 	 *
 	 * @param lenght
-	 *            the lenght to set
+	 *            the length to set
 	 */
 	public void setLenght(float lenght) {
-		this.lenght = lenght;
+		this.length = lenght;
 	}
 
 	/**
@@ -118,7 +118,7 @@ public class Rhombus extends Square {
 	 */
 	public void drow() {
 		System.out.println("Point and saids are" + a);
-		System.out.println("Length of the thigh " + lenght);
+		System.out.println("Length of the thigh " + length);
 		System.out.println("First angle is " + firstAngle);
 		System.out.println("Second angle is " + secondAngle);
 

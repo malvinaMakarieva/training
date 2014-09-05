@@ -16,6 +16,8 @@ public class Node<T> {
 	private ArrayList<Node<T>> children;
 
 	/**
+	 * Constructor of node.
+	 * 
 	 * @param data
 	 *            data of element in Tree
 	 */

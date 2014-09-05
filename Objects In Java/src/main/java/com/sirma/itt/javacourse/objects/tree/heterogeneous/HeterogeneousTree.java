@@ -11,6 +11,18 @@ public class HeterogeneousTree {
 	private HeterogeneousNode root;
 
 	/**
+	 * Constructor of heterogeneous tree.
+	 * 
+	 * @param rootData
+	 *            data about root data of root
+	 */
+	public HeterogeneousTree(Object rootData) {
+		root = new HeterogeneousNode(rootData);
+		root.setData(rootData);
+		root.setChildren(new ArrayList<HeterogeneousNode>());
+	}
+
+	/**
 	 * Getter method for root.
 	 *
 	 * @return the root
@@ -30,24 +42,12 @@ public class HeterogeneousTree {
 	}
 
 	/**
-	 * Constructor
-	 * 
-	 * @param rootData
-	 *            data about root data of root
-	 */
-	public HeterogeneousTree(Object rootData) {
-		root = new HeterogeneousNode(rootData);
-		root.setData(rootData);
-		root.setChildren(new ArrayList<HeterogeneousNode>());
-	}
-
-	/**
 	 * Print tree in console.
 	 * 
 	 * @param node
 	 *            root of a tree.
 	 * @param children
-	 *            list of all cildren.
+	 *            list of all children.
 	 */
 	public void printTree(HeterogeneousNode node, ArrayList<HeterogeneousNode> children) {
 		if (node == null) {

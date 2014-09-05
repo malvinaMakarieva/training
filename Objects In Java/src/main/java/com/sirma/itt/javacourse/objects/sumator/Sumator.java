@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 /**
- * class that has various functions for summing
+ * Class that has various functions for summing.
  * 
  * @author Malvina Makarieva
  */

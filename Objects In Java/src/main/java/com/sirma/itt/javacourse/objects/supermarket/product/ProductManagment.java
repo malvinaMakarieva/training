@@ -1,8 +1,7 @@
 package com.sirma.itt.javacourse.objects.supermarket.product;
 
-
 /**
- * Interface describing the behavior of products
+ * Interface describing the behavior of products.
  * 
  * @author Malvina Makarieva
  */

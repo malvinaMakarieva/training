@@ -1,9 +1,16 @@
 package com.sirma.itt.javacourse.objects.supermarket.humans;
 
+import com.sirma.itt.javacourse.objects.supermarket.product.Products;
 
 public interface ClientsManagment {
-
-	void buy();
+	/**
+	 * Method that which contains information about purchases made.
+	 * 
+	 * @param products
+	 *            array from buy products.
+	 * @return
+	 */
+	Double buy(Products[] products);
 
 	/**
 	 * Method that signs of poor service
@@ -42,4 +49,5 @@ public interface ClientsManagment {
 	 * @return percentage value
 	 */
 	float calculateDiscounts();
+
 }

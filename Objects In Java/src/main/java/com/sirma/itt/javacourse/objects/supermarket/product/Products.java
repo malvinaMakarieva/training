@@ -9,10 +9,10 @@ import java.math.BigInteger;
  */
 public class Products {
 
-	String nameOfProduct;
-	float quantity;
-	BigInteger barcode;
-	double price;
+	private String nameOfProduct;
+	private float quantity;
+	private BigInteger barcode;
+	private double price;
 
 	/**
 	 * Default constructor.

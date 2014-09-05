@@ -6,10 +6,10 @@ package com.sirma.itt.javacourse.objects.supermarket.humans;
  * @author Malvina Makarieva
  */
 public class Humans {
-	String name;
-	String lastName;
-	String complaint;
-	String compliment;
+	private String name;
+	private String lastName;
+	private String complaint;
+	private String compliment;
 
 	/**
 	 * Default constructor.

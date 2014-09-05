@@ -14,6 +14,8 @@ public class HeterogeneousNode {
 	private ArrayList<HeterogeneousNode> children;
 
 	/**
+	 * Constructor of heterogeneous node.
+	 * 
 	 * @param data
 	 *            data of element in Tree
 	 */

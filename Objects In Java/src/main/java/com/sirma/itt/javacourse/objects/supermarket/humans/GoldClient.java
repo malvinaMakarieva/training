@@ -1,5 +1,6 @@
 package com.sirma.itt.javacourse.objects.supermarket.humans;
 
+import com.sirma.itt.javacourse.objects.supermarket.product.Products;
 
 /**
  * CClass describing the behavior of a gold client
@@ -7,11 +8,17 @@ package com.sirma.itt.javacourse.objects.supermarket.humans;
  * @author Malvina Makarieva
  */
 public class GoldClient extends Humans implements ClientsManagment {
-
-	@Override
-	public void buy() {
-		System.out.println("Still can buy");
-	}
+	/**
+	 * Method that signs of poor service
+	 * 
+	 * @param nameClient
+	 *            first name of client
+	 * @param LastNameClient
+	 *            last name of client
+	 * @param complaint
+	 *            this is complaint from client
+	 * @return text of complaint {@inheritDoc}
+	 */
 
 	@Override
 	public String complaint(String nameClient, String LastNameClient, String complaint) {
@@ -19,21 +26,54 @@ public class GoldClient extends Humans implements ClientsManagment {
 		return null;
 	}
 
+	/**
+	 * @param nameClient
+	 *            first name of client
+	 * @param LastNameClient
+	 *            last name of client
+	 * @param compliment
+	 *            this is compliment from client
+	 * @return text of compliment {@inheritDoc}
+	 */
 	@Override
 	public String compliment(String nameClient, String LastNameClient, String compliment) {
 		System.out.println("Important" + compliment + " form " + nameClient + " " + LastNameClient);
 		return null;
 	}
 
+	/**
+	 * Method that sum value of all purchases made ​​by the customer
+	 * 
+	 * @return amount of supplied goods {@inheritDoc}
+	 */
 	@Override
 	public Double sumByAllTime() {
 		return null;
 	}
 
+	/**
+	 * Method which calculates the discount
+	 * 
+	 * @return percentage value {@inheritDoc}
+	 */
 	@Override
 	public float calculateDiscounts() {
 		System.out.println("Discount for you is 10%");
 		return 0.10f;
+	}
+
+	/**
+	 * /** Method that which contains information about purchases made.
+	 * 
+	 * @param products
+	 *            array from buy products. {@inheritDoc}
+	 */
+
+	@Override
+	public Double buy(Products[] products) {
+		double currentSum = 0;
+		System.out.println("Sum of product is " + currentSum);
+		return currentSum;
 	}
 
 }

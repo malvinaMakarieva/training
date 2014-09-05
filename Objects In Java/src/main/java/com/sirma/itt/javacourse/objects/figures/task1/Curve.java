@@ -8,7 +8,7 @@ package com.sirma.itt.javacourse.objects.figures.task1;
 public class Curve extends Point {
 	private Point a;
 	private int angle;
-	private float lenght;
+	private float length;
 
 	/**
 	 * Default constructor.
@@ -30,7 +30,7 @@ public class Curve extends Point {
 	public Curve(Point point, int currentAngle, float currentLenght) {
 		this.a = point;
 		this.angle = currentAngle;
-		this.lenght = currentLenght;
+		this.length = currentLenght;
 	}
 
 	/**
@@ -72,22 +72,22 @@ public class Curve extends Point {
 	}
 
 	/**
-	 * Getter method for lenght.
+	 * Getter method for length.
 	 *
-	 * @return the lenght
+	 * @return the length
 	 */
 	public float getLenght() {
-		return lenght;
+		return length;
 	}
 
 	/**
-	 * Setter method for lenght.
+	 * Setter method for length.
 	 *
 	 * @param lenght
-	 *            the lenght to set
+	 *            the length to set
 	 */
 	public void setLenght(float lenght) {
-		this.lenght = lenght;
+		this.length = lenght;
 	}
 
 	/**
@@ -96,7 +96,7 @@ public class Curve extends Point {
 	public void drow() {
 		System.out.println("Point of curve is " + a);
 		System.out.println("Angle of curve is " + angle);
-		System.out.println("Lenght of curve is " + lenght);
+		System.out.println("Lenght of curve is " + length);
 	}
 
 }

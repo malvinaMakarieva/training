@@ -13,6 +13,18 @@ public class HomogeneusTree<T> {
 	private Node<T> root;
 
 	/**
+	 * Constructor of homogeneus tree.
+	 * 
+	 * @param rootData
+	 *            data about root data of root
+	 */
+	public HomogeneusTree(T rootData) {
+		root = new Node<T>(rootData);
+		root.setData(rootData);
+		root.setChildren(new ArrayList<Node<T>>());
+	}
+
+	/**
 	 * Getter method for root.
 	 *
 	 * @return the root
@@ -29,18 +41,6 @@ public class HomogeneusTree<T> {
 	 */
 	public void setRoot(Node<T> root) {
 		this.root = root;
-	}
-
-	/**
-	 * Constructor
-	 * 
-	 * @param rootData
-	 *            data about root data of root
-	 */
-	public HomogeneusTree(T rootData) {
-		root = new Node<T>(rootData);
-		root.setData(rootData);
-		root.setChildren(new ArrayList<Node<T>>());
 	}
 
 }

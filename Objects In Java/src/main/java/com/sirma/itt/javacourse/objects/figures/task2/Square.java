@@ -71,7 +71,7 @@ public class Square extends Point {
 	}
 
 	/**
-	 * Method that drow square.
+	 * Method that draw square.
 	 */
 	public void drow() {
 		System.out.println("Point of square is " + a);
