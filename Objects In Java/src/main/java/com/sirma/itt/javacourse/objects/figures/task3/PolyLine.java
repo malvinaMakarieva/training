@@ -1,6 +1,5 @@
 package com.sirma.itt.javacourse.objects.figures.task3;
 
-import com.sirma.itt.javacourse.objects.figures.task1.Point;
 
 /**
  * Class represents the data needed to draw the polyline and constructors.
@@ -10,13 +9,13 @@ import com.sirma.itt.javacourse.objects.figures.task1.Point;
 
 public class PolyLine extends Point {
 	private int pointsNumber;
-	private Point[] allPoints = new Point[pointsNumber];
+	private Point[] allPoints;
 
 	/**
 	 * Default constructor.
 	 */
 	public PolyLine() {
-
+		allPoints = new Point[pointsNumber];
 	}
 
 	/**
