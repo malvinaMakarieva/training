@@ -1,5 +1,7 @@
 package com.sirma.itt.javacourse.objects.supermarket.product;
 
+import java.util.Date;
+
 /**
  * class associated with the operation of technology
  * 
@@ -44,6 +46,16 @@ public class Technology extends OtherProducts implements ProductManagment {
 	@Override
 	public Double incomeOrwaste() {
 		return null;
+	}
+
+	/**
+	 * Keeps track of expiry date of the guarantee
+	 * 
+	 * @return expiry date of the guarantee
+	 */
+	public Date guarantee() {
+		return null;
+
 	}
 
 }

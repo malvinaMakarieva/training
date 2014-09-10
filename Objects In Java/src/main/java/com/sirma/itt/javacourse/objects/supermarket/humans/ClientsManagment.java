@@ -6,11 +6,11 @@ public interface ClientsManagment {
 	/**
 	 * Method that which contains information about purchases made.
 	 * 
-	 * @param products
-	 *            array from buy products.
+	 * @param product
+	 *            product from class Products
 	 * @return
 	 */
-	Double buy(Products[] products);
+	Double buy(Products product);
 
 	/**
 	 * Method that signs of poor service

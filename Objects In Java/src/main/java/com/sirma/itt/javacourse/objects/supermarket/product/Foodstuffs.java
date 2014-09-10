@@ -1,5 +1,7 @@
 package com.sirma.itt.javacourse.objects.supermarket.product;
 
+import javax.xml.crypto.Data;
+
 /**
  * class associated with the operation of foodstaffs live meat or drinks.
  * 
@@ -44,6 +46,17 @@ public class Foodstuffs extends Products implements ProductManagment {
 	@Override
 	public Double incomeOrwaste() {
 		return null;
+	}
+
+	/**
+	 * Signals the expiry
+	 * 
+	 * @return date of expiry of shelf life
+	 */
+	public Data availability() {
+		Data someDate = null;
+		return someDate;
+
 	}
 
 }

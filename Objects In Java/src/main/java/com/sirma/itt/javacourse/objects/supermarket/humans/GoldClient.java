@@ -23,7 +23,7 @@ public class GoldClient extends Humans implements ClientsManagment {
 	@Override
 	public String complaint(String nameClient, String LastNameClient, String complaint) {
 		System.out.println("Important" + complaint + " form " + nameClient + " " + LastNameClient);
-		return null;
+		return complaint;
 	}
 
 	/**
@@ -38,7 +38,7 @@ public class GoldClient extends Humans implements ClientsManagment {
 	@Override
 	public String compliment(String nameClient, String LastNameClient, String compliment) {
 		System.out.println("Important" + compliment + " form " + nameClient + " " + LastNameClient);
-		return null;
+		return compliment;
 	}
 
 	/**
@@ -63,14 +63,11 @@ public class GoldClient extends Humans implements ClientsManagment {
 	}
 
 	/**
-	 * /** Method that which contains information about purchases made.
-	 * 
-	 * @param products
-	 *            array from buy products. {@inheritDoc}
+	 * {@inheritDoc}
 	 */
 
 	@Override
-	public Double buy(Products[] products) {
+	public Double buy(Products product) {
 		double currentSum = 0;
 		System.out.println("Sum of product is " + currentSum);
 		return currentSum;

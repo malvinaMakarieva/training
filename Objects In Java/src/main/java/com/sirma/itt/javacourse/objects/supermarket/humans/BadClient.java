@@ -23,7 +23,7 @@ public class BadClient extends Humans implements ClientsManagment {
 	public String complaint(String nameClient, String LastNameClient, String complaint) {
 		System.out.println("Ignores" + complaint + " from " + nameClient + " " + LastNameClient);
 		System.out.println("Ignores" + complaint);
-		return null;
+		return complaint;
 	}
 
 	/**
@@ -38,7 +38,7 @@ public class BadClient extends Humans implements ClientsManagment {
 	@Override
 	public String compliment(String nameClient, String LastNameClient, String compliment) {
 		System.out.println("Ignores" + compliment + " from " + nameClient + " " + LastNameClient);
-		return null;
+		return compliment;
 	}
 
 	/**
@@ -63,18 +63,16 @@ public class BadClient extends Humans implements ClientsManagment {
 	}
 
 	/**
-	 * /** Method that which contains information about purchases made.
+	 * Method that which contains information about purchases made.
 	 * 
-	 * @param products
-	 *            array from buy products. {@inheritDoc}
+	 * @param product
+	 *            bought from supermarket. {@inheritDoc}
 	 */
-
 	@Override
-	public Double buy(Products[] products) {
+	public Double buy(Products product) {
 		double currentSum = 0;
 		System.out.println("Sum of product is " + currentSum);
 		return currentSum;
-
 	}
 
 }

@@ -21,7 +21,7 @@ public class Seller extends Humans implements PersonnelManagment {
 	 */
 	@Override
 	public float takeSalary() {
-		return 500;
+		return 500f;
 	}
 
 	/**
