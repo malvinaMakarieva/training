@@ -121,6 +121,13 @@ public class BinaryTree {
 		printInOrderRec(currRoot.getRightChild());
 	}
 
+	/**
+	 * Method checks whether a node has leaves.
+	 * 
+	 * @param currentNode
+	 *            node to check if there leaves
+	 * @return true when node have leaf.
+	 */
 	public boolean findLeaf(BinaryNode currentNode) {
 		if (currentNode.getLeftChild() != null) {
 			return true;

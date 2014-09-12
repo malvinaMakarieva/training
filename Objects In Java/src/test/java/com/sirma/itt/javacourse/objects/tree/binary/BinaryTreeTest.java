@@ -100,4 +100,25 @@ public class BinaryTreeTest {
 		Assert.assertFalse(testLeafTwo);
 
 	}
+
+	/**
+	 * Test findLeaf() method form class BinaryTree.
+	 */
+	@Test
+	public void findLeaftest() {
+		testTree.insertBinaryNode(10);
+		testTree.insertBinaryNode(5);
+		testTree.insertBinaryNode(200);
+		testTree.insertBinaryNode(100);
+		testTree.insertBinaryNode(700);
+
+		BinaryNode testTreeNodeOne = testTree.getRoot().getRightChild();
+		BinaryNode testTreeNodeTwo = testTree.getRoot().getLeftChild();
+
+		boolean testFirsNode = testTree.findLeaf(testTreeNodeOne);
+		boolean testSecondNode = testTree.findLeaf(testTreeNodeTwo);
+
+		Assert.assertEquals(true, testFirsNode);
+		Assert.assertEquals(false, testSecondNode);
+	}
 }
