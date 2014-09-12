@@ -1,5 +1,7 @@
 package com.sirma.itt.javacourse.objects.tree.binary;
 
+import java.util.Scanner;
+
 public class RunBinaryTree {
 	/**
 	 * Run function from BinaryTree and BinaryNode to create one binary tree.
@@ -18,14 +20,23 @@ public class RunBinaryTree {
 		binaryTree.insertBinaryNode(30);
 		binaryTree.insertBinaryNode(23);
 		binaryTree.insertBinaryNode(19);
-		System.out.println();
 
-		binaryTree.print(binaryTree.root);
+		System.out.println("Inorder");
+		binaryTree.printInorder();
 
-		System.out.println();
-		binaryTree.searchNodeInTree(7);
-		binaryTree.searchNodeInTree(90);
+		System.out.print("Enter the value of the search node = ");
+		Scanner userInput = new Scanner(System.in);
+		int findNode = userInput.nextInt();
 
+		boolean flag = binaryTree.searchNodeInTree(findNode);
+		if (flag) {
+			System.out.println("Element is located in the tree");
+		} else
+			System.out.println("The element is not found in tree");
+
+		if (userInput != null) {
+			userInput.close();
+		}
 	}
 
 }

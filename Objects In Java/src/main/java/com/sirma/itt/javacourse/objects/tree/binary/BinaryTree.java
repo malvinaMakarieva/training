@@ -28,48 +28,59 @@ public class BinaryTree {
 	}
 
 	/**
-	 * Adding numeric value in binary tree.
+	 * Insert new value in the tree. If this value already exists, it is not added.
 	 * 
-	 * @param number
-	 *            value of new node.
+	 * @param value
+	 *            value added in the tree.
 	 */
-	public void insertBinaryNode(int number) {
-		BinaryNode newNode = new BinaryNode(number);
-		if (root == null) {
-			root = newNode;
-		} else {
-			if (!searchNodeInTree(number)) {
-				BinaryNode parent;
-				BinaryNode selectNode = root;
-				for (;;) {
-					parent = selectNode;
-					if (number < selectNode.getNumber() && number != selectNode.getNumber()) {
-						selectNode = selectNode.getLeftChild();
-						if (selectNode == null) {
-							parent.setLeftChild(newNode);
-							return;
-						}
-					} else if (number != selectNode.getNumber()) {
-						selectNode = selectNode.getRightChild();
-						if (selectNode == null) {
-							parent.setRightChild(newNode);
-							return;
-						}
-					}
-				}
+	public void insertBinaryNode(int value) {
+		BinaryNode node = new BinaryNode(value);
 
-			}
+		if (root == null) {
+			root = node;
+			return;
+		}
+		if (searchNodeInTree(value)) {
+			return;
 		}
 
+		insertBinaryNodeRec(root, node);
+
+	}
+
+	/**
+	 * Helper method to recursively insert in the tree.
+	 * 
+	 * @param latestRoot
+	 *            node from the tree.
+	 * @param newNode
+	 *            value added in the tree
+	 */
+	private void insertBinaryNodeRec(BinaryNode latestRoot, BinaryNode newNode) {
+
+		if (latestRoot.getNumber() > newNode.getNumber()) {
+
+			if (latestRoot.getLeftChild() == null) {
+				latestRoot.setLeftChild(newNode);
+				return;
+			} else {
+				insertBinaryNodeRec(latestRoot.getLeftChild(), newNode);
+			}
+		} else {
+			if (latestRoot.getRightChild() == null) {
+				latestRoot.setRightChild(newNode);
+				return;
+			} else {
+				insertBinaryNodeRec(latestRoot.getRightChild(), newNode);
+			}
+		}
 	}
 
 	/**
 	 * Method looking whether a number is a node in the tree.
 	 * 
-	 * @param tree
-	 *            binary tree.
 	 * @param wantedNode
-	 *            node that.
+	 *            node that look.
 	 * @return true for found node, and false for not found node.
 	 */
 	public boolean searchNodeInTree(int wantedNode) {
@@ -77,7 +88,6 @@ public class BinaryTree {
 
 		while (node != null) {
 			if (node.getNumber() == wantedNode) {
-				System.out.println("Node " + wantedNode + " was found");
 				return true;
 			} else {
 				if (node.getNumber() < wantedNode) {
@@ -87,23 +97,38 @@ public class BinaryTree {
 				}
 			}
 		}
-		System.out.println("Node " + wantedNode + " wasn't in a tree");
 		return false;
 
 	}
 
 	/**
-	 * Print elements of the tree in this order - left successor, root, right successor.
-	 * 
-	 * @param node
-	 *            data on one node on tree
+	 * Printing the contents of the tree in an inorder way.
 	 */
-	public void print(BinaryNode node) {
-		if (node == null) {
+	public void printInorder() {
+		printInOrderRec(root);
+		System.out.println("");
+	}
+
+	/**
+	 * Helper method to recursively print the contents in an inorder way
+	 */
+	private void printInOrderRec(BinaryNode currRoot) {
+		if (currRoot == null) {
 			return;
 		}
-		print(node.getLeftChild());
-		System.out.print(node.getNumber() + " ");
-		print(node.getRightChild());
+		printInOrderRec(currRoot.getLeftChild());
+		System.out.print(currRoot.getNumber() + " ");
+		printInOrderRec(currRoot.getRightChild());
+	}
+
+	public boolean findLeaf(BinaryNode currentNode) {
+		if (currentNode.getLeftChild() != null) {
+			return true;
+		}
+		if (currentNode.getRightChild() != null) {
+			return true;
+		}
+		return false;
+
 	}
 }

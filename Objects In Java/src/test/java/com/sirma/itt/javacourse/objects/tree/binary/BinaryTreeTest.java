@@ -18,10 +18,10 @@ public class BinaryTreeTest {
 	@Test
 	public void searchNodeInTreeTest() {
 		testTree.insertBinaryNode(10);
-		testTree.insertBinaryNode(5);
+		testTree.insertBinaryNode(-5);
 		testTree.insertBinaryNode(200);
 
-		boolean testActualfaund = testTree.searchNodeInTree(5);
+		boolean testActualfaund = testTree.searchNodeInTree(-5);
 		boolean testActualNotfound = testTree.searchNodeInTree(30);
 		Assert.assertTrue(testActualfaund);
 		Assert.assertTrue(!testActualNotfound);
@@ -81,7 +81,7 @@ public class BinaryTreeTest {
 	}
 
 	/**
-	 * Check nodes of nodes.
+	 * Check whether the node has a successor Is leaf
 	 */
 	@Test
 	public void nodeThereLeaves() {
@@ -91,9 +91,13 @@ public class BinaryTreeTest {
 		testTree.insertBinaryNode(100);
 		testTree.insertBinaryNode(700);
 
-		Assert.assertEquals(100, testTree.getRoot().getRightChild().getLeftChild().getNumber());
-		Assert.assertEquals(null, testTree.getRoot().getLeftChild().getRightChild().getNumber());
+		BinaryNode testTreeNodeOne = testTree.getRoot().getRightChild();
+		BinaryNode testTreeNodeTwo = testTree.getRoot().getLeftChild();
+
+		boolean testLeafOne = testTree.findLeaf(testTreeNodeOne);
+		boolean testLeafTwo = testTree.findLeaf(testTreeNodeTwo);
+		Assert.assertTrue(testLeafOne);
+		Assert.assertFalse(testLeafTwo);
 
 	}
-
 }
