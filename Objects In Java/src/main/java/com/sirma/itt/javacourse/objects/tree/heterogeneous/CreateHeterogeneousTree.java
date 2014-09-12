@@ -1,7 +1,5 @@
 package com.sirma.itt.javacourse.objects.tree.heterogeneous;
 
-import java.util.ArrayList;
-
 /**
  * Class which builds a tree
  * 
@@ -15,21 +13,15 @@ public class CreateHeterogeneousTree {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		HeterogeneousTree tree = new HeterogeneousTree("tree");
+		HeterogeneousTree tree = new HeterogeneousTree();
+		tree.insertHeteroNode("tree");
+		tree.insertHeteroNode("meet");
+		tree.insertHeteroNode(8);
+		tree.insertHeteroNode(-568);
+		tree.insertHeteroNode(0.22545);
+		tree.insertHeteroNode("smart");
 
-		HeterogeneousNode root;
-		HeterogeneousNode firstCild = new HeterogeneousNode("meat");
-		HeterogeneousNode secondChild = new HeterogeneousNode(5);
-		HeterogeneousNode tirthChild = new HeterogeneousNode(-854);
-
-		root = tree.getRoot();
-
-		ArrayList<HeterogeneousNode> rootChildrenFirstGeneration = new ArrayList<HeterogeneousNode>();
-		rootChildrenFirstGeneration.add(secondChild);
-		rootChildrenFirstGeneration.add(firstCild);
-		rootChildrenFirstGeneration.add(tirthChild);
-
-		tree.printTree(tree.getRoot(), rootChildrenFirstGeneration);
-
+		System.out.println("Print in Preorder");
+		tree.printPreorder();
 	}
 }

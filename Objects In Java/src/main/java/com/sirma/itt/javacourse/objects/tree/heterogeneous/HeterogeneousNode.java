@@ -1,7 +1,5 @@
 package com.sirma.itt.javacourse.objects.tree.heterogeneous;
 
-import java.util.ArrayList;
-
 /**
  * Class describes a node of the tree
  * 
@@ -10,8 +8,15 @@ import java.util.ArrayList;
 
 public class HeterogeneousNode {
 	private Object data;
-	private HeterogeneousNode parent;
-	private ArrayList<HeterogeneousNode> children;
+	private HeterogeneousNode leftChild;
+	private HeterogeneousNode rightChild;
+
+	/**
+	 * Default constructor.
+	 */
+	public HeterogeneousNode() {
+
+	}
 
 	/**
 	 * Constructor of heterogeneous node.
@@ -43,52 +48,40 @@ public class HeterogeneousNode {
 	}
 
 	/**
-	 * Getter method for parent.
+	 * Getter method for leftChild.
 	 *
-	 * @return the parent
+	 * @return the leftChild
 	 */
-	public HeterogeneousNode getParent() {
-		return parent;
+	public HeterogeneousNode getLeftChild() {
+		return leftChild;
 	}
 
 	/**
-	 * Setter method for parent.
+	 * Setter method for leftChild.
 	 *
-	 * @param parent
-	 *            the parent to set
+	 * @param leftChild
+	 *            the leftChild to set
 	 */
-	public void setParent(HeterogeneousNode parent) {
-		this.parent = parent;
+	public void setLeftChild(HeterogeneousNode leftChild) {
+		this.leftChild = leftChild;
 	}
 
 	/**
-	 * Getter method for children.
+	 * Getter method for rightChild.
 	 *
-	 * @return the children
+	 * @return the rightChild
 	 */
-	public ArrayList<HeterogeneousNode> getChildren() {
-		return children;
+	public HeterogeneousNode getRightChild() {
+		return rightChild;
 	}
 
 	/**
-	 * Setter method for children.
+	 * Setter method for rightChild.
 	 *
-	 * @param children
-	 *            the children to set
+	 * @param rightChild
+	 *            the rightChild to set
 	 */
-	public void setChildren(ArrayList<HeterogeneousNode> children) {
-		this.children = children;
+	public void setRightChild(HeterogeneousNode rightChild) {
+		this.rightChild = rightChild;
 	}
-
-	/**
-	 * Add node in tree
-	 * 
-	 * @param child
-	 *            every node in tree without root
-	 */
-	public void addNode(HeterogeneousNode child) {
-		children.add(child);
-		child.setParent(this);
-	}
-
 }
