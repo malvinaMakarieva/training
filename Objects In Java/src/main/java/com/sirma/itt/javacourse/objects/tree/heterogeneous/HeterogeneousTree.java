@@ -1,7 +1,5 @@
 package com.sirma.itt.javacourse.objects.tree.heterogeneous;
 
-import com.sirma.itt.javacourse.objects.tree.binary.BinaryNode;
-
 /**
  * Class describes a heterogeneous tree.
  * 
@@ -141,7 +139,7 @@ public class HeterogeneousTree {
 		printPrerderRec(currRoot.getLeftChild());
 		printPrerderRec(currRoot.getRightChild());
 	}
-	
+
 	/**
 	 * Method checks whether a node has leaves.
 	 * 
