@@ -1,5 +1,7 @@
 package com.sirma.itt.javacourse.objects.tree.heterogeneous;
 
+import com.sirma.itt.javacourse.objects.tree.binary.BinaryNode;
+
 /**
  * Class describes a heterogeneous tree.
  * 
@@ -138,6 +140,23 @@ public class HeterogeneousTree {
 		System.out.print(currRoot.getData() + " ");
 		printPrerderRec(currRoot.getLeftChild());
 		printPrerderRec(currRoot.getRightChild());
+	}
+	
+	/**
+	 * Method checks whether a node has leaves.
+	 * 
+	 * @param currentNode
+	 *            node to check if there leaves
+	 * @return true when node have leaf.
+	 */
+	public boolean findLeaf(HeterogeneousNode currentNode) {
+		if (currentNode.getLeftChild() != null) {
+			return true;
+		}
+		if (currentNode.getRightChild() != null) {
+			return true;
+		}
+		return false;
 	}
 
 }
