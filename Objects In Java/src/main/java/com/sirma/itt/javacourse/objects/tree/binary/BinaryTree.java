@@ -136,6 +136,5 @@ public class BinaryTree {
 			return true;
 		}
 		return false;
-
 	}
 }
