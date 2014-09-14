@@ -20,7 +20,6 @@ public class HomogeneusTree<T> {
 	 */
 	public HomogeneusTree(T rootData) {
 		root = new Node<T>(rootData);
-		root.setData(rootData);
 		root.setChildren(new ArrayList<Node<T>>());
 	}
 
