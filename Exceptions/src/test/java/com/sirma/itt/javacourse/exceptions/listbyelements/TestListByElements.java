@@ -3,6 +3,7 @@ package com.sirma.itt.javacourse.exceptions.listbyelements;
 import org.junit.Assert;
 import org.junit.Test;
 
+
 /**
  * Class that test methods from ListByElements class.
  * 

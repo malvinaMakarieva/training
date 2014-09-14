@@ -9,7 +9,6 @@ import org.junit.Test;
  * @author Malvina Makarieva
  */
 public class BinaryTreeTest {
-	BinaryNode testNode;
 	BinaryTree testTree = new BinaryTree();
 
 	/**
@@ -23,14 +22,13 @@ public class BinaryTreeTest {
 
 		boolean testActualfaund = testTree.searchNodeInTree(-5);
 		boolean testActualNotfound = testTree.searchNodeInTree(30);
-		Assert.assertTrue(testActualfaund);
-		Assert.assertTrue(!testActualNotfound);
+		
 		Assert.assertNotSame(true, testActualNotfound);
 		Assert.assertNotSame(false, testActualfaund);
 	}
 
 	/**
-	 * Method checks whether the root of the tree is estimated,
+	 * Method checks whether the root of the tree is estimated.
 	 */
 	@Test
 	public void haveRoot() {
@@ -49,8 +47,13 @@ public class BinaryTreeTest {
 		testTree.insertBinaryNode(10);
 		testTree.insertBinaryNode(5);
 		testTree.insertBinaryNode(200);
+		testTree.insertBinaryNode(3);
+		
+		Object firstLeftChild =  testTree.getRoot().getLeftChild().getNumber();
+		Object secondLeftChild =  testTree.getRoot().getLeftChild().getLeftChild().getNumber();
 
-		Assert.assertEquals(5, testTree.getRoot().getLeftChild().getNumber());
+		Assert.assertEquals(5,firstLeftChild);
+		Assert.assertEquals(3,secondLeftChild);
 	}
 
 	/**
@@ -61,8 +64,16 @@ public class BinaryTreeTest {
 		testTree.insertBinaryNode(10);
 		testTree.insertBinaryNode(5);
 		testTree.insertBinaryNode(200);
+		testTree.insertBinaryNode(7);
+		testTree.insertBinaryNode(300);
 
-		Assert.assertEquals(200, testTree.getRoot().getRightChild().getNumber());
+		
+		Object firstRightChild =  testTree.getRoot().getLeftChild().getRightChild().getNumber();
+		Object secondRightChild =  testTree.getRoot().getRightChild().getRightChild().getNumber();
+
+
+		Assert.assertEquals(7, firstRightChild);
+		Assert.assertEquals(300, secondRightChild);
 
 	}
 
@@ -81,7 +92,7 @@ public class BinaryTreeTest {
 	}
 
 	/**
-	 * Check whether the node has a successor Is leaf
+	 * Check whether the node has a successor is leaf.
 	 */
 	@Test
 	public void nodeThereLeaves() {
@@ -96,6 +107,7 @@ public class BinaryTreeTest {
 
 		boolean testLeafOne = testTree.findLeaf(testTreeNodeOne);
 		boolean testLeafTwo = testTree.findLeaf(testTreeNodeTwo);
+		
 		Assert.assertTrue(testLeafOne);
 		Assert.assertFalse(testLeafTwo);
 
@@ -120,5 +132,6 @@ public class BinaryTreeTest {
 
 		Assert.assertEquals(true, testFirsNode);
 		Assert.assertEquals(false, testSecondNode);
+		
 	}
 }

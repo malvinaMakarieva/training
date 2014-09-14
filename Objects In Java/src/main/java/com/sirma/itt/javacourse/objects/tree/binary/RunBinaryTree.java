@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class RunBinaryTree {
 	/**
-	 * Run function from BinaryTree and BinaryNode to create one binary tree.
+	 * Run function from BinaryTree and BinaryNode to create binary tree.
 	 * 
 	 * @param args
 	 */
