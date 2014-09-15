@@ -12,8 +12,14 @@ import java.util.ArrayList;
 
 public class Node<T> {
 	private T data;
-	private Node<T> parent;
 	private ArrayList<Node<T>> children;
+
+	/**
+	 * Default constructor.
+	 */
+	public Node() {
+
+	}
 
 	/**
 	 * Constructor of node.
@@ -23,6 +29,7 @@ public class Node<T> {
 	 */
 	public Node(T data) {
 		this.data = data;
+		this.setChildren(new ArrayList<Node<T>>());
 	}
 
 	/**
@@ -42,25 +49,6 @@ public class Node<T> {
 	 */
 	public void setData(T data) {
 		this.data = data;
-	}
-
-	/**
-	 * Getter method for parent.
-	 *
-	 * @return the parent
-	 */
-	public Node<T> getParent() {
-		return parent;
-	}
-
-	/**
-	 * Setter method for parent.
-	 *
-	 * @param parent
-	 *            the parent to set
-	 */
-	public void setParent(Node<T> parent) {
-		this.parent = parent;
 	}
 
 	/**
@@ -90,7 +78,5 @@ public class Node<T> {
 	 */
 	public void addNode(Node<T> child) {
 		children.add(child);
-		child.setParent(this);
 	}
-
 }

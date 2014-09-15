@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class CreateTree {
 
 	/**
-	 * Method which builds the tree and displayed in the console
+	 * Method which builds the tree and displayed in the console.
 	 * 
 	 * @param args
 	 */
@@ -33,22 +33,15 @@ public class CreateTree {
 
 		tree.getRoot().setChildren(rootChildrenFirstGeneration);
 		ArrayList<Node<String>> childrenSecondGenerationNodeOne = new ArrayList<Node<String>>();
-		childrenSecondGenerationNodeOne.add(nodeOneLevelTwo);
-		childrenSecondGenerationNodeOne.add(nodeTwoLevelTwo);
+		childrenSecondGenerationNodeOne.add(nodeThreeLevelTwo);
+		childrenSecondGenerationNodeOne.add(nodeFourLevelTwo);
 
 		rootChildrenFirstGeneration.get(0).setChildren(childrenSecondGenerationNodeOne);
 		ArrayList<Node<String>> childrenSecondGenerationNodeTwo = new ArrayList<Node<String>>();
-		childrenSecondGenerationNodeTwo.add(nodeThreeLevelTwo);
-		childrenSecondGenerationNodeTwo.add(nodeFourLevelTwo);
+		childrenSecondGenerationNodeTwo.add(nodeOneLevelTwo);
+		childrenSecondGenerationNodeTwo.add(nodeTwoLevelTwo);
 		rootChildrenFirstGeneration.get(1).setChildren(childrenSecondGenerationNodeTwo);
 
-		System.out.println("                                   " + root.getData());
-		System.out.print("                      " + nodeOneLevelOne.getData());
-		System.out.println("                    " + nodeTwoLevelOne.getData());
-		System.out.print("             " + nodeOneLevelTwo.getData());
-		System.out.print("           " + nodeTwoLevelTwo.getData());
-		System.out.print("      " + nodeThreeLevelTwo.getData());
-		System.out.print("        " + nodeFourLevelTwo.getData());
-
+		tree.print(root, " - ");
 	}
 }

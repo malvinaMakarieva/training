@@ -13,6 +13,13 @@ public class HomogeneusTree<T> {
 	private Node<T> root;
 
 	/**
+	 * Default constructor.
+	 */
+	public HomogeneusTree() {
+
+	}
+
+	/**
 	 * Constructor of homogeneus tree.
 	 * 
 	 * @param rootData
@@ -42,4 +49,23 @@ public class HomogeneusTree<T> {
 		this.root = root;
 	}
 
+	/**
+	 * Print the tree and show the parent nodes and there children if any.
+	 * 
+	 * @param root
+	 *            root of the tree
+	 * @param symbol
+	 *            string for visual representing the tree and the nodes children
+	 */
+	public void print(Node<T> root, String symbol) {
+		if (this.root == null) {
+			return;
+		}
+		System.out.println(symbol + root.getData());
+		Node<T> child = null;
+		for (int i = 0; i < root.getChildren().size(); i++) {
+			child = root.getChildren().get(i);
+			print(child, symbol + symbol);
+		}
+	}
 }
