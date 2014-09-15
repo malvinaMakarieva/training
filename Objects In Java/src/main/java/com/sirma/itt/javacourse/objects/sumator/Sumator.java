@@ -2,7 +2,6 @@ package com.sirma.itt.javacourse.objects.sumator;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.function.Predicate;
 
 /**
  * Class that has various functions for summing.
@@ -104,10 +103,8 @@ public class Sumator {
 	 * 
 	 * @param predicate
 	 *            some int.
-	 * 
 	 * @param currentResult
 	 *            result form last summing.
-	 * 
 	 * @return sum of predicate and currentResult.
 	 */
 	private String summing(int predicate, String currentResult) {
