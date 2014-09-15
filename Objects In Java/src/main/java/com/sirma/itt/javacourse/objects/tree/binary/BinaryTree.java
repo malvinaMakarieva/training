@@ -28,7 +28,8 @@ public class BinaryTree {
 	}
 
 	/**
-	 * Insert new value in the tree. If this value already exists, it is not added.
+	 * Insert new value in the tree. If this value already exists, it is not
+	 * added.
 	 * 
 	 * @param value
 	 *            value added in the tree.

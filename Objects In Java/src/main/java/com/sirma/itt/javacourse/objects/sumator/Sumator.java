@@ -2,6 +2,7 @@ package com.sirma.itt.javacourse.objects.sumator;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.function.Predicate;
 
 /**
  * Class that has various functions for summing.
@@ -56,7 +57,7 @@ public class Sumator {
 	}
 
 	/**
-	 * Method collects two numbers of type String.
+	 * Method sums two numbers of type String.
 	 * 
 	 * @param a
 	 *            String entered by the user
@@ -90,12 +91,28 @@ public class Sumator {
 			} else {
 				transfer = 0;
 			}
-			result = String.valueOf(digit) + result;
+			result = summing(digit, result);
 		}
 		if (transfer > 0) {
-			result = String.valueOf(transfer) + result;
+			result = summing(transfer, result);
 		}
 		return result;
+	}
+
+	/**
+	 * Method summing currentResult and some digit to return a String.
+	 * 
+	 * @param predicate
+	 *            some int.
+	 * 
+	 * @param currentResult
+	 *            result form last summing.
+	 * 
+	 * @return sum of predicate and currentResult.
+	 */
+	private String summing(int predicate, String currentResult) {
+		return currentResult = String.valueOf(predicate) + currentResult;
+
 	}
 
 	/**

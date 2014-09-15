@@ -69,10 +69,11 @@ public class HeterogeneousTree {
 	 * @param newNode
 	 *            node to added in tree.
 	 * @param value
-	 *            value added to the tree needed to check number or string is object.
+	 *            value added to the tree needed to check number or string is
+	 *            object.
 	 */
-	private void insertHeteroNodeRec(HeterogeneousNode latestRoot, HeterogeneousNode newNode,
-			Object value) {
+	private void insertHeteroNodeRec(HeterogeneousNode latestRoot,
+			HeterogeneousNode newNode, Object value) {
 
 		if (isThisNumber(value)) {
 
