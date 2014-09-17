@@ -68,7 +68,7 @@ public class NormalClients extends Humans implements ClientsManagment {
 	 *            bought from supermarket. {@inheritDoc}
 	 */
 	@Override
-	public Double buy(Products product) {
+	public Double buy(Products[] product) {
 		double currentSum = 0;
 		System.out.println("Sum of product is " + currentSum);
 		return currentSum;

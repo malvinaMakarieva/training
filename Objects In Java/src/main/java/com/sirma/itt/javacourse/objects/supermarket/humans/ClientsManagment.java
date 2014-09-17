@@ -10,7 +10,7 @@ public interface ClientsManagment {
 	 *            product from class Products
 	 * @return
 	 */
-	Double buy(Products product);
+	Double buy(Products product[]);
 
 	/**
 	 * Method that signs of poor service
