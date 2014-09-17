@@ -190,7 +190,7 @@
   </class>  
   <interface id="18" language="java" name="com.sirma.itt.javacourse.objects.supermarket.humans.ClientsManagment" 
     project="Objects In Java" 
-    file="/Objects In Java/src/main/java/com/sirma/itt/javacourse/objects/supermarket/humans/ClientsManagment.java" 
+    file="/Objects In Java/src/main/java/com/sirma/itt/javacourse/objects/tree/homogeneousnew/ClientsManagment.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="416" y="535"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
