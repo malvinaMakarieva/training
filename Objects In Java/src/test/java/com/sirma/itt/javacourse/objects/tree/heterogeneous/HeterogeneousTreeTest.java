@@ -30,7 +30,7 @@ public class HeterogeneousTreeTest {
 	 * Check whether the return values of method isThisNumber() are expected.
 	 */
 	@Test
-	public void testNotNumberTest() {
+	public void isThisNumberTest() {
 		boolean testNumberFloat = testTree.isThisNumber(98.23);
 		boolean testNumberInteger = testTree.isThisNumber(85);
 		boolean testNumberNegativInteger = testTree.isThisNumber(-5);
@@ -51,8 +51,9 @@ public class HeterogeneousTreeTest {
 		testTree.insertHeteroNode("Second");
 		testTree.insertHeteroNode(9);
 
-		Assert.assertEquals("first", testTree.getRoot().getData());
-		Assert.assertNotEquals(9, testTree.getRoot().getData());
+		Object testNodehaveNode = testTree.getRoot().getData();
+
+		Assert.assertEquals("first", testNodehaveNode);
 
 	}
 
