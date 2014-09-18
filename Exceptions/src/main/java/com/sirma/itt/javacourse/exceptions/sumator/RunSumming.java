@@ -1,14 +1,13 @@
 package com.sirma.itt.javacourse.exceptions.sumator;
 
 /**
- * This class read from console and running method summingLargeNumbers(String firstNum, String
- * secondNum)
+ * This class read from console and running method summingStrings(String firstNum, String secondNum)
  * 
  * @author Malvina Makarieva
  */
 public class RunSumming {
 	/**
-	 * Main method that running summingLargeNumbers from class LargeNumber
+	 * Main method that running summingLargeNumbers from class Sumator
 	 * 
 	 * @param args
 	 */
@@ -21,7 +20,7 @@ public class RunSumming {
 		String secondNumber = null;
 		secondNumber = summing.readFromConsole();
 
-		String result = summing.summingLargeNumbers(firstNumber, secondNumber);
-		System.out.println("Sum of number is " + result);
+		String result = summing.summingStrings(firstNumber, secondNumber);
+		System.out.println("Sum is " + result);
 	}
 }

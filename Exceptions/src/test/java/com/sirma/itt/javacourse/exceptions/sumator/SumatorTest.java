@@ -9,31 +9,24 @@ import org.junit.Test;
  * @author Malvina Makarieva
  */
 public class SumatorTest {
+	Sumator testSumming = new Sumator();
 
 	/**
 	 * Test method summingLargeNumbers() from class Sumator.
 	 */
-	// @Test
+	@Test
 	public void summingLargeNumbersTest() {
-		Sumator testSumming = new Sumator();
-
-		Assert.assertEquals("100", testSumming.summingLargeNumbers("50", "50"));
-		Assert.assertEquals("15720", testSumming.summingLargeNumbers("7589", "8131"));
+		Assert.assertEquals("Sum is 100", testSumming.summingStrings("50", "50"));
+		Assert.assertEquals("Sum is 15720", testSumming.summingStrings("7589", "8131"));
 	}
 
 	/**
-	 * Test method readFromConsole() from class Sumator.
+	 * Method that tested exception.
 	 */
-	@Test
-	public void readFromConsoleTest() {
-		Sumator testRead = new Sumator();
-		System.out.println("Enter number 5");
-		String testInput = testRead.readFromConsole();
-		Assert.assertEquals("5", testInput);
-
-		System.out.println("Enter number 100");
-		String testInputSecond = testRead.readFromConsole();
-		Assert.assertEquals("100", testInputSecond);
+	@Test(expected = NumberFormatException.class)
+	public void exceptionTest() {
+		testSumming.summingStrings("50", "abc");
 
 	}
+
 }

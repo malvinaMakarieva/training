@@ -19,7 +19,7 @@ public class Sumator {
 	 * @return sum of two numbers
 	 */
 
-	public String summingLargeNumbers(String firstNum, String secondNum) {
+	public String summingStrings(String firstNum, String secondNum) {
 
 		String result = "";
 		int length;
@@ -43,9 +43,8 @@ public class Sumator {
 				Integer.parseInt(Character.toString(firstNum.charAt(i)));
 				Integer.parseInt(Character.toString(secondNum.charAt(i)));
 			} catch (NumberFormatException e) {
-				System.out.println("Input contains characters!");
-				e.printStackTrace();
-				System.exit(0);
+				System.out.println("Input contains symbols");
+				throw e;
 			}
 			digit = (firstNum.charAt(i) - '0') + ((secondNum.charAt(i) - '0')) + transfer;
 
@@ -55,14 +54,33 @@ public class Sumator {
 			} else {
 				transfer = 0;
 			}
-			result = String.valueOf(digit) + result;
+			result = summing(digit, result);
 		}
 		if (transfer > 0) {
-			result = String.valueOf(transfer) + result;
+			result = summing(transfer, result);
 		}
 		return result;
 	}
 
+	/**
+	 * Method summing currentResult and some digit to return a String.
+	 * 
+	 * @param predicate
+	 *            some int.
+	 * @param currentResult
+	 *            result form last summing.
+	 * @return sum of predicate and currentResult.
+	 */
+	private String summing(int predicate, String currentResult) {
+		return currentResult = String.valueOf(predicate) + currentResult;
+
+	}
+
+	/**
+	 * The method read form console string.
+	 * 
+	 * @return string from user input.
+	 */
 	public String readFromConsole() {
 		Scanner userInput = new Scanner(System.in);
 		System.out.print("Input number  = ");
