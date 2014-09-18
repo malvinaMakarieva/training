@@ -5,15 +5,15 @@ package com.sirma.itt.javacourse.exceptions.listbyelements;
  */
 public class ListByElements {
 
-	Object arrayList[] = new Object[5];
-	int lastFilledIndex = 0;
-	Object obj;
+	private Object arrayList[];
+	private int lastFilledIndex;
 
 	/**
 	 * Default constructor.
 	 */
 	public ListByElements() {
-
+		arrayList = new Object[5];
+		lastFilledIndex = 0;
 	}
 
 	/**
@@ -25,17 +25,11 @@ public class ListByElements {
 	 *             exception is thrown when the list is full.
 	 */
 	public void add(Object obj) throws ArrayIndexOutOfBoundsException {
-		if (lastFilledIndex == 0) {
-			arrayList[lastFilledIndex] = obj;
-			lastFilledIndex++;
-		} else {
-			if (lastFilledIndex > arrayList.length) {
-				lastFilledIndex--;
-				throw new ArrayIndexOutOfBoundsException("List is full!");
-			}
-			arrayList[lastFilledIndex] = obj;
-			lastFilledIndex++;
+		if (lastFilledIndex > arrayList.length) {
+			throw new ArrayIndexOutOfBoundsException("List is full!");
 		}
+		arrayList[lastFilledIndex] = obj;
+		lastFilledIndex++;
 	}
 
 	/**
@@ -58,11 +52,10 @@ public class ListByElements {
 	 * @return the string of all elements in [].
 	 */
 	public String printAllElements() {
-		String list = "[ ";
+		String list = "";
 		for (int i = 0; i < arrayList.length; i++) {
 			list += arrayList[i] + " ";
 		}
-		list += "]";
 		return list;
 	}
 }

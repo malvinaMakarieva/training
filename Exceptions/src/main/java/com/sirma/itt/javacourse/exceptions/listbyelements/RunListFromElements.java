@@ -1,5 +1,10 @@
 package com.sirma.itt.javacourse.exceptions.listbyelements;
 
+/**
+ * In the class creates a list. Added and removed from it.
+ * 
+ * @author Malvina Makarieva
+ */
 public class RunListFromElements {
 	/**
 	 * Main class
@@ -14,10 +19,10 @@ public class RunListFromElements {
 		listElements.add(7.55);
 		listElements.add("no");
 
-		System.out.println("All elements are " + listElements.printAllElements());
+		System.out.println("All elements are - " + listElements.printAllElements());
 
 		listElements.remove();
-		System.out.println("After remove elements are " + listElements.printAllElements());
+		System.out.println("After remove elements are - " + listElements.printAllElements());
 
 	}
 }
