@@ -15,7 +15,7 @@ public class RunConsoleReader {
 	 *             number is out of range.
 	 */
 	public static void main(String[] args) throws IncorectInputAreaException {
-		ConsolReader consoleReader = new ConsolReader();
+		ConsoleReader consoleReader = new ConsoleReader();
 		consoleReader.readFromConsoleNumbers();
 	}
 

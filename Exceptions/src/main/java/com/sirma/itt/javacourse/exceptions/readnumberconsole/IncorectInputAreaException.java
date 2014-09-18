@@ -6,10 +6,10 @@ package com.sirma.itt.javacourse.exceptions.readnumberconsole;
  * 
  * @author Malvina Makarieva
  */
-public class IncorectInputAreaException extends Exception {
+public class IncorectInputAreaException extends RuntimeException {
 
 	/**
-	 * Automatic generate serialVersionUID.
+	 * Comment for serialVersionUID.
 	 */
 	private static final long serialVersionUID = 5547529901572293853L;
 

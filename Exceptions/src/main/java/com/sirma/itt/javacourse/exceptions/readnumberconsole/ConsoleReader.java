@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 
  * @author Malvina Makarieva
  */
-public class ConsolReader {
+public class ConsoleReader {
 	/**
 	 * Method read form console numbers in range 0 to 100.
 	 * 
@@ -30,17 +30,23 @@ public class ConsolReader {
 				.println("Enter numbers in the range from 0 to 100 introduction ends with the input of a number outside the range.");
 		Scanner input = new Scanner(System.in);
 		int userInput;
-		while (true) {
 
+		while (true) {
 			System.out.print("input number = ");
 			userInput = input.nextInt();
+			checkRange(userInput);
+		}
+	}
 
-			if (userInput < 0 || userInput > 100) {
-				input.close();
-				throw new IncorectInputAreaException(
-						"Incorrectly entered number. It must be from 0 to 100");
-
-			}
+	/**
+	 * Method checks whether the entered number is in the range 0-100. If not throw an exception.
+	 * 
+	 * @param userInput
+	 */
+	public void checkRange(int userInput) {
+		if (userInput < 0 || userInput > 100) {
+			throw new IncorectInputAreaException(
+					"Incorrectly entered number. It must be from 0 to 100");
 		}
 	}
 }
