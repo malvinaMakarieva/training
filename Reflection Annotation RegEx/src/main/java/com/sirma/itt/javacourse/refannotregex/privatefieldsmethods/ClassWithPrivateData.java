@@ -22,6 +22,7 @@ public class ClassWithPrivateData {
 	 *
 	 * @return the privateString
 	 */
+	@SuppressWarnings("unused")
 	private String getPrivateString() {
 		return privateString;
 	}
@@ -32,6 +33,7 @@ public class ClassWithPrivateData {
 	 * @param privateString
 	 *            the privateString to set
 	 */
+	@SuppressWarnings("unused")
 	private void setPrivateString(String privateString) {
 		this.privateString = privateString;
 	}
@@ -41,6 +43,7 @@ public class ClassWithPrivateData {
 	 *
 	 * @return the privateFloat
 	 */
+	@SuppressWarnings("unused")
 	private float getPrivateFloat() {
 		return privateFloat;
 	}
@@ -51,6 +54,7 @@ public class ClassWithPrivateData {
 	 * @param privateFloat
 	 *            the privateFloat to set
 	 */
+	@SuppressWarnings("unused")
 	private void setPrivateFloat(float privateFloat) {
 		this.privateFloat = privateFloat;
 	}
@@ -60,6 +64,7 @@ public class ClassWithPrivateData {
 	 *
 	 * @return the privateInteger
 	 */
+	@SuppressWarnings("unused")
 	private Integer getPrivateInteger() {
 		return privateInteger;
 	}
@@ -70,6 +75,7 @@ public class ClassWithPrivateData {
 	 * @param privateInteger
 	 *            the privateInteger to set
 	 */
+	@SuppressWarnings("unused")
 	private void setPrivateInteger(Integer privateInteger) {
 		this.privateInteger = privateInteger;
 	}
@@ -79,6 +85,7 @@ public class ClassWithPrivateData {
 	 * 
 	 * @return false always.
 	 */
+	@SuppressWarnings("unused")
 	private boolean print() {
 		return false;
 
