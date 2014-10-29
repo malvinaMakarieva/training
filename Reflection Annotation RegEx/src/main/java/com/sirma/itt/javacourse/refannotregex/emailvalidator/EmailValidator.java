@@ -1,4 +1,4 @@
-package com.sirma.itt.javacourse.refannotregex.privatefieldsmerhod;
+package com.sirma.itt.javacourse.refannotregex.emailvalidator;
 
 /**
  * Class describes the validation email

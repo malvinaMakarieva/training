@@ -1,7 +1,9 @@
-package com.sirma.itt.javacourse.refannotregex.privatefieldsmerhod;
+package com.sirma.itt.javacourse.refannotregex.emailvalidator;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.sirma.itt.javacourse.refannotregex.emailvalidator.EmailValidator;
 
 /**
  * Class that test validation of email.

@@ -3,6 +3,8 @@ package com.sirma.itt.javacourse.refannotregex.privatefieldsmethods;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Class that contain some method using reflection.
@@ -20,22 +22,22 @@ public class ReflectionFunctions {
 	 * @throws IllegalArgumentException
 	 * @throws IllegalAccessException
 	 */
-	public void fieldValue(Class<?> classInstance) throws NoSuchFieldException,
-			IllegalArgumentException, IllegalAccessException {
+	public List<String> fieldValue(Class<?> classInstance, Object instance)
+			throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException {
 
-		ClassWithPrivateData someClassInstance = new ClassWithPrivateData();
+		// ClassWithPrivateData instanceOfClassForReflaction = new ClassWithPrivateData();
 		Field[] field = classInstance.getDeclaredFields();
+		List<String> list = new ArrayList<String>();
 
 		String nameOfField = null;
-		System.out.println("Field and value.");
 		for (int i = 0; i < field.length; i++) {
-
 			nameOfField = field[i].getName();
 			Field privateStringField = ClassWithPrivateData.class.getDeclaredField(nameOfField);
 			privateStringField.setAccessible(true);
-			Object fieldValue = privateStringField.get(someClassInstance);
-			System.out.println(nameOfField + " = " + fieldValue);
+			Object fieldValue = privateStringField.get(instance);
+			list.add(nameOfField + " = " + fieldValue);
 		}
+		return list;
 	}
 
 	/**
@@ -51,15 +53,15 @@ public class ReflectionFunctions {
 	 * @throws IllegalArgumentException
 	 * @throws InvocationTargetException
 	 */
-	public void getMethodValues(Class<?> classInstance, String methodName)
+	public Object getMethodValues(Class<?> classInstance, String methodName, Object instance)
 			throws NoSuchMethodException, SecurityException, IllegalAccessException,
 			IllegalArgumentException, InvocationTargetException {
-		ClassWithPrivateData instanceOfClassWithPrivateData = new ClassWithPrivateData();
+		// ClassWithPrivateData instanceOfClassWithPrivateData = new ClassWithPrivateData();
 
 		Method privateStringMethod = ClassWithPrivateData.class.getDeclaredMethod(methodName, null);
 		privateStringMethod.setAccessible(true);
-		Object returnValue = privateStringMethod.invoke(instanceOfClassWithPrivateData, null);
+		Object returnValue = privateStringMethod.invoke(instance, null);
 
-		System.out.println(methodName + " return value = " + returnValue);
+		return returnValue;
 	}
 }
