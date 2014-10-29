@@ -21,20 +21,20 @@ public class ReflectionFunctions {
 	 * @throws NoSuchFieldException
 	 * @throws IllegalArgumentException
 	 * @throws IllegalAccessException
+	 * @throws InstantiationException
 	 */
-	public List<String> fieldValue(Class<?> classInstance, Object instance)
-			throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException {
+	public List<String> fieldValue(Class<?> classInstance) throws NoSuchFieldException,
+			IllegalArgumentException, IllegalAccessException, InstantiationException {
 
-		// ClassWithPrivateData instanceOfClassForReflaction = new ClassWithPrivateData();
 		Field[] field = classInstance.getDeclaredFields();
 		List<String> list = new ArrayList<String>();
-
 		String nameOfField = null;
+
 		for (int i = 0; i < field.length; i++) {
 			nameOfField = field[i].getName();
-			Field privateStringField = ClassWithPrivateData.class.getDeclaredField(nameOfField);
+			Field privateStringField = classInstance.getDeclaredField(nameOfField);
 			privateStringField.setAccessible(true);
-			Object fieldValue = privateStringField.get(instance);
+			Object fieldValue = privateStringField.get(classInstance.newInstance());
 			list.add(nameOfField + " = " + fieldValue);
 		}
 		return list;
@@ -52,15 +52,15 @@ public class ReflectionFunctions {
 	 * @throws IllegalAccessException
 	 * @throws IllegalArgumentException
 	 * @throws InvocationTargetException
+	 * @throws InstantiationException
 	 */
-	public Object getMethodValues(Class<?> classInstance, String methodName, Object instance)
+	public Object getMethodValues(Class<?> classInstance, String methodName)
 			throws NoSuchMethodException, SecurityException, IllegalAccessException,
-			IllegalArgumentException, InvocationTargetException {
-		// ClassWithPrivateData instanceOfClassWithPrivateData = new ClassWithPrivateData();
+			IllegalArgumentException, InvocationTargetException, InstantiationException {
 
-		Method privateStringMethod = ClassWithPrivateData.class.getDeclaredMethod(methodName, null);
+		Method privateStringMethod = classInstance.getDeclaredMethod(methodName, null);
 		privateStringMethod.setAccessible(true);
-		Object returnValue = privateStringMethod.invoke(instance, null);
+		Object returnValue = privateStringMethod.invoke(classInstance.newInstance(), null);
 
 		return returnValue;
 	}

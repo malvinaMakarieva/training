@@ -26,23 +26,18 @@ public class RunReflection {
 			InvocationTargetException, ClassNotFoundException, InstantiationException {
 
 		Class<ClassWithPrivateData> instanceOfClass = ClassWithPrivateData.class;
-
-		ClassWithPrivateData instance = new ClassWithPrivateData();
-
 		ReflectionFunctions reflectionMethods = new ReflectionFunctions();
 
 		System.out.println("Field and value.");
-		System.out.println(reflectionMethods.fieldValue(instanceOfClass, instance));
-		Object privateField = reflectionMethods.getMethodValues(instanceOfClass,
-				"getPrivateString", instance);
+		System.out.println(reflectionMethods.fieldValue(instanceOfClass));
+		Object privateField = reflectionMethods
+				.getMethodValues(instanceOfClass, "getPrivateString");
 		System.out.println("getPrivateString return valie = " + privateField);
-		privateField = reflectionMethods.getMethodValues(instanceOfClass, "getPrivateFloat",
-				instance);
+		privateField = reflectionMethods.getMethodValues(instanceOfClass, "getPrivateFloat");
 		System.out.println("getPrivateFloat return valie = " + privateField);
-		privateField = reflectionMethods.getMethodValues(instanceOfClass, "getPrivateInteger",
-				instance);
+		privateField = reflectionMethods.getMethodValues(instanceOfClass, "getPrivateInteger");
 		System.out.println("getPrivateInteger return valie = " + privateField);
-		privateField = reflectionMethods.getMethodValues(instanceOfClass, "print", instance);
+		privateField = reflectionMethods.getMethodValues(instanceOfClass, "print");
 		System.out.println("print return valie = " + privateField);
 	}
 }
