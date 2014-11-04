@@ -17,7 +17,7 @@ public class RunReverse {
 	public static void main(String[] args) throws IOException {
 
 		ReverseFile rv = new ReverseFile();
-		rv.addReverseLine("abc.txt");
+		rv.addReverseLine("src\\main\\resources\\abc.txt");
 
 	}
 }

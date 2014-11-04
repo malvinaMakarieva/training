@@ -21,7 +21,7 @@ public class ReverseFileTest {
 	@Test
 	public void addReverseLineTest() throws IOException {
 		StringBuilder actual;
-		actual = reverse.addReverseLine("reverseTestFile.txt");
+		actual = reverse.addReverseLine("src\\test\\resources\\reverseTestFile.txt");
 		StringBuilder expected = new StringBuilder("\n3\n2\n1");
 
 		Assert.assertEquals(expected.toString(), actual.toString());

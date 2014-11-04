@@ -22,8 +22,8 @@ public class WriteInFileTest {
 	@Test
 	public void testFileWrite() throws IOException {
 
-		String testActualFile = "actualFile.txt";
-		String testExpectedFile = "expectedFile.txt";
+		String testActualFile = "src\\test\\resources\\actualFile.txt";
+		String testExpectedFile = "src\\test\\resources\\expectedFile.txt";
 
 		String actualData = testActualFile + "\r\n tra la la \r\n tra \r\n.";
 		String exprctedData = " tra la la  tra ";

@@ -26,7 +26,7 @@ public class DirectoryBrowserTest {
 		List<String> actual = new ArrayList<String>();
 		expected.add("This is file");
 
-		actual.addAll(browser.chekDirectoryOrFile("testFile.txt"));
+		actual.addAll(browser.chekDirectoryOrFile("src\\test\\resources\\testFile.txt"));
 
 		Assert.assertEquals(expected, actual);
 	}
@@ -44,7 +44,7 @@ public class DirectoryBrowserTest {
 		expected.add("directory1");
 		expected.add("directory2");
 
-		actual.addAll(browser.chekDirectoryOrFile("SomeFolder"));
+		actual.addAll(browser.chekDirectoryOrFile("src\\test\\resources\\SomeFolder"));
 
 		Assert.assertEquals(expected, actual);
 
