@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author Malvina Makarieva
  */
-public class Run {
+public class RunAlignmentAnnotation {
 	/**
 	 * In the method creates an array of instances of classes successor and sorted.
 	 * 

@@ -25,8 +25,7 @@ public class InstanceOfClassTest {
 				.getInstansByNameOfClass("com.sirma.itt.javacourse.refannotregex.instanceclass.SomeClassTest");
 		String testInterfaceName = instanceByName.getInterfaceName(testInstance, 0);
 
-		Assert.assertEquals(
-				"Interface com.sirma.itt.javacourse.refannotregex.instanceclass.InterfaceTest",
+		Assert.assertEquals("com.sirma.itt.javacourse.refannotregex.instanceclass.InterfaceTest",
 				testInterfaceName);
 	}
 
@@ -45,7 +44,7 @@ public class InstanceOfClassTest {
 		String testSuperClassName = instanceByName.getSuperclassName(testInstance);
 
 		Assert.assertEquals(
-				"Super class com.sirma.itt.javacourse.refannotregex.instanceclass.SuperClassForTest",
+				"com.sirma.itt.javacourse.refannotregex.instanceclass.SuperClassForTest",
 				testSuperClassName);
 	}
 }

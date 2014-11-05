@@ -2,13 +2,13 @@ package com.sirma.itt.javacourse.refannotregex.instanceclass;
 
 /**
  * Class create instance from a class, and get some information about this class.
- * 
+ *
  * @author Malvina Makarieva
  */
 public class InstanceOfClass {
 	/**
 	 * Makes an instance of the class name.
-	 * 
+	 *
 	 * @param className
 	 *            the full name of the class - includes the package name and class name.
 	 * @return instance of a class in object type.
@@ -26,19 +26,18 @@ public class InstanceOfClass {
 
 	/**
 	 * Take the name of the super class.
-	 * 
+	 *
 	 * @param classInstance
 	 *            instance of the class.
 	 * @return string whit superclass name.
 	 */
 	public String getSuperclassName(Object classInstance) {
-		String supperClassName = classInstance.getClass().getSuperclass().getName();
-		return "Super class " + supperClassName;
+		return classInstance.getClass().getSuperclass().getName();
 	}
 
 	/**
 	 * Take the name of the implements interfaces.
-	 * 
+	 *
 	 * @param classInstance
 	 *            instance of the class.
 	 * @param numberOfInterface
@@ -46,7 +45,6 @@ public class InstanceOfClass {
 	 * @return
 	 */
 	public String getInterfaceName(Object classInstance, int numberOfInterface) {
-		String interfeces = classInstance.getClass().getInterfaces()[numberOfInterface].getName();
-		return "Interface " + interfeces;
+		return classInstance.getClass().getInterfaces()[numberOfInterface].getName();
 	}
 }

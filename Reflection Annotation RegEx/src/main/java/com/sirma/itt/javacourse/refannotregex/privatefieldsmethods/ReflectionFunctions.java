@@ -28,14 +28,12 @@ public class ReflectionFunctions {
 
 		Field[] field = classInstance.getDeclaredFields();
 		List<String> list = new ArrayList<String>();
-		String nameOfField = null;
+		Object currentInstance = classInstance.newInstance();
 
 		for (int i = 0; i < field.length; i++) {
-			nameOfField = field[i].getName();
-			Field privateStringField = classInstance.getDeclaredField(nameOfField);
-			privateStringField.setAccessible(true);
-			Object fieldValue = privateStringField.get(classInstance.newInstance());
-			list.add(nameOfField + " = " + fieldValue);
+			Field currentField = field[i];
+			currentField.setAccessible(true);
+			list.add(currentField.getName() + " = " + currentField.get(currentInstance));
 		}
 		return list;
 	}
@@ -58,10 +56,9 @@ public class ReflectionFunctions {
 			throws NoSuchMethodException, SecurityException, IllegalAccessException,
 			IllegalArgumentException, InvocationTargetException, InstantiationException {
 
-		Method privateStringMethod = classInstance.getDeclaredMethod(methodName, null);
+		Method privateStringMethod = classInstance.getDeclaredMethod(methodName);
 		privateStringMethod.setAccessible(true);
-		Object returnValue = privateStringMethod.invoke(classInstance.newInstance(), null);
-
-		return returnValue;
+		privateStringMethod.invoke(classInstance.newInstance());
+		return privateStringMethod.invoke(classInstance.newInstance());
 	}
 }
