@@ -18,7 +18,6 @@ public class TagReplacer {
 	 */
 	public String replaceTag(String code) throws PatternSyntaxException {
 		String pattern = "<x[^<]*[^>]/x>";
-		String newCode = code.replaceAll(pattern, "<x/>");
-		return newCode;
+		return code.replaceAll(pattern, "<x/>");
 	}
 }
