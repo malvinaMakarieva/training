@@ -14,7 +14,7 @@ public class ConsoleReaderTest {
 	 * Method that tested exception.
 	 */
 	@Test(expected = IncorectInputAreaException.class)
-	public void ExceptionTest() {
+	public void testException() {
 		readNumber.checkRange(200);
 	}
 }

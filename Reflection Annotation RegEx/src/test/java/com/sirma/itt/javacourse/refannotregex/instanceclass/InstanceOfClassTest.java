@@ -19,7 +19,7 @@ public class InstanceOfClassTest {
 	 * @throws IllegalAccessException
 	 */
 	@Test
-	public void getInterfaceNameTest() throws ClassNotFoundException, InstantiationException,
+	public void testGetInterfaceName() throws ClassNotFoundException, InstantiationException,
 			IllegalAccessException {
 		Object testInstance = instanceByName
 				.getInstansByNameOfClass("com.sirma.itt.javacourse.refannotregex.instanceclass.SomeClassTest");
@@ -37,7 +37,7 @@ public class InstanceOfClassTest {
 	 * @throws IllegalAccessException
 	 */
 	@Test
-	public void getSuperclassNameTest() throws ClassNotFoundException, InstantiationException,
+	public void testGetSuperclassName() throws ClassNotFoundException, InstantiationException,
 			IllegalAccessException {
 		Object testInstance = instanceByName
 				.getInstansByNameOfClass("com.sirma.itt.javacourse.refannotregex.instanceclass.SomeClassTest");

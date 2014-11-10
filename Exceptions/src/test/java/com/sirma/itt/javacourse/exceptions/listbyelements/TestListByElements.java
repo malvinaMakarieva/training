@@ -28,7 +28,7 @@ public class TestListByElements {
 	 * Test whether the method correctly remove items from the list.
 	 */
 	@Test
-	public void RemoveElementFromListTest() {
+	public void testRemoveElementFromList() {
 		testArray.add(6);
 		testArray.add("more");
 		testArray.add(9);
@@ -50,7 +50,7 @@ public class TestListByElements {
 	 * Method tests whether the correct elements are added to the list.
 	 */
 	@Test
-	public void AddElemelntInListTest() {
+	public void testAddElemelntInList() {
 		testArray.add(6);
 
 		String result = testArray.printAllElements();
@@ -79,7 +79,7 @@ public class TestListByElements {
 	 * Method that tested exception - ArrayIndexOutOfBoundsException.
 	 */
 	@Test(expected = ArrayIndexOutOfBoundsException.class)
-	public void listIsFull() {
+	public void testListIsFull() {
 		testArray.add(1);
 		testArray.add(2);
 		testArray.add(3);

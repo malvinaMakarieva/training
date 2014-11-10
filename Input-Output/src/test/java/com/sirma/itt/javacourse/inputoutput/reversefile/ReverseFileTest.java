@@ -19,7 +19,7 @@ public class ReverseFileTest {
 	 * @throws IOException
 	 */
 	@Test
-	public void addReverseLineTest() throws IOException {
+	public void testAddReverseLine() throws IOException {
 		StringBuilder actual;
 		actual = reverse.addReverseLine("src\\test\\resources\\reverseTestFile.txt");
 		StringBuilder expected = new StringBuilder("\n3\n2\n1");

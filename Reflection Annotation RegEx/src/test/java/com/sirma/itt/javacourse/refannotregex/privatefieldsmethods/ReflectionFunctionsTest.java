@@ -27,7 +27,7 @@ public class ReflectionFunctionsTest {
 	 * @throws InstantiationException
 	 */
 	@Test
-	public void fieldValueTest() throws NoSuchFieldException, IllegalArgumentException,
+	public void testFieldValue() throws NoSuchFieldException, IllegalArgumentException,
 			IllegalAccessException, IOException, InstantiationException {
 
 		List<String> actualList = reflectionMethods.fieldValue(instanceOfClass);
@@ -51,7 +51,7 @@ public class ReflectionFunctionsTest {
 	 * @throws InstantiationException
 	 */
 	@Test
-	public void getMethodValuesTest() throws NoSuchMethodException, SecurityException,
+	public void testGetMethodValues() throws NoSuchMethodException, SecurityException,
 			IllegalAccessException, IllegalArgumentException, InvocationTargetException,
 			InstantiationException {
 

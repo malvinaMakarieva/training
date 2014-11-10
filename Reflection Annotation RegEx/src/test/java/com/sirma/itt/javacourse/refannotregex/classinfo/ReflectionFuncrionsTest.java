@@ -20,7 +20,7 @@ public class ReflectionFuncrionsTest {
 	 * Test getSomeClassPakege() method from ReflectionFunction.
 	 */
 	@Test
-	public void getSomeClassPakegeTest() {
+	public void testGetSomeClassPakege() {
 		String packageInfo = reflection.getSomeClassPakege(testClassInstnce);
 		Assert.assertEquals("package com.sirma.itt.javacourse.refannotregex.classinfo", packageInfo);
 
@@ -30,7 +30,7 @@ public class ReflectionFuncrionsTest {
 	 * Test getClassConstructor() method from ReflectionFunction
 	 */
 	@Test
-	public void getClassConstructorTest() {
+	public void testGetClassConstructor() {
 		List<String> expectedList = new ArrayList<String>();
 		expectedList.add("public com.sirma.itt.javacourse.refannotregex.classinfo.TestClass()");
 		List<String> actualList = reflection.getClassConstructor(testClassInstnce);
@@ -42,7 +42,7 @@ public class ReflectionFuncrionsTest {
 	 * Test getMethodInfo() method from class ReflectionFunction
 	 */
 	@Test
-	public void getMethodInfoTest() {
+	public void testGetMethodInfo() {
 		List<String> expectedList = new ArrayList<String>();
 		expectedList
 				.add("public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException");
@@ -69,7 +69,7 @@ public class ReflectionFuncrionsTest {
 	 * @throws IllegalAccessException
 	 */
 	@Test
-	public void fieldValueTest() throws NoSuchFieldException, IllegalArgumentException,
+	public void testFieldValue() throws NoSuchFieldException, IllegalArgumentException,
 			IllegalAccessException {
 		List<String> expectedList = new ArrayList<String>();
 		expectedList

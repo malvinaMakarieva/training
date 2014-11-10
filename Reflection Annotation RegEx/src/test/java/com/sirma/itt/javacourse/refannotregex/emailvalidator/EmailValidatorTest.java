@@ -3,8 +3,6 @@ package com.sirma.itt.javacourse.refannotregex.emailvalidator;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.sirma.itt.javacourse.refannotregex.emailvalidator.EmailValidator;
-
 /**
  * Class that test validation of email.
  * 
@@ -17,7 +15,7 @@ public class EmailValidatorTest {
 	 * Test validateEmail();
 	 */
 	@Test
-	public void validateEmailTest() {
+	public void testValidateEmail() {
 		String testEmailOne = "malvina.v.m@gmial.com";
 		String testEmailTwo = "h1ello@sirma999.com";
 		String testEmailThree = "test@sirma.com";

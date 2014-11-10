@@ -24,7 +24,7 @@ public class SumatorTest {
 	 * Method that tested exception.
 	 */
 	@Test(expected = NumberFormatException.class)
-	public void exceptionTest() {
+	public void testException() {
 		testSumming.summingStrings("50", "abc");
 
 	}

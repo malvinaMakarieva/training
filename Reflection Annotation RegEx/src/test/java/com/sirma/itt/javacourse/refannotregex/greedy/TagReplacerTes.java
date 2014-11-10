@@ -15,7 +15,7 @@ public class TagReplacerTes {
 	 * Test method replaceTag().
 	 */
 	@Test
-	public void replaceTagTest() {
+	public void testReplaceTag() {
 		String testString = "<x><b></b><x>Hello world</x>" + "<b>sdfsdf</b><x>Good"
 				+ "morning</x><x>69</x><x>sdfsdfsdf</x>" + "</x>";
 		String expectedResult = "<x><b></b><x/>" + "<b>sdfsdf</b><x/><x/><x/>" + "</x>";

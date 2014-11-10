@@ -15,7 +15,7 @@ public class ValidatorTest {
 	 * Test method ibanValidator.
 	 */
 	@Test
-	public void ibanValidatorTest() {
+	public void testIbanValidator() {
 		String testString = "<bankAccounts>" + "<iban>GR16 0110 1050 0000 1054 7023 795</iban>"
 				+ "<iban>GB35 MIBG 4025 3432 1446 70</iban>"
 				+ "<iban>SA80 8000 0375 6080 1019 0160</iban>"
