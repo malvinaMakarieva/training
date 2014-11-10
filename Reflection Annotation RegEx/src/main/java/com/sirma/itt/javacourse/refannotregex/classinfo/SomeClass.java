@@ -1,8 +1,5 @@
 package com.sirma.itt.javacourse.refannotregex.classinfo;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 
 /**
  * SomeClass is class with random fields and methods. Created for using java reflection.
@@ -101,71 +98,6 @@ public class SomeClass {
 	@SuppressWarnings("unused")
 	private boolean someBooleanMethod() {
 		return true;
-	}
-
-	/**
-	 * Method displays the names and values ​​of fields of one class.
-	 * 
-	 * @param classInstance
-	 *            instance of class SomeClass.
-	 * @throws NoSuchFieldException
-	 * @throws IllegalArgumentException
-	 * @throws IllegalAccessException
-	 */
-	public void fieldValue(Class<?> classInstance) throws NoSuchFieldException,
-			IllegalArgumentException, IllegalAccessException {
-
-		SomeClass someClassInstance = new SomeClass();
-		System.out.println("Field modificators and names.");
-		Field[] field = classInstance.getDeclaredFields();
-		for (int i = 0; i < field.length; i++) {
-			System.out.println(field[i]);
-		}
-
-		String nameOfField = null;
-		System.out.println();
-		System.out.println("Field and value.");
-		for (int i = 0; i < field.length; i++) {
-
-			nameOfField = field[i].getName();
-			Field privateStringField = SomeClass.class.getDeclaredField(nameOfField);
-
-			privateStringField.setAccessible(true);
-			Object fieldValue = privateStringField.get(someClassInstance);
-			System.out.println(nameOfField + " = " + fieldValue);
-		}
-	}
-
-	/**
-	 * Displays information about package
-	 * 
-	 * @param classInstance
-	 *            instance of class SomeClass.
-	 * @return String with the full name of the package.
-	 */
-	public String getSomeClassPakege(Class<?> classInstance) {
-		Package Package = classInstance.getPackage();
-		return Package.toString();
-	}
-
-	/**
-	 * Displays information for all methods and constructors in class.
-	 * 
-	 * @param classInstance
-	 *            instance of class SomeClass.
-	 */
-	public void getSomeClassMethodsAndConstructors(Class<?> classInstance) {
-		Method[] allMethod = classInstance.getMethods();
-		for (int i = 0; i < allMethod.length; i++) {
-			System.out.println(allMethod[i]);
-		}
-
-		System.out.println("Constructor/s");
-		Constructor<?>[] constructors = classInstance.getConstructors();
-		for (int i = 0; i < constructors.length; i++) {
-			System.out.println(constructors[i]);
-		}
-
 	}
 
 }

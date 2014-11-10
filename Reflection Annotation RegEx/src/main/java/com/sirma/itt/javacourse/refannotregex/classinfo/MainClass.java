@@ -24,15 +24,17 @@ public class MainClass {
 	public static void main(String[] args) throws NoSuchFieldException, SecurityException,
 			IllegalArgumentException, IllegalAccessException {
 
-		SomeClass someClassInstance = new SomeClass();
+		ReflectionFunction reflection = new ReflectionFunction();
 		Class<SomeClass> instanceOfSomeClass = SomeClass.class;
 
-		String pakcege = someClassInstance.getSomeClassPakege(instanceOfSomeClass);
+		String pakcege = reflection.getSomeClassPakege(instanceOfSomeClass);
 		System.out.println("Packege - " + pakcege);
 		System.out.println("Methods are: ");
-		someClassInstance.getSomeClassMethodsAndConstructors(instanceOfSomeClass);
-		System.out.println();
-		someClassInstance.fieldValue(instanceOfSomeClass);
+		System.out.println(reflection.getMethodInfo(instanceOfSomeClass));
+		System.out.println("Constructor/s are:");
+		System.out.println(reflection.getClassConstructor(instanceOfSomeClass));
+		System.out.println("Field modificators, names and value");
+		System.out.println(reflection.fieldValue(instanceOfSomeClass));
 
 	}
 
