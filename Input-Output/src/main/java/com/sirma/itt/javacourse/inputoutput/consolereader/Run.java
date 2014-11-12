@@ -6,7 +6,11 @@ package com.sirma.itt.javacourse.inputoutput.consolereader;
  * @author Malvina Makarieva
  */
 public class Run {
-
+	/**
+	 * Main method. Input some data from console.
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		System.out.print("Input string: ");
 		System.out.println(ReadFromConsole.readString());

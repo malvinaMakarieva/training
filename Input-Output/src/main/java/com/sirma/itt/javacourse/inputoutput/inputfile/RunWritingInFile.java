@@ -9,7 +9,7 @@ import java.io.IOException;
  */
 public class RunWritingInFile {
 	/**
-	 * Main method.
+	 * Main method. Run writing in file.
 	 * 
 	 * @param args
 	 * @throws IOException
