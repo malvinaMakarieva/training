@@ -13,7 +13,6 @@ import org.junit.Test;
  */
 public class ReflectionFuncrionsTest {
 	ReflectionFunction reflection = new ReflectionFunction();
-	Class<SomeClass> instanceOfSomeClass = SomeClass.class;
 	Class<TestClass> testClassInstnce = TestClass.class;
 
 	/**

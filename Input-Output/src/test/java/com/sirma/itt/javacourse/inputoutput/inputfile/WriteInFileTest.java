@@ -11,6 +11,11 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 
+/**
+ * Class test methods from WriteInFile class.
+ * 
+ * @author Malvina Makarieva
+ */
 public class WriteInFileTest {
 	private WriteInFile writeInFile = new WriteInFile();
 
