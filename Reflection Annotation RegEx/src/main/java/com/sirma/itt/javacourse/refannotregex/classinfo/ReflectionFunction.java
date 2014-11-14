@@ -46,10 +46,12 @@ public class ReflectionFunction {
 	 * @return list of full name of methods.
 	 */
 	public List<String> getMethodInfo(Class<?> classInstance) {
+
 		List<String> listMethods = new ArrayList<String>();
-		Method[] allMethod = classInstance.getMethods();
-		for (int i = 0; i < allMethod.length; i++) {
-			listMethods.add(allMethod[i].toString());
+		Method[] declaredMethods = classInstance.getDeclaredMethods();
+		for (int i = 0; i < declaredMethods.length; i++) {
+			Method method = declaredMethods[i];
+			listMethods.add(method.toString());
 		}
 		return listMethods;
 	}
@@ -68,18 +70,19 @@ public class ReflectionFunction {
 
 		Field[] field = classInstance.getDeclaredFields();
 		List<String> listFields = new ArrayList<String>();
+		Object fieldValue;
 
 		for (int i = 0; i < field.length; i++) {
-			Field currerntField = classInstance.getDeclaredField(field[i].getName());
+			Field currerntField = field[i];
 			currerntField.setAccessible(true);
-			Object fieldValue = null;
+			fieldValue = null;
 			try {
 				fieldValue = currerntField.get(classInstance.newInstance());
 			} catch (InstantiationException e) {
 				e.printStackTrace();
 			}
 
-			listFields.add(field[i] + " = " + fieldValue);
+			listFields.add(field[i].getName() + " = " + fieldValue);
 		}
 		return listFields;
 	}

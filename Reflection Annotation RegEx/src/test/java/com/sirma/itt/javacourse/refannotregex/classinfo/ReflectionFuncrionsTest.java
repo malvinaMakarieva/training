@@ -13,7 +13,7 @@ import org.junit.Test;
  */
 public class ReflectionFuncrionsTest {
 	ReflectionFunction reflection = new ReflectionFunction();
-	Class<TestClass> testClassInstnce = TestClass.class;
+	Class<SomeClass> testClassInstnce = SomeClass.class;
 
 	/**
 	 * Test getSomeClassPakege() method from ReflectionFunction.
@@ -31,7 +31,9 @@ public class ReflectionFuncrionsTest {
 	@Test
 	public void testGetClassConstructor() {
 		List<String> expectedList = new ArrayList<String>();
-		expectedList.add("public com.sirma.itt.javacourse.refannotregex.classinfo.TestClass()");
+		expectedList.add("public com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass()");
+		expectedList
+				.add("public com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass(java.lang.String,java.lang.String)");
 		List<String> actualList = reflection.getClassConstructor(testClassInstnce);
 		Assert.assertEquals(expectedList, actualList);
 
@@ -44,17 +46,19 @@ public class ReflectionFuncrionsTest {
 	public void testGetMethodInfo() {
 		List<String> expectedList = new ArrayList<String>();
 		expectedList
-				.add("public final void java.lang.Object.wait(long,int) throws java.lang.InterruptedException");
+				.add("public void com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass.setSomeInt(int)");
 		expectedList
-				.add("public final native void java.lang.Object.wait(long) throws java.lang.InterruptedException");
+				.add("public int com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass.getSomeInt()");
 		expectedList
-				.add("public final void java.lang.Object.wait() throws java.lang.InterruptedException");
-		expectedList.add("public boolean java.lang.Object.equals(java.lang.Object)");
-		expectedList.add("public java.lang.String java.lang.Object.toString()");
-		expectedList.add("public native int java.lang.Object.hashCode()");
-		expectedList.add("public final native java.lang.Class java.lang.Object.getClass()");
-		expectedList.add("public final native void java.lang.Object.notify()");
-		expectedList.add("public final native void java.lang.Object.notifyAll()");
+				.add("public void com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass.setSomeString(java.lang.String)");
+		expectedList
+				.add("public java.lang.String com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass.getSomeString()");
+		expectedList
+				.add("private boolean com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass.someBooleanMethod()");
+		expectedList
+				.add("public void com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass.setPrivateString(java.lang.String)");
+		expectedList
+				.add("public java.lang.String com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass.getPrivateString()");
 
 		List<String> actualList = reflection.getMethodInfo(testClassInstnce);
 		Assert.assertEquals(expectedList, actualList);
@@ -71,10 +75,10 @@ public class ReflectionFuncrionsTest {
 	public void testFieldValue() throws NoSuchFieldException, IllegalArgumentException,
 			IllegalAccessException {
 		List<String> expectedList = new ArrayList<String>();
-		expectedList
-				.add("public java.lang.String com.sirma.itt.javacourse.refannotregex.classinfo.TestClass.someString = jumo");
-		expectedList
-				.add("private int com.sirma.itt.javacourse.refannotregex.classinfo.TestClass.someInt = 10");
+		expectedList.add("someString = juno");
+		expectedList.add("someChar = a");
+		expectedList.add("privateString = luna");
+		expectedList.add("someInt = 0");
 		List<String> actualList = reflection.fieldValue(testClassInstnce);
 		Assert.assertEquals(expectedList, actualList);
 	}
