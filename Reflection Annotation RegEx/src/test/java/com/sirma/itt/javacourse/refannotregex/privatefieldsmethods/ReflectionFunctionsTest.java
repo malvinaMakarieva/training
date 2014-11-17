@@ -14,7 +14,7 @@ import org.junit.Test;
  * @author Malvina Makarieva
  */
 public class ReflectionFunctionsTest {
-	Class<ClassWithPrivateDataTest> instanceOfClass = ClassWithPrivateDataTest.class;
+	Class<ClassWithPrivateData> instanceOfClass = ClassWithPrivateData.class;
 	ReflectionFunctions reflectionMethods = new ReflectionFunctions();
 
 	/**
@@ -32,9 +32,9 @@ public class ReflectionFunctionsTest {
 
 		List<String> actualList = reflectionMethods.fieldValue(instanceOfClass);
 		List<String> expectedList = new ArrayList<String>();
-		expectedList.add("privateStringTest = java");
-		expectedList.add("privateFloatTest = 20.03");
-		expectedList.add("privateIntegerTest = 255");
+		expectedList.add("privateString = bam");
+		expectedList.add("privateFloat = 79.35");
+		expectedList.add("privateInteger = 100");
 
 		Assert.assertEquals(expectedList, actualList);
 
@@ -56,15 +56,15 @@ public class ReflectionFunctionsTest {
 			InstantiationException {
 
 		Object stringFieldMethod = reflectionMethods.getMethodValues(instanceOfClass,
-				"getPrivateStringTest");
+				"getPrivateString");
 		Object floatFieldMethod = reflectionMethods.getMethodValues(instanceOfClass,
-				"getPrivateFloatTest");
+				"getPrivateFloat");
 		Object integerFieldMethod = reflectionMethods.getMethodValues(instanceOfClass,
-				"getPrivateIntegerTest");
+				"getPrivateInteger");
 
-		Assert.assertEquals("java", stringFieldMethod);
-		Assert.assertEquals(20.03f, floatFieldMethod);
-		Assert.assertEquals(255, integerFieldMethod);
+		Assert.assertEquals("bam", stringFieldMethod);
+		Assert.assertEquals(79.35f, floatFieldMethod);
+		Assert.assertEquals(100, integerFieldMethod);
 	}
 
 }
