@@ -37,13 +37,13 @@ public class RunReflectionFunction {
 		Object privateField;
 		try {
 			privateField = reflectionMethods.getMethodValues(instanceOfClass, "getPrivateString");
-			System.out.println("getPrivateString return valie = " + privateField);
+			System.out.println("getPrivateString return value = " + privateField);
 			privateField = reflectionMethods.getMethodValues(instanceOfClass, "getPrivateFloat");
-			System.out.println("getPrivateFloat return valie = " + privateField);
+			System.out.println("getPrivateFloat return value = " + privateField);
 			privateField = reflectionMethods.getMethodValues(instanceOfClass, "getPrivateInteger");
-			System.out.println("getPrivateInteger return valie = " + privateField);
+			System.out.println("getPrivateInteger return value = " + privateField);
 			privateField = reflectionMethods.getMethodValues(instanceOfClass, "print");
-			System.out.println("print return valie = " + privateField);
+			System.out.println("print return value = " + privateField);
 		} catch (NoSuchMethodException e) {
 			e.printStackTrace();
 		} catch (IllegalArgumentException e) {
