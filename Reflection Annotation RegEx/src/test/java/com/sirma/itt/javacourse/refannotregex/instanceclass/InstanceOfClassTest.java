@@ -22,10 +22,11 @@ public class InstanceOfClassTest {
 	public void testGetInterfaceName() throws ClassNotFoundException, InstantiationException,
 			IllegalAccessException {
 		Object testInstance = instanceByName
-				.getInstansByNameOfClass("com.sirma.itt.javacourse.refannotregex.instanceclass.SomeClassTest");
+				.getInstansByNameOfClass("com.sirma.itt.javacourse.refannotregex.instanceclass.Foodstuffs");
 		String testInterfaceName = instanceByName.getInterfaceName(testInstance, 0);
 
-		Assert.assertEquals("com.sirma.itt.javacourse.refannotregex.instanceclass.InterfaceTest",
+		Assert.assertEquals(
+				"com.sirma.itt.javacourse.refannotregex.instanceclass.ProductManagment",
 				testInterfaceName);
 	}
 
@@ -40,11 +41,10 @@ public class InstanceOfClassTest {
 	public void testGetSuperclassName() throws ClassNotFoundException, InstantiationException,
 			IllegalAccessException {
 		Object testInstance = instanceByName
-				.getInstansByNameOfClass("com.sirma.itt.javacourse.refannotregex.instanceclass.SomeClassTest");
+				.getInstansByNameOfClass("com.sirma.itt.javacourse.refannotregex.instanceclass.Foodstuffs");
 		String testSuperClassName = instanceByName.getSuperclassName(testInstance);
 
-		Assert.assertEquals(
-				"com.sirma.itt.javacourse.refannotregex.instanceclass.SuperClassForTest",
+		Assert.assertEquals("com.sirma.itt.javacourse.refannotregex.instanceclass.Products",
 				testSuperClassName);
 	}
 }
