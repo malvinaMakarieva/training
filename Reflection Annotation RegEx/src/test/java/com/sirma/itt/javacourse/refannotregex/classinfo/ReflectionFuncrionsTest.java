@@ -61,7 +61,22 @@ public class ReflectionFuncrionsTest {
 				.add("public java.lang.String com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass.getPrivateString()");
 
 		List<String> actualList = reflection.getMethodInfo(testClassInstnce);
-		Assert.assertEquals(expectedList, actualList);
+
+		Assert.assertTrue(actualList
+				.contains("public void com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass.setSomeInt(int)"));
+		Assert.assertTrue(actualList
+				.contains("public int com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass.getSomeInt()"));
+		Assert.assertTrue(actualList
+				.contains("public void com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass.setSomeString(java.lang.String)"));
+		Assert.assertTrue(actualList
+				.contains("public java.lang.String com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass.getSomeString()"));
+		Assert.assertTrue(actualList
+				.contains("private boolean com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass.someBooleanMethod()"));
+		Assert.assertTrue(actualList
+				.contains("public void com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass.setPrivateString(java.lang.String)"));
+		Assert.assertTrue(actualList
+				.contains("public java.lang.String com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass.getPrivateString()"));
+
 	}
 
 	/**
