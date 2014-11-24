@@ -30,14 +30,14 @@ public class ReverseFile {
 	public StringBuilder addReverseLine(String path) throws IOException {
 		BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
 		String line;
-		StringBuilder tmp = new StringBuilder();
+		StringBuilder content = new StringBuilder();
 		line = bufferedReader.readLine();
 		while (line != null) {
-			tmp.append(line + '\n');
+			content.append(line + '\n');
 
 			line = bufferedReader.readLine();
 		}
-		StringBuilder reverseFile = tmp.reverse();
+		StringBuilder reverseFile = content.reverse();
 		bufferedReader.close();
 		BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path));
 		bufferedWriter.append(reverseFile);
