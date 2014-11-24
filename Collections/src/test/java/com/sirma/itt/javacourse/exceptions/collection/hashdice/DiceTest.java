@@ -12,14 +12,14 @@ import org.junit.Test;
  * @author mmakarieva
  */
 public class DiceTest {
-	Dice d = new Dice();
+	Dice diceFunction = new Dice();
 
 	/**
 	 * Test whether the method includes the values of the parties.
 	 */
 	@Test
 	public void testRollDice() {
-		String actual = d.rollDice(1);
+		String actual = diceFunction.rollDice(1);
 		Assert.assertEquals("1, 1", actual);
 	}
 
@@ -29,7 +29,7 @@ public class DiceTest {
 	@Test
 	public void testRollStatistic() {
 		Map<String, List<Integer>> actualResult = new HashMap<String, List<Integer>>();
-		actualResult = d.rollStatistic(1, 3);
+		actualResult = diceFunction.rollStatistic(1, 3);
 		Map<String, List<Integer>> expectedResult = new HashMap<String, List<Integer>>();
 		List<Integer> listRolls = new ArrayList<Integer>();
 		listRolls.add(1);
