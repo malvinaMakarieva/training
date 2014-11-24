@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author Malvina Makarieva
  */
 public class WriteInFile {
-	private static Scanner sc = new Scanner(System.in);
+	private static Scanner input = new Scanner(System.in);
 
 	/**
 	 * Create file and write in file from console.
@@ -20,17 +20,17 @@ public class WriteInFile {
 	 */
 	protected void write() throws IOException {
 		System.out.print("File name: ");
-		String fileName = sc.nextLine();
+		String fileName = input.nextLine();
 		FileWriter fileWriter = new FileWriter(fileName, true);
 
 		System.out.println("Input text: ");
-		String line = sc.nextLine();
+		String line = input.nextLine();
 		while (!line.equals(".")) {
 			fileWriter.append(line);
-			line = sc.nextLine();
+			line = input.nextLine();
 		}
 		fileWriter.close();
-		sc.close();
+		input.close();
 	}
 
 	/**
@@ -38,8 +38,8 @@ public class WriteInFile {
 	 *
 	 * @return the userInput
 	 */
-	public Scanner getSc() {
-		return sc;
+	public Scanner getInput() {
+		return input;
 	}
 
 	/**
@@ -48,8 +48,8 @@ public class WriteInFile {
 	 * @param userInput
 	 *            the userInput to set
 	 */
-	public void setSc(InputStream stream) {
-		WriteInFile.sc = new Scanner(stream);
+	public void setInput(InputStream stream) {
+		WriteInFile.input = new Scanner(stream);
 	}
 
 }

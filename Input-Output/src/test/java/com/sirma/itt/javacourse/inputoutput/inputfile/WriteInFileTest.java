@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -19,6 +20,9 @@ import org.junit.Test;
 public class WriteInFileTest {
 	private WriteInFile writeInFile = new WriteInFile();
 
+	final String TEST_ACTUAL_FILE = "src\\test\\resources\\actualFile.txt";
+	final String TEST_EXPECTED_FILE = "src\\test\\resources\\expectedFile.txt";
+
 	/**
 	 * Test write() method from WriteInFile class.
 	 * 
@@ -27,25 +31,33 @@ public class WriteInFileTest {
 	@Test
 	public void testFileWrite() throws IOException {
 
-		String testActualFile = "src\\test\\resources\\actualFile.txt";
-		String testExpectedFile = "src\\test\\resources\\expectedFile.txt";
-
-		String actualData = testActualFile + "\r\n tra la la \r\n tra \r\n.";
+		String actualData = TEST_ACTUAL_FILE + "\r\n tra la la \r\n tra \r\n.";
 		String exprctedData = " tra la la  tra ";
 
-		writeInFile.setSc(new ByteArrayInputStream(actualData.getBytes()));
+		writeInFile.setInput(new ByteArrayInputStream(actualData.getBytes()));
 		writeInFile.write();
 
 		List<String> actual = null;
-		actual = Files.readAllLines(Paths.get(testActualFile), StandardCharsets.UTF_8);
+		actual = Files.readAllLines(Paths.get(TEST_EXPECTED_FILE), StandardCharsets.UTF_8);
 
-		FileWriter fw = new FileWriter(testExpectedFile);
-		fw.append(exprctedData);
-		fw.close();
+		FileWriter fileWriter = new FileWriter(TEST_EXPECTED_FILE);
+		fileWriter.append(exprctedData);
+		fileWriter.close();
 
 		List<String> expected = null;
-		expected = Files.readAllLines(Paths.get(testExpectedFile), StandardCharsets.UTF_8);
+		expected = Files.readAllLines(Paths.get(TEST_EXPECTED_FILE), StandardCharsets.UTF_8);
 
 		Assert.assertEquals(expected, actual);
+	}
+
+	/**
+	 * After the test file is cleared, lest there be multiple rewriting.
+	 * 
+	 * @throws IOException
+	 */
+	@After
+	public void restor() throws IOException {
+		FileWriter fileWriter = new FileWriter(TEST_ACTUAL_FILE, false);
+		fileWriter.close();
 	}
 }
