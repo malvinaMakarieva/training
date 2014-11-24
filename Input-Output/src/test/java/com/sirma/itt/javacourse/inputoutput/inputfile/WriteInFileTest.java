@@ -56,7 +56,7 @@ public class WriteInFileTest {
 	 * @throws IOException
 	 */
 	@After
-	public void restor() throws IOException {
+	public void restorFile() throws IOException {
 		FileWriter fileWriter = new FileWriter(TEST_ACTUAL_FILE, false);
 		fileWriter.close();
 	}
