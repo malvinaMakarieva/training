@@ -8,8 +8,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -22,6 +22,17 @@ public class WriteInFileTest {
 
 	final String TEST_ACTUAL_FILE = "src\\test\\resources\\actualFile.txt";
 	final String TEST_EXPECTED_FILE = "src\\test\\resources\\expectedFile.txt";
+
+	/**
+	 * Before the test file is cleared, lest there be multiple rewriting.
+	 * 
+	 * @throws IOException
+	 */
+	@Before
+	public void restorFile() throws IOException {
+		FileWriter fileWriter = new FileWriter(TEST_ACTUAL_FILE, false);
+		fileWriter.close();
+	}
 
 	/**
 	 * Test write() method from WriteInFile class.
@@ -50,14 +61,4 @@ public class WriteInFileTest {
 		Assert.assertEquals(expected, actual);
 	}
 
-	/**
-	 * After the test file is cleared, lest there be multiple rewriting.
-	 * 
-	 * @throws IOException
-	 */
-	@After
-	public void restorFile() throws IOException {
-		FileWriter fileWriter = new FileWriter(TEST_ACTUAL_FILE, false);
-		fileWriter.close();
-	}
 }
