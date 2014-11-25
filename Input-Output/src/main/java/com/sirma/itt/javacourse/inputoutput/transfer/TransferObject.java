@@ -1,5 +1,6 @@
 package com.sirma.itt.javacourse.inputoutput.transfer;
 
+import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -83,6 +84,9 @@ public class TransferObject {
 		long transferBytes = 0;
 		inStream.skip(offset);
 		transferBytes = inStream.read(allBytes, 0, numberOfBytes);
+		if (transferBytes == -1) {
+			throw new EOFException("End of file. Read and transfer wasn't successful");
+		}
 		outStream.write(allBytes);
 		return transferBytes;
 
