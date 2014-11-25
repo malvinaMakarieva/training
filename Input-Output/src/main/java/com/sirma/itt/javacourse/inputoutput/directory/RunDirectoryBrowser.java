@@ -14,15 +14,12 @@ public class RunDirectoryBrowser {
 	 * Main method.
 	 * 
 	 * @param args
+	 * @throws FileNotFoundException
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		DirectoryBrowser browser = new DirectoryBrowser();
-		try {
-			List<String> result = new ArrayList<String>();
-			result.addAll(browser.chekDirectoryOrFile("E:/GitHub/training"));
-			System.out.println(result);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
+		List<String> result = new ArrayList<String>();
+		result.addAll(browser.chekDirectoryOrFile("E:/GitHub/training"));
+		System.out.println(result);
 	}
 }

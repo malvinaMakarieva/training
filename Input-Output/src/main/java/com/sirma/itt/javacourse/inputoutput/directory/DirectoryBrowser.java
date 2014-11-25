@@ -1,7 +1,6 @@
 package com.sirma.itt.javacourse.inputoutput.directory;
 
 import java.io.File;
-import java.io.FileFilter;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
@@ -73,11 +72,7 @@ public class DirectoryBrowser {
 	protected List<String> chekDirectoryOrFile(String path) throws FileNotFoundException {
 		List<String> resultList = new ArrayList<String>();
 		File file = new File(path);
-		File[] subDirs = file.listFiles(new FileFilter() {
-			public boolean accept(File pathname) {
-				return pathname.isDirectory();
-			}
-		});
+		File[] subDirs = file.listFiles();
 		if (!file.exists()) {
 			throw new FileNotFoundException("File not found");
 		} else {

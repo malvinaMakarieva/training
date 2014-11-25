@@ -14,6 +14,8 @@ import org.junit.Test;
  */
 public class DirectoryBrowserTest {
 	DirectoryBrowser browser = new DirectoryBrowser();
+	final static String TEST_FILE_DIRECTORY = "src\\test\\resources\\testFile.txt";
+	final static String FOLDER_ADDRESS = "src\\test\\resources\\SomeFolder";
 
 	/**
 	 * Method that test whether if submitted file will recognize it.
@@ -26,7 +28,7 @@ public class DirectoryBrowserTest {
 		List<String> actual = new ArrayList<String>();
 		expected.add("This is file");
 
-		actual.addAll(browser.chekDirectoryOrFile("src\\test\\resources\\testFile.txt"));
+		actual.addAll(browser.chekDirectoryOrFile(TEST_FILE_DIRECTORY));
 
 		Assert.assertEquals(expected, actual);
 	}
@@ -43,8 +45,9 @@ public class DirectoryBrowserTest {
 		List<String> actual = new ArrayList<String>();
 		expected.add("directory1");
 		expected.add("directory2");
+		expected.add("test.txt");
 
-		actual.addAll(browser.chekDirectoryOrFile("src\\test\\resources\\SomeFolder"));
+		actual.addAll(browser.chekDirectoryOrFile(FOLDER_ADDRESS));
 
 		Assert.assertEquals(expected, actual);
 
