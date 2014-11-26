@@ -72,10 +72,10 @@ public class DirectoryBrowser {
 	protected List<String> chekDirectoryOrFile(String path) throws FileNotFoundException {
 		List<String> resultList = new ArrayList<String>();
 		File file = new File(path);
-		File[] subDirs = file.listFiles();
 		if (!file.exists()) {
 			throw new FileNotFoundException("File not found");
 		} else {
+			File[] subDirs = file.listFiles();
 			if (file.isDirectory()) {
 				for (File subDir : subDirs) {
 					resultList.add(subDir.getName());

@@ -18,7 +18,7 @@ public class ReverseFileTest {
 
 	/**
 	 * Prepare the file before the test
-	 * 
+	 *
 	 * @throws IOException
 	 */
 	@Before
