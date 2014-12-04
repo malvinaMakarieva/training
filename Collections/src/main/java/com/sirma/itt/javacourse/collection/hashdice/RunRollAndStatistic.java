@@ -1,4 +1,4 @@
-package com.sirma.itt.javacourse.exceptions.collection.hashdice;
+package com.sirma.itt.javacourse.collection.hashdice;
 
 /**
  * Running class.

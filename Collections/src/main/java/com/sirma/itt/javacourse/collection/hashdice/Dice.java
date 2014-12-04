@@ -1,4 +1,4 @@
-package com.sirma.itt.javacourse.exceptions.collection.hashdice;
+package com.sirma.itt.javacourse.collection.hashdice;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.sirma.itt.javacourse.exceptions.collection.hashdice;
+package com.sirma.itt.javacourse.collection.hashdice;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,7 +9,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * @author mmakarieva
+ * Class that test Dice class.
+ * 
+ * @author Malvina Makarieva
  */
 public class DiceTest {
 	Dice diceFunction = new Dice();
