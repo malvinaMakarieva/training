@@ -77,18 +77,29 @@ public class TransferObject {
 	 * @param offset
 	 *            Number of bytes from the beginning of the stream, which will be missed.
 	 * @return number of transfer bytes.
-	 * @throws IOException
+	 * @throws EOFException
 	 */
-	protected long transfer(int numberOfBytes, int offset) throws IOException {
-		byte[] allBytes = new byte[numberOfBytes];
-		long transferBytes = 0;
-		inStream.skip(offset);
-		transferBytes = inStream.read(allBytes, 0, numberOfBytes);
-		if (transferBytes == -1) {
-			throw new EOFException("End of file. Read and transfer wasn't successful");
-		}
-		outStream.write(allBytes);
-		return transferBytes;
+	protected int transfer(int numberOfBytes, int offset) throws IOException {
 
+		byte[] buffer = new byte[1048576];
+		int size = 0;
+		int actualBytes = 0;
+		try {
+			inStream.skip(offset);
+			while (actualBytes < numberOfBytes) {
+				if ((actualBytes + 1048576) > numberOfBytes)
+					size = inStream.read(buffer, 0, numberOfBytes % 1048576);
+				else
+					size = inStream.read(buffer);
+				if (size < 0) {
+					break;
+				}
+				actualBytes += size;
+				outStream.write(buffer, 0, size);
+			}
+		} catch (IOException e) {
+			throw new IOException();
+		}
+		return actualBytes;
 	}
 }

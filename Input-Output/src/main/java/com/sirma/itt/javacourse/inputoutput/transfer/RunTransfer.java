@@ -30,6 +30,6 @@ public final class RunTransfer {
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		TransferObject transfer = new TransferObject(in, out);
 
-		System.out.println(transfer.transfer(5, 0));
+		System.out.println(transfer.transfer(7, 0));
 	}
 }
