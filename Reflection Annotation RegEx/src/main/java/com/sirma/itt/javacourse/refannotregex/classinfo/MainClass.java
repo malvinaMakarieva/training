@@ -25,7 +25,7 @@ public class MainClass {
 			IllegalArgumentException, IllegalAccessException {
 
 		ReflectionFunction reflection = new ReflectionFunction();
-		Class<SomeClass> instanceOfSomeClass = SomeClass.class;
+		SomeClass instanceOfSomeClass = new SomeClass();
 
 		String pakcege = reflection.getSomeClassPakege(instanceOfSomeClass);
 		System.out.println("Packege - " + pakcege);

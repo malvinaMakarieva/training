@@ -13,7 +13,7 @@ import org.junit.Test;
  */
 public class ReflectionFuncrionsTest {
 	ReflectionFunction reflection = new ReflectionFunction();
-	Class<SomeClass> testClassInstnce = SomeClass.class;
+	SomeClass testClassInstnce = new SomeClass();
 
 	/**
 	 * Test getSomeClassPakege() method from ReflectionFunction.
@@ -30,7 +30,7 @@ public class ReflectionFuncrionsTest {
 	 */
 	@Test
 	public void testGetClassConstructor() {
-		List<String> expectedList = new ArrayList<String>();
+		List<String> expectedList = new ArrayList<String>(2);
 		expectedList.add("public com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass()");
 		expectedList
 				.add("public com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass(java.lang.String,java.lang.String)");
@@ -44,7 +44,7 @@ public class ReflectionFuncrionsTest {
 	 */
 	@Test
 	public void testGetMethodInfo() {
-		List<String> expectedList = new ArrayList<String>();
+		List<String> expectedList = new ArrayList<String>(7);
 		expectedList
 				.add("public void com.sirma.itt.javacourse.refannotregex.classinfo.SomeClass.setSomeInt(int)");
 		expectedList
@@ -89,7 +89,7 @@ public class ReflectionFuncrionsTest {
 	@Test
 	public void testFieldValue() throws NoSuchFieldException, IllegalArgumentException,
 			IllegalAccessException {
-		List<String> expectedList = new ArrayList<String>();
+		List<String> expectedList = new ArrayList<String>(4);
 		expectedList.add("someString = juno");
 		expectedList.add("someChar = a");
 		expectedList.add("privateString = luna");

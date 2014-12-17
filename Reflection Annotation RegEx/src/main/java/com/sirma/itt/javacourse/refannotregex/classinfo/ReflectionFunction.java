@@ -19,8 +19,8 @@ public class ReflectionFunction {
 	 *            instance of class SomeClass.
 	 * @return String with the full name of the package.
 	 */
-	public String getSomeClassPakege(Class<?> classInstance) {
-		Package Package = classInstance.getPackage();
+	public String getSomeClassPakege(Object classInstance) {
+		Package Package = classInstance.getClass().getPackage();
 		return Package.toString();
 	}
 
@@ -29,9 +29,9 @@ public class ReflectionFunction {
 	 *            instance of class SomeClass.
 	 * @return list of full name of constructors.
 	 */
-	public List<String> getClassConstructor(Class<?> classInstance) {
-		List<String> listConstructors = new ArrayList<String>();
-		Constructor<?>[] constructors = classInstance.getConstructors();
+	public List<String> getClassConstructor(Object classInstance) {
+		Constructor<?>[] constructors = classInstance.getClass().getConstructors();
+		List<String> listConstructors = new ArrayList<String>(constructors.length);
 		for (int i = 0; i < constructors.length; i++) {
 			listConstructors.add(constructors[i].toString());
 		}
@@ -45,10 +45,9 @@ public class ReflectionFunction {
 	 *            instance of class SomeClass.
 	 * @return list of full name of methods.
 	 */
-	public List<String> getMethodInfo(Class<?> classInstance) {
-
-		List<String> listMethods = new ArrayList<String>();
-		Method[] declaredMethods = classInstance.getDeclaredMethods();
+	public List<String> getMethodInfo(Object classInstance) {
+		Method[] declaredMethods = classInstance.getClass().getDeclaredMethods();
+		List<String> listMethods = new ArrayList<String>(declaredMethods.length);
 		for (int i = 0; i < declaredMethods.length; i++) {
 			Method method = declaredMethods[i];
 			listMethods.add(method.toString());
@@ -65,23 +64,17 @@ public class ReflectionFunction {
 	 * @throws IllegalArgumentException
 	 * @throws IllegalAccessException
 	 */
-	public List<String> fieldValue(Class<?> classInstance) throws NoSuchFieldException,
+	public List<String> fieldValue(Object classInstance) throws NoSuchFieldException,
 			IllegalArgumentException, IllegalAccessException {
 
-		Field[] field = classInstance.getDeclaredFields();
+		Field[] field = classInstance.getClass().getDeclaredFields();
 		List<String> listFields = new ArrayList<String>();
-		Object fieldValue;
+		Object fieldValue = null;
 
 		for (int i = 0; i < field.length; i++) {
 			Field currerntField = field[i];
 			currerntField.setAccessible(true);
-			fieldValue = null;
-			try {
-				fieldValue = currerntField.get(classInstance.newInstance());
-			} catch (InstantiationException e) {
-				e.printStackTrace();
-			}
-
+			fieldValue = currerntField.get(classInstance);
 			listFields.add(field[i].getName() + " = " + fieldValue);
 		}
 		return listFields;
