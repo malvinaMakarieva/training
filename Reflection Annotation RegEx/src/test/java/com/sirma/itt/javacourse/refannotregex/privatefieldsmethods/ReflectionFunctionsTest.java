@@ -14,7 +14,7 @@ import org.junit.Test;
  * @author Malvina Makarieva
  */
 public class ReflectionFunctionsTest {
-	Class<ClassWithPrivateData> instanceOfClass = ClassWithPrivateData.class;
+	ClassWithPrivateData instanceOfClass = new ClassWithPrivateData();
 	ReflectionFunctions reflectionMethods = new ReflectionFunctions();
 
 	/**
@@ -31,7 +31,7 @@ public class ReflectionFunctionsTest {
 			IllegalAccessException, IOException, InstantiationException {
 
 		List<String> actualList = reflectionMethods.fieldValue(instanceOfClass);
-		List<String> expectedList = new ArrayList<String>();
+		List<String> expectedList = new ArrayList<String>(3);
 		expectedList.add("privateString = bam");
 		expectedList.add("privateFloat = 79.35");
 		expectedList.add("privateInteger = 100");

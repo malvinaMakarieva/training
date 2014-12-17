@@ -24,25 +24,28 @@ public class RunReflectionFunction {
 	public static void main(String[] args) throws IllegalAccessException, SecurityException,
 			InvocationTargetException, ClassNotFoundException, InstantiationException {
 
-		Class<ClassWithPrivateData> instanceOfClass = ClassWithPrivateData.class;
+		ClassWithPrivateData privateClassInstance = new ClassWithPrivateData();
 		ReflectionFunctions reflectionMethods = new ReflectionFunctions();
 
 		System.out.println("Field and value.");
 		try {
-			System.out.println(reflectionMethods.fieldValue(instanceOfClass));
+			System.out.println(reflectionMethods.fieldValue(privateClassInstance));
 
 		} catch (NoSuchFieldException e) {
 			e.printStackTrace();
 		}
 		Object privateField;
 		try {
-			privateField = reflectionMethods.getMethodValues(instanceOfClass, "getPrivateString");
+			privateField = reflectionMethods.getMethodValues(privateClassInstance,
+					"getPrivateString");
 			System.out.println("getPrivateString return value = " + privateField);
-			privateField = reflectionMethods.getMethodValues(instanceOfClass, "getPrivateFloat");
+			privateField = reflectionMethods.getMethodValues(privateClassInstance,
+					"getPrivateFloat");
 			System.out.println("getPrivateFloat return value = " + privateField);
-			privateField = reflectionMethods.getMethodValues(instanceOfClass, "getPrivateInteger");
+			privateField = reflectionMethods.getMethodValues(privateClassInstance,
+					"getPrivateInteger");
 			System.out.println("getPrivateInteger return value = " + privateField);
-			privateField = reflectionMethods.getMethodValues(instanceOfClass, "print");
+			privateField = reflectionMethods.getMethodValues(privateClassInstance, "print");
 			System.out.println("print return value = " + privateField);
 		} catch (NoSuchMethodException e) {
 			e.printStackTrace();

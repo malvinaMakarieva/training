@@ -23,12 +23,12 @@ public class ReflectionFunctions {
 	 * @throws IllegalAccessException
 	 * @throws InstantiationException
 	 */
-	public List<String> fieldValue(Class<?> classInstance) throws NoSuchFieldException,
+	public List<String> fieldValue(Object classInstance) throws NoSuchFieldException,
 			IllegalArgumentException, IllegalAccessException, InstantiationException {
 
-		Field[] field = classInstance.getDeclaredFields();
-		List<String> list = new ArrayList<String>();
-		Object currentInstance = classInstance.newInstance();
+		Field[] field = classInstance.getClass().getDeclaredFields();
+		List<String> list = new ArrayList<String>(field.length);
+		Object currentInstance = classInstance;
 
 		for (int i = 0; i < field.length; i++) {
 			Field currentField = field[i];
@@ -52,13 +52,13 @@ public class ReflectionFunctions {
 	 * @throws InvocationTargetException
 	 * @throws InstantiationException
 	 */
-	public Object getMethodValues(Class<?> classInstance, String methodName)
+	public Object getMethodValues(Object classInstance, String methodName)
 			throws NoSuchMethodException, SecurityException, IllegalAccessException,
 			IllegalArgumentException, InvocationTargetException, InstantiationException {
 
-		Method privateStringMethod = classInstance.getDeclaredMethod(methodName);
+		Method privateStringMethod = classInstance.getClass().getDeclaredMethod(methodName);
 		privateStringMethod.setAccessible(true);
-		privateStringMethod.invoke(classInstance.newInstance());
-		return privateStringMethod.invoke(classInstance.newInstance());
+		privateStringMethod.invoke(classInstance);
+		return privateStringMethod.invoke(classInstance);
 	}
 }
