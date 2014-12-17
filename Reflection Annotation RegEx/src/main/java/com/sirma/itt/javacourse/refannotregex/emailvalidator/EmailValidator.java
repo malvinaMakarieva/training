@@ -7,7 +7,7 @@ package com.sirma.itt.javacourse.refannotregex.emailvalidator;
  */
 public class EmailValidator {
 
-	private static final String PATTERN_MAIL = "[a-zA-Z][a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\\.[a-z]*";
+	private static final String PATTERN_MAIL = "[a-zA-Z][a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\\.[a-z]+";
 
 	/**
 	 * Default constructor.

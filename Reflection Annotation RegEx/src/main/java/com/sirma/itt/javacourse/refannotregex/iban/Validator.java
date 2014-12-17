@@ -8,7 +8,7 @@ import java.util.regex.PatternSyntaxException;
  * @author Malvina Makarieva
  */
 public class Validator {
-	private static final String PATTERN_IBAN_BG = "BG80 [A-Z]{4} [0-9]{4} [0-9]{4} [0-9]{4}.";
+	private static final String PATTERN_IBAN_BG = "BG[0-9]{2}\\s[A-Z]{4}\\s[0-9]{4}\\s[0-9]{4}\\s[0-9]{4}.";
 	private static final String PATTERN_STARS = "****";
 
 	/**
