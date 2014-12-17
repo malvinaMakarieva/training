@@ -1,5 +1,8 @@
 package com.sirma.itt.javacourse.refannotregex.instanceclass;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -23,11 +26,12 @@ public class InstanceOfClassTest {
 			IllegalAccessException {
 		Object testInstance = instanceByName
 				.getInstansByNameOfClass("com.sirma.itt.javacourse.refannotregex.instanceclass.Foodstuffs");
-		String testInterfaceName = instanceByName.getInterfaceName(testInstance, 0);
+		List<String> actualInterfaceName = instanceByName.getInterfaceName(testInstance);
+		List<String> expectedInterfaceName = new ArrayList<String>(1);
+		expectedInterfaceName
+				.add("com.sirma.itt.javacourse.refannotregex.instanceclass.ProductManagment");
 
-		Assert.assertEquals(
-				"com.sirma.itt.javacourse.refannotregex.instanceclass.ProductManagment",
-				testInterfaceName);
+		Assert.assertEquals(expectedInterfaceName, actualInterfaceName);
 	}
 
 	/**

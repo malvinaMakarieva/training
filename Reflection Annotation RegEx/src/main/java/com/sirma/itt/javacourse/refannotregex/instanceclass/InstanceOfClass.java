@@ -1,5 +1,8 @@
 package com.sirma.itt.javacourse.refannotregex.instanceclass;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Class create instance from a class, and get some information about this class.
  *
@@ -40,11 +43,17 @@ public class InstanceOfClass {
 	 *
 	 * @param classInstance
 	 *            instance of the class.
-	 * @param numberOfInterface
-	 *            order number of the interface implementation, starting from zero.
-	 * @return
+	 * @return list of all interfaces.
 	 */
-	public String getInterfaceName(Object classInstance, int numberOfInterface) {
-		return classInstance.getClass().getInterfaces()[numberOfInterface].getName();
+
+	public List<String> getInterfaceName(Object classInstance) {
+
+		Class<?>[] interfaces = classInstance.getClass().getInterfaces();
+		List<String> interfacesList = new ArrayList<String>(interfaces.length);
+		for (int i = 0; i < interfaces.length; i++) {
+			interfacesList.add(interfaces[i].getName());
+		}
+		return interfacesList;
+
 	}
 }

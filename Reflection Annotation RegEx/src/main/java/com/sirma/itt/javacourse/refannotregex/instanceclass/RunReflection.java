@@ -1,5 +1,7 @@
 package com.sirma.itt.javacourse.refannotregex.instanceclass;
 
+import java.util.List;
+
 /**
  * The class create instance of class by name and get information about that class.
  *
@@ -27,9 +29,8 @@ public class RunReflection {
 		String superClassName = instance.getSuperclassName(classInstance);
 		System.out.println("Super class " + superClassName);
 
-		String interfeces = instance.getInterfaceName(classInstance, 0);
+		List<String> interfeces = instance.getInterfaceName(classInstance);
 		System.out.println("Interface " + interfeces);
-
 	}
 
 }
