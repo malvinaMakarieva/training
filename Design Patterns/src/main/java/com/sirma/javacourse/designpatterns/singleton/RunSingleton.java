@@ -12,10 +12,10 @@ public class RunSingleton {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Singleton object = Singleton.getInstance();
-		Singleton object1 = Singleton.getInstance();
-		System.out.println(object);
-		System.out.println(object1);// ////////////// test
+		Singleton firstObject = Singleton.getInstance();
+		Singleton secondObject = Singleton.getInstance();
+		System.out.println(firstObject);
+		System.out.println(secondObject);
 	}
 
 }
