@@ -6,7 +6,7 @@ package com.sirma.javacourse.designpatterns.singleton;
  * @author Malvina Makarieva
  */
 public class Singleton {
-	private static Singleton INSTANCE = new Singleton();
+	private static Singleton INSTANCE = null;
 
 	/**
 	 * Constructor.
@@ -21,6 +21,9 @@ public class Singleton {
 	 * @return the INSTANCE
 	 */
 	public static Singleton getInstance() {
+		if (INSTANCE == null) {
+			INSTANCE = new Singleton();
+		}
 		return INSTANCE;
 	}
 }
