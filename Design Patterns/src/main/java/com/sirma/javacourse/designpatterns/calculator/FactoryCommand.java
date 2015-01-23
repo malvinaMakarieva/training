@@ -14,7 +14,7 @@ public class FactoryCommand {
 	 * Default constructor of FactoryCommand.
 	 */
 	public FactoryCommand() {
-		commandList.put('+', new MultiplicationCommand());
+		commandList.put('+', new AdditionCommand());
 		commandList.put('-', new SubtractionCommand());
 		commandList.put('*', new MultiplicationCommand());
 		commandList.put('/', new DivisionCommand());
