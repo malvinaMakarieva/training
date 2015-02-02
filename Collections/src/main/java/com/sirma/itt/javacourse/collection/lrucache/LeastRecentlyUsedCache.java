@@ -1,6 +1,7 @@
 package com.sirma.itt.javacourse.collection.lrucache;
 
-import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Implementation of LRU Cache.
@@ -9,7 +10,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  */
 public class LeastRecentlyUsedCache {
 	private final int CAPASITY;
-	private ConcurrentLinkedQueue<Object> queue = new ConcurrentLinkedQueue<Object>();
+	private Queue<Object> queue = new LinkedList<Object>();
 
 	/**
 	 * Constructor.
@@ -26,7 +27,7 @@ public class LeastRecentlyUsedCache {
 	 *
 	 * @return the queue
 	 */
-	public ConcurrentLinkedQueue<Object> getQueue() {
+	public Queue<Object> getQueue() {
 		return queue;
 	}
 
@@ -36,7 +37,7 @@ public class LeastRecentlyUsedCache {
 	 * @param queue
 	 *            the queue to set
 	 */
-	public void setQueue(ConcurrentLinkedQueue<Object> queue) {
+	public void setQueue(Queue<Object> queue) {
 		this.queue = queue;
 	}
 

@@ -13,6 +13,67 @@ import java.util.NoSuchElementException;
  */
 public class ExceptionMessageManager {
 	private Map<String, String> exception = new HashMap<String, String>();
+	private String message;
+	private final static String SEPARATOR = "*";
+
+	/**
+	 * Default constructor.
+	 */
+	public ExceptionMessageManager() {
+
+	}
+
+	/**
+	 * The method checks that the set messages "exception" there is a message with the same value.
+	 * 
+	 * @param message
+	 *            message that must be added to the combination message.
+	 * @return true if the message is added.
+	 */
+	public boolean addExceptionMessage(String message) {
+		if (exception.containsValue(message)) {
+			this.message.concat(SEPARATOR + message);
+			return true;
+		} else
+			throw new NoSuchElementException("No such element");
+	}
+
+	/**
+	 * Method to verify that the "exceptions" set messages have a message such key.
+	 * 
+	 * @param messageCode
+	 *            code of message that must be added to the combination message.
+	 * @return true if the code of message is added.
+	 */
+	public boolean addExceptionMessageUsingCode(String messageCode) {
+		if (exception.containsKey(messageCode)) {
+			this.message.concat(SEPARATOR + messageCode);
+			return true;
+		} else
+			throw new NoSuchElementException("No such element");
+	}
+
+	/**
+	 * Static method shattering parameter messagesCombination of constituent strings.
+	 * 
+	 * @param messagesCombination
+	 *            combination of exceptions messages.
+	 * @return broken string returned as a collection of strings.
+	 */
+	public static Collection<String> getMessages(String messagesCombination) {
+		Collection<String> separateMessage = new ArrayList<String>();
+		if (messagesCombination.contains(SEPARATOR)) {
+			String separator = "[*]";
+			String[] messageArray = messagesCombination.split(separator);
+			for (int i = 0; i < messageArray.length; i++) {
+				separateMessage.add(messageArray[i]);
+			}
+		} else {
+			separateMessage.add(messagesCombination);
+		}
+		return separateMessage;
+
+	}
 
 	/**
 	 * Getter method for exception.
@@ -42,48 +103,6 @@ public class ExceptionMessageManager {
 		return SEPARATOR;
 	}
 
-	private String message;
-	private final static String SEPARATOR = "*";
-
-	/**
-	 * Default constructor.
-	 */
-	public ExceptionMessageManager() {
-
-	}
-
-	/**
-	 * The method checks that the set messages "exception" there is a message with the same value.
-	 * 
-	 * @param message
-	 *            message that must be added to the combination message.
-	 * @return true if the message is added.
-	 */
-	public boolean addExceptionMessage(String message) {
-		if (exception.containsValue(message)) {
-			this.message.concat(SEPARATOR);
-			this.message.concat(message);
-			return true;
-		} else
-			throw new NoSuchElementException("No such element");
-	}
-
-	/**
-	 * Method to verify that the "exceptions" set messages have a message such key.
-	 * 
-	 * @param messageCode
-	 *            code of message that must be added to the combination message.
-	 * @return true if the code of message is added.
-	 */
-	public boolean addExceptionMessageUsingCode(String messageCode) {
-		if (exception.containsKey(messageCode)) {
-			this.message.concat(SEPARATOR);
-			this.message.concat(messageCode);
-			return true;
-		} else
-			throw new NoSuchElementException("No such element");
-	}
-
 	/**
 	 * Getter method for message.
 	 *
@@ -103,25 +122,4 @@ public class ExceptionMessageManager {
 		this.message = message;
 	}
 
-	/**
-	 * Static method shattering parameter messagesCombination of constituent strings.
-	 * 
-	 * @param messagesCombination
-	 *            combination of exceptions messages.
-	 * @return broken string returned as a collection of strings.
-	 */
-	public static Collection<String> getMessages(String messagesCombination) {
-		Collection<String> separateMessage = new ArrayList<String>();
-		if (messagesCombination.contains(SEPARATOR)) {
-			String separator = "[*]";
-			String[] messageArray = messagesCombination.split(separator);
-			for (int i = 0; i < messageArray.length; i++) {
-				separateMessage.add(messageArray[i]);
-			}
-		} else {
-			separateMessage.add(messagesCombination);
-		}
-		return separateMessage;
-
-	}
 }

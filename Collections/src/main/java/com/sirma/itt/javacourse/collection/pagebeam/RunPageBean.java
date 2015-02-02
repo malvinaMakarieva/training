@@ -18,7 +18,8 @@ public class RunPageBean {
 	 *            the arguments
 	 */
 	public static void main(String[] args) {
-		ArrayList<String> list = new ArrayList<String>();
+
+		List<String> list = new ArrayList<String>();
 		list.add("element 1");
 		list.add("element 2");
 		list.add("element 3");
@@ -30,11 +31,14 @@ public class RunPageBean {
 		list.add("element 7");
 
 		PageBean<String> paging = new PageBean<String>(list, 3);
+		Commands command = new Commands();
 
-		List<String> subListPaging = paging.next();
-		for (int i = 0; i < subListPaging.size(); i++) {
-			System.out.println(subListPaging.get(i));
-		}
+		List<String> subListPaging = new ArrayList<String>();
+		subListPaging = command.firstPage(paging, 3);
+		System.out.println(subListPaging);
+		// for (int i = 0; i < subListPaging.size(); i++) {
+		// System.out.println(subListPaging.get(i));
+		// }
 		Scanner scan = new Scanner(System.in);
 		String input = scan.next();
 		while (!"close".equals(input)) {

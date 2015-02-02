@@ -1,6 +1,7 @@
 package com.sirma.itt.javacourse.collection.pagebeam;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Class for page bean.
@@ -11,7 +12,7 @@ import java.util.ArrayList;
  */
 public class PageBean<E> {
 
-	private ArrayList<E> listPages = new ArrayList<E>();
+	private List<E> listPages = new ArrayList<E>();
 	private final int PAGE_SIZE;
 	private int currentPage = 0;
 
@@ -23,7 +24,7 @@ public class PageBean<E> {
 	 * @param pageSize
 	 *            the page size
 	 */
-	public PageBean(ArrayList<E> listPages, int pageSize) {
+	public PageBean(List<E> listPages, int pageSize) {
 		this.listPages = listPages;
 		this.PAGE_SIZE = pageSize;
 	}
@@ -33,7 +34,7 @@ public class PageBean<E> {
 	 * 
 	 * @return list of items.
 	 */
-	public ArrayList<E> getItems() {
+	public List<E> getItems() {
 		int start = (currentPage - 1) * PAGE_SIZE;
 		int end;
 		if (currentPage * PAGE_SIZE > listPages.size()) {
@@ -41,7 +42,7 @@ public class PageBean<E> {
 		} else {
 			end = start + PAGE_SIZE;
 		}
-		ArrayList<E> listItems = new ArrayList<E>();
+		List<E> listItems = new ArrayList<E>();
 		for (int i = start; i < end; i++) {
 			listItems.add(listPages.get(i));
 		}
@@ -53,10 +54,9 @@ public class PageBean<E> {
 	 * 
 	 * @return next page.
 	 */
-	public ArrayList<E> next() {
+	public List<E> next() {
 		if (!hasNext()) {
-			System.out.println("No more pages");
-			throw new IndexOutOfBoundsException();
+			throw new IndexOutOfBoundsException("No more pages");
 		}
 		currentPage++;
 		return getItems();
@@ -67,9 +67,9 @@ public class PageBean<E> {
 	 * 
 	 * @return previous page.
 	 */
-	public ArrayList<E> previous() {
+	public List<E> previous() {
 		if (!hasPrevious()) {
-			throw new IndexOutOfBoundsException();
+			throw new IndexOutOfBoundsException("No more previous pages");
 		} else
 			currentPage--;
 		return getItems();
@@ -98,7 +98,7 @@ public class PageBean<E> {
 	 * 
 	 * @return List of first page elements.
 	 */
-	public ArrayList<E> firstPage() {
+	public List<E> firstPage() {
 		currentPage = 1;
 		return getItems();
 	}
@@ -108,7 +108,7 @@ public class PageBean<E> {
 	 * 
 	 * @return List of last page elements.
 	 */
-	public ArrayList<E> lastPage() {
+	public List<E> lastPage() {
 		if (listPages.size() % PAGE_SIZE > 0) {
 			currentPage = (listPages.size() / PAGE_SIZE) + 1;
 		} else {
