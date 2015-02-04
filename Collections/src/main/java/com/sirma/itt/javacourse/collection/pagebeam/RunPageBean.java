@@ -31,41 +31,13 @@ public class RunPageBean {
 		list.add("element 7");
 
 		PageBean<String> paging = new PageBean<String>(list, 3);
-		Commands command = new Commands();
+		Commands command = new Commands(paging);
 
-		List<String> subListPaging = new ArrayList<String>();
-		subListPaging = command.firstPage(paging, 3);
-		System.out.println(subListPaging);
-		// for (int i = 0; i < subListPaging.size(); i++) {
-		// System.out.println(subListPaging.get(i));
-		// }
 		Scanner scan = new Scanner(System.in);
-		String input = scan.next();
+		String input = "n";
+
 		while (!"close".equals(input)) {
-			if ("n".equals(input)) {
-				subListPaging = paging.next();
-				for (int i = 0; i < subListPaging.size(); i++) {
-					System.out.println(subListPaging.get(i));
-				}
-			}
-			if ("p".equals(input)) {
-				subListPaging = paging.previous();
-				for (int i = 0; i < subListPaging.size(); i++) {
-					System.out.println(subListPaging.get(i));
-				}
-			}
-			if ("first".equals(input)) {
-				subListPaging = paging.firstPage();
-				for (int i = 0; i < subListPaging.size(); i++) {
-					System.out.println(subListPaging.get(i));
-				}
-			}
-			if ("last".equals(input)) {
-				subListPaging = paging.lastPage();
-				for (int i = 0; i < subListPaging.size(); i++) {
-					System.out.println(subListPaging.get(i));
-				}
-			}
+			command.pageControl(input);
 			input = scan.next();
 		}
 		scan.close();
