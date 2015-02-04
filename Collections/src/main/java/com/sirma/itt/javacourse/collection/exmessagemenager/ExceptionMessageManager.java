@@ -1,6 +1,7 @@
 package com.sirma.itt.javacourse.collection.exmessagemenager;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -24,22 +25,24 @@ public class ExceptionMessageManager {
 	}
 
 	/**
-	 * The method checks that the set messages "exception" there is a message with the same value.
+	 * The method checks that the set messages "exception" there is a message
+	 * with the same value.
 	 * 
-	 * @param message
+	 * @param messageNew
 	 *            message that must be added to the combination message.
 	 * @return true if the message is added.
 	 */
-	public boolean addExceptionMessage(String message) {
-		if (exception.containsValue(message)) {
-			this.message.concat(SEPARATOR + message);
+	public boolean addExceptionMessage(String messageNew) {
+		if (exception.containsValue(messageNew)) {
+			message.concat(SEPARATOR + messageNew);
 			return true;
 		} else
 			throw new NoSuchElementException("No such element");
 	}
 
 	/**
-	 * Method to verify that the "exceptions" set messages have a message such key.
+	 * Method to verify that the "exceptions" set messages have a message such
+	 * key.
 	 * 
 	 * @param messageCode
 	 *            code of message that must be added to the combination message.
@@ -47,14 +50,15 @@ public class ExceptionMessageManager {
 	 */
 	public boolean addExceptionMessageUsingCode(String messageCode) {
 		if (exception.containsKey(messageCode)) {
-			this.message.concat(SEPARATOR + messageCode);
+			message.concat(SEPARATOR + messageCode);
 			return true;
 		} else
 			throw new NoSuchElementException("No such element");
 	}
 
 	/**
-	 * Static method shattering parameter messagesCombination of constituent strings.
+	 * Static method shattering parameter messagesCombination of constituent
+	 * strings.
 	 * 
 	 * @param messagesCombination
 	 *            combination of exceptions messages.
@@ -65,11 +69,9 @@ public class ExceptionMessageManager {
 		if (messagesCombination.contains(SEPARATOR)) {
 			String separator = "[*]";
 			String[] messageArray = messagesCombination.split(separator);
-			for (int i = 0; i < messageArray.length; i++) {
-				separateMessage.add(messageArray[i]);
-			}
+			separateMessage.addAll(Arrays.asList(messageArray));
 		} else {
-			separateMessage.add(messagesCombination);
+			separateMessage.addAll(Arrays.asList(messagesCombination));
 		}
 		return separateMessage;
 
